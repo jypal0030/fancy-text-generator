@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0a12"/>
+      <stop offset="1" stop-color="#1a1033"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset=".55" stop-color="#d946ef"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="150" cy="90" r="220" fill="#8b5cf6" opacity=".18"/>
+  <circle cx="1080" cy="560" r="240" fill="#22d3ee" opacity=".14"/>
+  <text x="600" y="150" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" fill="#a5a3c0" letter-spacing="6">FONTVERSE — FREE ONLINE TOOL</text>
+  <text x="600" y="280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="86" font-weight="800" fill="url(#acc)">Fancy Font Generator</text>
+  <text x="600" y="370" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="46" fill="#f2f1fb">𝓑𝓸𝓵𝓭 · 𝒞𝓊𝓇𝓈𝒾𝓋𝑒 · ღ Aesthetic ღ · Ａｅｓｔｈｅｔｉｃ · sᴍᴀʟʟ ᴄᴀᴘs</text>
+  <text x="600" y="470" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="34" fill="#a5a3c0">54+ stylish fonts · one-click copy · Instagram · WhatsApp · TikTok · Free Fire</text>
+  <rect x="440" y="520" width="320" height="62" rx="31" fill="url(#acc)"/>
+  <text x="600" y="560" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">Try it free →</text>
+</svg>
