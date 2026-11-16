@@ -750,7 +750,7 @@
     { id:'italic', name:'Italic', cat:'serif', compat:2, tags:'italic slant serif', fn:rangeFn(0x1D434,0x1D44E,0,EXC_ITALIC) },
     { id:'bolditalic', name:'Bold Italic', cat:'serif', compat:2, tags:'bold italic slant serif', fn:rangeFn(0x1D468,0x1D482,0) },
     { id:'script', name:'Cursive', cat:'script', pop:true, compat:2, tags:'cursive script handwriting signature fancy', fn:rangeFn(0x1D49C,0x1D4B6,0,EXC_SCRIPT) },
-    { id:'boldscript', name:'Bold Cursive', cat:'script', compat:2, tags:'bold cursive script handwriting', fn:rangeFn(0x1D4D0,0x1D4EA,0) },
+    { id:'boldscript', name:'Bold Cursive', cat:'script', pop:true, compat:2, tags:'bold cursive script handwriting', fn:rangeFn(0x1D4D0,0x1D4EA,0) },
     { id:'fraktur', name:'Old English', cat:'script', pop:true, compat:1, tags:'old english gothic blackletter fraktur medieval', fn:rangeFn(0x1D504,0x1D51E,0,EXC_FRAKTUR) },
     { id:'boldfraktur', name:'Bold Old English', cat:'script', compat:1, tags:'bold gothic blackletter fraktur old english', fn:rangeFn(0x1D56C,0x1D586,0) },
     { id:'double', name:'Outline', cat:'fancy', pop:true, compat:1, tags:'outline hollow double struck blackboard bold', fn:rangeFn(0x1D538,0x1D552,0x1D7D8,EXC_DS) },
@@ -784,7 +784,7 @@
     { id:'d-sparkles', name:'✨ Sparkles', cat:'deco', pop:true, compat:3, tags:'sparkles emoji decorated cute', fn:decoFn('✨ ',' ✨') },
     { id:'d-hearts', name:'♥ Hearts', cat:'deco', compat:3, tags:'hearts love cute decorated', fn:decoFn('❤ ',' ❤','♥') },
     { id:'d-stars', name:'✦ Stars', cat:'deco', compat:3, tags:'stars sparkle decorated', fn:decoFn('✧ ',' ✧','✦') },
-    { id:'d-royal', name:'༺ Royal', cat:'deco', compat:3, tags:'royal crown decorated king', fn:decoFn('༺ ',' ༻') },
+    { id:'d-royal', name:'༺ Royal', cat:'deco', pop:true, compat:3, tags:'royal crown decorated king', fn:decoFn('༺ ',' ༻') },
     { id:'d-brackets', name:'『 Brackets', cat:'deco', compat:3, tags:'brackets japanese decorated', fn:decoFn('『 ',' 』') },
     { id:'d-fire', name:'🔥 Fire', cat:'deco', compat:3, tags:'fire hot emoji decorated', fn:decoFn('🔥 ',' 🔥') },
     { id:'d-wave', name:'〰 Wave', cat:'deco', compat:3, tags:'wave decorated retro', fn:decoFn('¸,ø¤º°`°º¤ø,¸ ',' ¸,ø¤º°`°º¤ø,¸') },
@@ -796,7 +796,7 @@
     { id:'d-joinstar', name:'✰ Star Join', cat:'deco', compat:3, tags:'star join decorated', fn:decoFn('','','✰') },
     { id:'d-joinoutline', name:'☆ Outline Join', cat:'deco', compat:3, tags:'star outline join decorated', fn:decoFn('','','☆') },
     { id:'d-joinheart', name:'❥ Heart Join', cat:'deco', compat:3, tags:'heart join love decorated', fn:decoFn('','','❥') },
-    { id:'d-starwing', name:'★彡 Star Wing', cat:'deco', compat:3, tags:'star wing decorated anime', fn:decoFn('★彡 ',' 彡★') },
+    { id:'d-starwing', name:'★彡 Star Wing', cat:'deco', pop:true, compat:3, tags:'star wing decorated anime', fn:decoFn('★彡 ',' 彡★') },
     { id:'d-bars', name:'▌ Bars', cat:'deco', compat:3, tags:'bars block decorated bold', fn:decoFn('▌│█║ ║█│▌ ') },
     { id:'d-joinrosette', name:'⊹ Rosette Join', cat:'deco', compat:3, tags:'rosette flower join decorated', fn:decoFn('','','⊹') },
     { id:'d-prestar', name:'⭑⭑ Double Star', cat:'deco', compat:3, tags:'double star decorated', fn:decoFn('⭑⭑ ',' ⭑⭑') },
@@ -943,9 +943,6 @@
     });
 
     /* search + categories */
-    function inPopView() {
-      return !state.query && state.view === 'popular' && state.cat === 'all';
-    }
     search.addEventListener('input', function () { state.query = search.value.trim().toLowerCase(); render(); });
     catsEl.addEventListener('click', function (e) {
       var btn = e.target.closest('.ffg-cat');
@@ -953,13 +950,8 @@
       root.querySelectorAll('.ffg-cat').forEach(function (b) { b.classList.remove('active'); });
       btn.classList.add('active');
       var cat = btn.getAttribute('data-cat');
-      state.cat = cat;
-      if (cat === 'all') { state.view = 'all'; }
-      else if (cat === 'popular') { state.view = 'popular'; state.cat = 'all'; }
-      else {
-        var hasPop = FONTS.some(function (x) { return x.cat === cat && x.pop; });
-        state.view = hasPop ? 'popular' : 'all';
-      }
+      if (cat === 'popular') { state.cat = 'all'; state.view = 'popular'; }
+      else { state.cat = cat; state.view = 'all'; }
       render();
     });
     var showAllBtn = $('#ffg-showall');
@@ -969,11 +961,16 @@
       render();
       results.scrollIntoView({ block: 'start', behavior: 'smooth' });
     });
-    /* match initial chip state to Popular default */
+    /* category chip counts — always match displayed results */
     (function () {
-      var popChip = root.querySelector('.ffg-cat[data-cat="popular"]');
-      var allChip = root.querySelector('.ffg-cat[data-cat="all"]');
-      if (popChip && allChip) { allChip.classList.remove('active'); popChip.classList.add('active'); }
+      root.querySelectorAll('.ffg-cat').forEach(function (chip) {
+        var cat = chip.getAttribute('data-cat');
+        var n;
+        if (cat === 'all') n = FONTS.length;
+        else if (cat === 'popular' || cat === 'favorites') return;
+        else n = FONTS.filter(function (f) { return f.cat === cat; }).length;
+        if (n) chip.textContent = chip.textContent + ' (' + n + ')';
+      });
     })();
 
     /* symbols */
@@ -1173,9 +1170,7 @@
       if (state.cat === 'favorites') return state.favs.indexOf(font.id) !== -1;
       if (state.query) return true; /* search always spans all 54 */
       if (state.cat === 'all') return state.view === 'popular' ? !!font.pop : true;
-      /* Phase-2 rule: category filters within Popular when it intersects; else full category */
-      var catHasPop = FONTS.some(function (x) { return x.cat === state.cat && x.pop; });
-      if (state.view === 'popular' && catHasPop) return !!font.pop && font.cat === state.cat;
+      if (state.cat === 'popular') return !!font.pop;
       return font.cat === state.cat;
     }
     var BIOS_TAGS = { 'd-sparkles': 1, 'script': 1, 'smallcaps': 1, 'fullwidth': 1, 'sansbold': 1, 'd-hearts': 1 };
