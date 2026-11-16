@@ -1,0 +1,46 @@
+# Deploy to Hostinger via FTP (auto-sync from GitHub)
+#
+# ABHI INACTIVE HAI — jab Hostinger FTP credentials ready ho jayein, tab enable karo:
+#
+# STEP 1: GitHub repo → Settings → Secrets and variables → Actions → New repository SECRET (3 secrets):
+#   FTP_SERVER   = Hostinger FTP hostname (jaise ftpupload.net ya yourdomain.com)
+#   FTP_USERNAME = FTP username (Hostinger hPanel → FTP Accounts me milta hai)
+#   FTP_PASSWORD = FTP password
+#
+# STEP 2: Settings → Secrets and variables → Actions → Variables tab → New repository VARIABLE:
+#   FTP_DEPLOY_ENABLED = true
+#
+# STEP 3: Done! Ab har git push ke baad ye workflow chal ke files
+#         Hostinger ke public_html/ me auto-upload kar dega.
+#
+# Note: server-dir ko Hostinger panel me apne account ke subfolder ke hisaab se
+#       adjust karo (kuch accounts me sirf / hota hai, public_html ke bina).
+
+name: Deploy to Hostinger (FTP)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+    if: ${{ vars.FTP_DEPLOY_ENABLED == 'true' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy files to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: /public_html/
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/.nojekyll
