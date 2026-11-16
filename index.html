@@ -9,16 +9,16 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="FontVerse">
 <meta name="theme-color" content="#0a0a12">
-<!-- SEO: replace https://fancyfontly.com with your real domain (see README) -->
-<link rel="canonical" href="https://fancyfontly.com/">
+<!-- SEO: replace https://jypal0030.github.io/fancy-text-generator with your real domain (see README) -->
+<link rel="canonical" href="https://jypal0030.github.io/fancy-text-generator/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="FontVerse">
 <meta property="og:title" content="Fancy Text Generator – Stylish Fonts Copy and Paste Free">
 <meta property="og:description" content="Create fancy text instantly with our free Fancy Text Generator. 54+ stylish Unicode fonts — copy and paste for Instagram, Facebook, TikTok, WhatsApp and more.">
-<meta property="og:url" content="https://fancyfontly.com/">
-<meta property="og:image" content="https://fancyfontly.com/og-image.svg">
+<meta property="og:url" content="https://jypal0030.github.io/fancy-text-generator/">
+<meta property="og:image" content="https://jypal0030.github.io/fancy-text-generator/og-image.svg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
@@ -26,7 +26,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Fancy Text Generator – Stylish Fonts Copy and Paste Free">
 <meta name="twitter:description" content="Create fancy text instantly. 54+ stylish Unicode fonts — copy and paste for Instagram, Facebook, TikTok &amp; more.">
-<meta name="twitter:image" content="https://fancyfontly.com/og-image.svg">
+<meta name="twitter:image" content="https://jypal0030.github.io/fancy-text-generator/og-image.svg">
 
 <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="%238b5cf6"/><stop offset=".5" stop-color="%23d946ef"/><stop offset="1" stop-color="%2322d3ee"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="url(%23g)"/><text x="32" y="45" font-size="36" font-family="system-ui,sans-serif" font-weight="800" text-anchor="middle" fill="white">F</text></svg>'>
 
@@ -38,12 +38,12 @@
     {
       "@type": "WebSite",
       "name": "FontVerse",
-      "url": "https://fancyfontly.com/"
+      "url": "https://jypal0030.github.io/fancy-text-generator/"
     },
     {
       "@type": "WebApplication",
       "name": "FontVerse — Fancy Text Generator",
-      "url": "https://fancyfontly.com/",
+      "url": "https://jypal0030.github.io/fancy-text-generator/",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any (web browser)",
       "browserRequirements": "Requires JavaScript",
@@ -54,8 +54,8 @@
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fancyfontly.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Fancy Font Generator", "item": "https://fancyfontly.com/#generator" }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jypal0030.github.io/fancy-text-generator/" },
+        { "@type": "ListItem", "position": 2, "name": "Fancy Font Generator", "item": "https://jypal0030.github.io/fancy-text-generator/#generator" }
       ]
     },
     {
@@ -171,6 +171,54 @@
 #ffg-root .ffg-chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:8px;}
 #ffg-root .ffg-chipstat{background:var(--card);border:1px solid var(--border);border-radius:999px;padding:7px 15px;font-size:.86rem;font-weight:600;color:var(--muted);}
 #ffg-root .ffg-chipstat b{color:var(--text);}
+
+/* ===== ORION P0/P1 additions ===== */
+/* compact mobile hero */
+@media (max-width:719px){
+  #ffg-root .ffg-hero{padding:20px 16px 10px;}
+  #ffg-root .ffg-hero h1{font-size:clamp(1.7rem,7.5vw,2.1rem);margin-bottom:10px;}
+  #ffg-root .ffg-h1sub{font-size:.75rem;margin-top:6px;}
+  #ffg-root .ffg-hero .ffg-sub{font-size:.98rem;margin-bottom:12px;}
+  #ffg-root .ffg-sub-full{display:none;}
+  #ffg-root .ffg-glow.g2,#ffg-root .ffg-glow.g3{opacity:.15;}
+}
+@media (min-width:720px){ #ffg-root .ffg-sub-short{display:none;} }
+/* preview chips */
+#ffg-root .ffg-preview{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:14px;}
+#ffg-root .ffg-pv{background:var(--bg2);border:1.5px solid var(--border);border-radius:12px;color:var(--text);min-height:44px;padding:8px 14px;font-size:1.15rem;font-weight:600;transition:transform .15s,border-color .15s,background .15s;}
+#ffg-root .ffg-pv:hover{background:var(--card2);border-color:var(--acc1);transform:translateY(-2px);}
+#ffg-root .ffg-pv:active{transform:scale(.98);}
+/* sticky text bar */
+#ffg-root .ffg-stickybar{position:fixed;left:0;right:0;bottom:0;bottom:env(safe-area-inset-bottom);height:52px;background:var(--bg2);border-top:1px solid var(--border);display:flex;align-items:center;gap:8px;padding:0 12px;z-index:60;visibility:hidden;transform:translateY(100%);transition:transform .2s,visibility .2s;box-shadow:0 -8px 24px rgba(0,0,0,.35);}
+#ffg-root .ffg-stickybar[data-show="true"]{visibility:visible;transform:none;}
+#ffg-root .ffg-sb-text{flex:1;min-width:0;font-size:.9rem;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#ffg-root .ffg-sb-btn{background:var(--card);border:1px solid var(--border);color:var(--text);border-radius:10px;min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:4px;font-weight:700;font-size:.85rem;padding:0 10px;transition:.15s;}
+#ffg-root .ffg-sb-btn:hover{background:var(--card2);border-color:var(--acc1);}
+#ffg-root .ffg-sb-btn:active{transform:scale(.96);}
+@media (min-width:720px){
+  #ffg-root .ffg-stickybar{left:auto;right:16px;bottom:16px;border-radius:999px;border:1px solid var(--border);padding:0 10px;max-width:420px;}
+}
+#ffg-root.ffg-hasbar{padding-bottom:64px;}
+@media (min-width:720px){ #ffg-root.ffg-hasbar{padding-bottom:0;} }
+/* favorites row */
+#ffg-root .ffg-favrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:14px;}
+#ffg-root .ffg-favrow[hidden]{display:none;}
+#ffg-root .ffg-favchip{background:var(--bg2);border:1.5px solid var(--border);border-radius:10px;color:var(--text);min-height:44px;padding:8px 12px;font-size:1.05rem;font-weight:600;max-width:170px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;transition:.15s;}
+#ffg-root .ffg-favchip:hover{border-color:var(--acc1);background:var(--card2);}
+/* post-copy share row + favorites nudge */
+#ffg-root .ffg-postcopy{display:flex;gap:8px;align-items:center;margin-top:12px;flex-wrap:wrap;}
+#ffg-root .ffg-postcopy[hidden]{display:none;}
+#ffg-root .ffg-postcopy .ffg-lab{font-size:.8rem;color:var(--muted);font-weight:700;}
+#ffg-root .ffg-nudge{display:flex;align-items:center;gap:8px;margin-top:10px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 14px;font-size:.87rem;color:var(--muted);}
+#ffg-root .ffg-nudge[hidden]{display:none;}
+#ffg-root .ffg-nudge button{margin-left:auto;background:none;border:none;color:var(--muted);cursor:pointer;min-width:32px;min-height:32px;font-size:1rem;}
+#ffg-root .ffg-nudge button:hover{color:var(--text);}
+/* bios tag + star hit area + show-all pill */
+#ffg-root .ffg-biostag{font-size:.68rem;font-weight:700;color:var(--gold);background:rgba(251,191,36,.12);border:1px solid rgba(251,191,36,.3);border-radius:999px;padding:2px 8px;}
+#ffg-root .star{min-width:44px;min-height:44px;}
+#ffg-root .ffg-showall{display:block;margin:16px auto 0;background:var(--card);border:1px solid var(--border);color:var(--text);border-radius:999px;padding:12px 22px;font-weight:700;font-size:.92rem;transition:.15s;}
+#ffg-root .ffg-showall:hover{background:var(--grad);border-color:transparent;color:#fff;}
+#ffg-root .ffg-showall[hidden]{display:none;}
 
 /* generator card */
 #ffg-root .ffg-section{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:26px 20px;}
@@ -328,12 +376,18 @@
   <main id="top">
     <section class="ffg-hero">
       <h1>Fancy Text <span class="ffg-grad-text">Generator</span><span class="ffg-h1sub">Create Stylish Fonts Online — Free</span></h1>
-      <p class="ffg-sub">Type your text and instantly convert it into <span data-ffg-count>50</span>+ stylish Unicode fonts — bold, cursive, aesthetic, tiny, upside-down and more. Copy and paste anywhere: Instagram, Facebook, WhatsApp, TikTok, YouTube, Discord and Free Fire.</p>
+      <p class="ffg-sub"><span class="ffg-sub-short">54+ stylish Unicode styles — type, tap, paste. Free.</span><span class="ffg-sub-full">Type your text and instantly convert it into <span data-ffg-count>50</span>+ stylish Unicode fonts — bold, cursive, aesthetic, tiny, upside-down and more. Copy and paste anywhere: Instagram, Facebook, WhatsApp, TikTok, YouTube, Discord and Free Fire.</span></p>
       <div class="ffg-chips">
         <span class="ffg-chipstat"><b><span data-ffg-count>50</span>+</b> Fonts</span>
         <span class="ffg-chipstat"><b>100% Free</b> • No Sign-up</span>
         <span class="ffg-chipstat"><b>One-click</b> Copy</span>
-        <span class="ffg-chipstat"><b>Private</b> • Runs in your browser</span>
+        <span class="ffg-chipstat ffg-chip-full"><b>Private</b> • Runs in your browser</span>
+      </div>
+      <div class="ffg-preview" role="group" aria-label="Try a style">
+        <button class="ffg-pv" type="button" data-pv="bold" aria-label="Fill input with Hello in Bold style">𝐇𝐞𝐥𝐥𝐨</button>
+        <button class="ffg-pv" type="button" data-pv="script" aria-label="Fill input with Hello in Cursive style">ℋℯ𝓁𝓁ℴ</button>
+        <button class="ffg-pv" type="button" data-pv="fullwidth" aria-label="Fill input with Hello in Aesthetic style">Ｈｅｌｌｏ</button>
+        <button class="ffg-pv" type="button" data-pv="d-sparkles" aria-label="Fill input with Hello in Sparkles style">✨ Hello ✨</button>
       </div>
     </section>
 
@@ -346,10 +400,6 @@
         <div class="ffg-toolbar">
           <span class="ffg-count" id="ffg-count">0/500</span>
           <button class="ffg-mini" id="ffg-clear" type="button">✕ Clear</button>
-          <div class="ffg-share">
-            <button class="ffg-mini" id="ffg-wa" type="button" title="Share on WhatsApp">WhatsApp ↗</button>
-            <button class="ffg-mini" id="ffg-tw" type="button" title="Share on X (Twitter)">X ↗</button>
-          </div>
         </div>
         <div class="ffg-suggest" aria-label="Example texts">
           <span class="ffg-lab">Try:</span>
@@ -366,8 +416,8 @@
         <div class="ffg-controls">
           <input class="ffg-search" id="ffg-search" type="search" placeholder="Search fonts… (e.g. bold, cursive, bubble, aesthetic)" aria-label="Search fonts">
           <div class="ffg-catrow" id="ffg-cats" role="group" aria-label="Font categories">
-            <button class="ffg-cat active" data-cat="all" type="button">All</button>
-            <button class="ffg-cat" data-cat="popular" type="button">★ Popular</button>
+            <button class="ffg-cat" data-cat="all" type="button">All</button>
+            <button class="ffg-cat active" data-cat="popular" type="button">★ Popular</button>
             <button class="ffg-cat" data-cat="fancy" type="button">Fancy</button>
             <button class="ffg-cat" data-cat="script" type="button">Cursive</button>
             <button class="ffg-cat" data-cat="sans" type="button">Sans &amp; Mono</button>
@@ -386,7 +436,21 @@
         <h2 id="fonts">All Fancy Fonts</h2>
         <span class="ffg-showing" id="ffg-showing"></span>
       </div>
+      <div class="ffg-favrow" id="ffg-favrow" hidden aria-label="Your favorite styles">
+        <span class="ffg-lab" style="font-size:.8rem;color:var(--muted);font-weight:700;">★</span>
+      </div>
+      <div class="ffg-postcopy" id="ffg-postcopy" hidden>
+        <span class="ffg-lab">Share:</span>
+        <button class="ffg-mini" id="ffg-wa" type="button" title="Share on WhatsApp">WhatsApp ↗</button>
+        <button class="ffg-mini" id="ffg-tw" type="button" title="Share on X (Twitter)">X ↗</button>
+      </div>
+      <div class="ffg-nudge" id="ffg-nudge" hidden>
+        <span aria-hidden="true">☆</span>
+        <span>Tap ☆ on styles you love — they'll be one tap away.</span>
+        <button type="button" id="ffg-nudge-x" aria-label="Dismiss favorites tip">✕</button>
+      </div>
       <div class="ffg-grid" id="ffg-results" aria-live="polite"></div>
+      <button class="ffg-showall" id="ffg-showall" type="button" hidden>Show all 54 styles</button>
     </section>
 
     <section class="ffg-section" id="symbols" aria-label="Fancy symbols and dividers">
@@ -396,6 +460,39 @@
 
       <div class="ffg-status" style="margin-top:30px;"><h2>Text Dividers &amp; Lines</h2></div>
       <div class="ffg-dividers" id="ffg-divs"></div>
+    </section>
+
+    <section class="ffg-section ffg-prose" id="fancy-letters" aria-label="Fancy letters A to Z">
+      <h2>Fancy Letters A to Z — Copy Each One</h2>
+      <p>Need just a single fancy letter for your username or monogram? Here are the most popular fancy letters in five styles. Tap any letter to copy it.</p>
+      <div class="ffg-ltgrid" id="ffg-letters" aria-label="Fancy letters copy grid"></div>
+      <p style="margin-top:14px;">Full words look even better — <a href="#generator">jump back to the generator</a> and type your name to see it in all 54 styles at once.</p>
+    </section>
+
+    <section class="ffg-section ffg-prose" id="cursive-letters" aria-label="Cursive letters">
+      <h2>Cursive Letters — 𝒜𝒷𝒸 Style Alphabet</h2>
+      <p>The mathematical script alphabet gives every letter a handwritten cursive look: <span class="ffg-curse-demo">𝒜 𝐵 𝒞 𝒟 ℰ ℱ 𝒢 ℋ ℐ 𝒥 𝒦 ℒ ℳ 𝒩 𝒪 𝒫 𝒬 ℛ 𝒮 𝒯 𝒰 𝒱 𝒲 𝒳 𝒴 ℨ</span>. People search for single cursive letters like cursive S (𝓈), cursive G (𝑔), cursive J (𝒿) and cursive B (𝒷) to style one character inside a normal username — Instagram only allows letters, numbers, periods and underscores in profile names, so a single styled letter is a clever workaround.</p>
+      <p>Tip: cursive capital letters use the script range and some letters (like ℰ, ℱ, ℳ) have alternate symbol forms — if one letter renders as a box on an older phone, type the whole word in cursive instead of mixing.</p>
+    </section>
+
+    <section class="ffg-section ffg-prose" id="lenny-face" aria-label="Lenny faces and kaomoji">
+      <h2>Lenny Faces &amp; Kaomoji — Copy and Paste</h2>
+      <p>Classic text emoticons built from Unicode characters. Tap to copy:</p>
+      <div class="ffg-ltgrid ffg-lenny" id="ffg-lenny" aria-label="Lenny faces copy grid"></div>
+      <p style="margin-top:14px;">These kaomoji work in Twitch chat, Discord, comments and bios — anywhere emoji reactions feel too much.</p>
+    </section>
+
+    <section class="ffg-section ffg-prose" id="related" aria-label="Related font tools">
+      <h2>Popular Font Changers &amp; Text Styles</h2>
+      <p>FontVerse covers the full family of text styling tools in one page — no need to jump between sites:</p>
+      <div class="ffg-links-grid">
+        <a class="ffg-linkcard" href="#generator"><strong>Font Maker</strong><span>Turn any word into a styled logo-like text</span></a>
+        <a class="ffg-linkcard" href="#generator"><strong>Font Changer</strong><span>Switch between 54+ styles with one tap</span></a>
+        <a class="ffg-linkcard" href="#generator"><strong>Special Fonts</strong><span>Old English, outline, squared &amp; dark bubble</span></a>
+        <a class="ffg-linkcard" href="#generator"><strong>Online Font Creator</strong><span>Create fancy writing for bios &amp; captions</span></a>
+        <a class="ffg-linkcard" href="#symbols"><strong>Symbols &amp; Dividers</strong><span>36 symbols + 10 aesthetic line dividers</span></a>
+        <a class="ffg-linkcard" href="#lenny-face"><strong>Lenny Face Generator</strong><span>Classic kaomoji emoticons, tap to copy</span></a>
+      </div>
     </section>
 
     <section class="ffg-section ffg-prose" id="how" aria-label="How to use">
@@ -436,39 +533,6 @@
         <div class="ucard"><span class="ffg-ico" aria-hidden="true">Ａ</span><h3>Aesthetic Fullwidth Fonts</h3><p>The vaporwave-style ｗｉｄｅ letters give bios and captions that dreamy, spaced-out aesthetic look.</p></div>
       </div>
       <p style="margin-top:14px;">Want the full style list with compatibility ratings? Scroll back to <a href="#fonts">all fancy fonts</a> — every card shows a one-tap Copy button.</p>
-    </section>
-
-    <section class="ffg-section ffg-prose" id="fancy-letters" aria-label="Fancy letters A to Z">
-      <h2>Fancy Letters A to Z — Copy Each One</h2>
-      <p>Need just a single fancy letter for your username or monogram? Here are the most popular fancy letters in five styles. Tap any letter to copy it.</p>
-      <div class="ffg-ltgrid" id="ffg-letters" aria-label="Fancy letters copy grid"></div>
-      <p style="margin-top:14px;">Full words look even better — <a href="#generator">jump back to the generator</a> and type your name to see it in all 54 styles at once.</p>
-    </section>
-
-    <section class="ffg-section ffg-prose" id="cursive-letters" aria-label="Cursive letters">
-      <h2>Cursive Letters — 𝒜𝒷𝒸 Style Alphabet</h2>
-      <p>The mathematical script alphabet gives every letter a handwritten cursive look: <span class="ffg-curse-demo">𝒜 𝐵 𝒞 𝒟 ℰ ℱ 𝒢 ℋ ℐ 𝒥 𝒦 ℒ ℳ 𝒩 𝒪 𝒫 𝒬 ℛ 𝒮 𝒯 𝒰 𝒱 𝒲 𝒳 𝒴 ℨ</span>. People search for single cursive letters like cursive S (𝓈), cursive G (𝑔), cursive J (𝒿) and cursive B (𝒷) to style one character inside a normal username — Instagram only allows letters, numbers, periods and underscores in profile names, so a single styled letter is a clever workaround.</p>
-      <p>Tip: cursive capital letters use the script range and some letters (like ℰ, ℱ, ℳ) have alternate symbol forms — if one letter renders as a box on an older phone, type the whole word in cursive instead of mixing.</p>
-    </section>
-
-    <section class="ffg-section ffg-prose" id="lenny-face" aria-label="Lenny faces and kaomoji">
-      <h2>Lenny Faces &amp; Kaomoji — Copy and Paste</h2>
-      <p>Classic text emoticons built from Unicode characters. Tap to copy:</p>
-      <div class="ffg-ltgrid ffg-lenny" id="ffg-lenny" aria-label="Lenny faces copy grid"></div>
-      <p style="margin-top:14px;">These kaomoji work in Twitch chat, Discord, comments and bios — anywhere emoji reactions feel too much.</p>
-    </section>
-
-    <section class="ffg-section ffg-prose" id="related" aria-label="Related font tools">
-      <h2>Popular Font Changers &amp; Text Styles</h2>
-      <p>FontVerse covers the full family of text styling tools in one page — no need to jump between sites:</p>
-      <div class="ffg-links-grid">
-        <a class="ffg-linkcard" href="#generator"><strong>Font Maker</strong><span>Turn any word into a styled logo-like text</span></a>
-        <a class="ffg-linkcard" href="#generator"><strong>Font Changer</strong><span>Switch between 54+ styles with one tap</span></a>
-        <a class="ffg-linkcard" href="#generator"><strong>Special Fonts</strong><span>Old English, outline, squared &amp; dark bubble</span></a>
-        <a class="ffg-linkcard" href="#generator"><strong>Online Font Creator</strong><span>Create fancy writing for bios &amp; captions</span></a>
-        <a class="ffg-linkcard" href="#symbols"><strong>Symbols &amp; Dividers</strong><span>36 symbols + 10 aesthetic line dividers</span></a>
-        <a class="ffg-linkcard" href="#lenny-face"><strong>Lenny Face Generator</strong><span>Classic kaomoji emoticons, tap to copy</span></a>
-      </div>
     </section>
 
     <section class="ffg-section" id="faq" aria-label="Frequently asked questions">
@@ -548,6 +612,12 @@
   </footer>
 
   <div class="ffg-toast" id="ffg-toast" role="status" aria-live="polite"></div>
+  <div class="ffg-stickybar" id="ffg-stickybar" role="toolbar" aria-label="Quick actions for your text" data-show="false">
+    <span class="ffg-sb-text" id="ffg-sb-text"></span>
+    <button class="ffg-sb-btn" id="ffg-sb-edit" type="button" aria-label="Edit your text">✎ <span>Edit</span></button>
+    <button class="ffg-sb-btn" id="ffg-sb-fav" type="button" aria-label="Open favorites">★ <span>0</span></button>
+    <button class="ffg-sb-btn" id="ffg-sb-clear" type="button" aria-label="Clear your text">✕</button>
+  </div>
 </div>
 <!--FFG-APP-END-->
 
@@ -680,7 +750,7 @@
     { id:'italic', name:'Italic', cat:'serif', compat:2, tags:'italic slant serif', fn:rangeFn(0x1D434,0x1D44E,0,EXC_ITALIC) },
     { id:'bolditalic', name:'Bold Italic', cat:'serif', compat:2, tags:'bold italic slant serif', fn:rangeFn(0x1D468,0x1D482,0) },
     { id:'script', name:'Cursive', cat:'script', pop:true, compat:2, tags:'cursive script handwriting signature fancy', fn:rangeFn(0x1D49C,0x1D4B6,0,EXC_SCRIPT) },
-    { id:'boldscript', name:'Bold Cursive', cat:'script', compat:2, tags:'bold cursive script handwriting', fn:rangeFn(0x1D4D0,0x1D4EA,0) },
+    { id:'boldscript', name:'Bold Cursive', cat:'script', pop:true, compat:2, tags:'bold cursive script handwriting', fn:rangeFn(0x1D4D0,0x1D4EA,0) },
     { id:'fraktur', name:'Old English', cat:'script', pop:true, compat:1, tags:'old english gothic blackletter fraktur medieval', fn:rangeFn(0x1D504,0x1D51E,0,EXC_FRAKTUR) },
     { id:'boldfraktur', name:'Bold Old English', cat:'script', compat:1, tags:'bold gothic blackletter fraktur old english', fn:rangeFn(0x1D56C,0x1D586,0) },
     { id:'double', name:'Outline', cat:'fancy', pop:true, compat:1, tags:'outline hollow double struck blackboard bold', fn:rangeFn(0x1D538,0x1D552,0x1D7D8,EXC_DS) },
@@ -714,7 +784,7 @@
     { id:'d-sparkles', name:'✨ Sparkles', cat:'deco', pop:true, compat:3, tags:'sparkles emoji decorated cute', fn:decoFn('✨ ',' ✨') },
     { id:'d-hearts', name:'♥ Hearts', cat:'deco', compat:3, tags:'hearts love cute decorated', fn:decoFn('❤ ',' ❤','♥') },
     { id:'d-stars', name:'✦ Stars', cat:'deco', compat:3, tags:'stars sparkle decorated', fn:decoFn('✧ ',' ✧','✦') },
-    { id:'d-royal', name:'༺ Royal', cat:'deco', compat:3, tags:'royal crown decorated king', fn:decoFn('༺ ',' ༻') },
+    { id:'d-royal', name:'༺ Royal', cat:'deco', pop:true, compat:3, tags:'royal crown decorated king', fn:decoFn('༺ ',' ༻') },
     { id:'d-brackets', name:'『 Brackets', cat:'deco', compat:3, tags:'brackets japanese decorated', fn:decoFn('『 ',' 』') },
     { id:'d-fire', name:'🔥 Fire', cat:'deco', compat:3, tags:'fire hot emoji decorated', fn:decoFn('🔥 ',' 🔥') },
     { id:'d-wave', name:'〰 Wave', cat:'deco', compat:3, tags:'wave decorated retro', fn:decoFn('¸,ø¤º°`°º¤ø,¸ ',' ¸,ø¤º°`°º¤ø,¸') },
@@ -726,7 +796,7 @@
     { id:'d-joinstar', name:'✰ Star Join', cat:'deco', compat:3, tags:'star join decorated', fn:decoFn('','','✰') },
     { id:'d-joinoutline', name:'☆ Outline Join', cat:'deco', compat:3, tags:'star outline join decorated', fn:decoFn('','','☆') },
     { id:'d-joinheart', name:'❥ Heart Join', cat:'deco', compat:3, tags:'heart join love decorated', fn:decoFn('','','❥') },
-    { id:'d-starwing', name:'★彡 Star Wing', cat:'deco', compat:3, tags:'star wing decorated anime', fn:decoFn('★彡 ',' 彡★') },
+    { id:'d-starwing', name:'★彡 Star Wing', cat:'deco', pop:true, compat:3, tags:'star wing decorated anime', fn:decoFn('★彡 ',' 彡★') },
     { id:'d-bars', name:'▌ Bars', cat:'deco', compat:3, tags:'bars block decorated bold', fn:decoFn('▌│█║ ║█│▌ ') },
     { id:'d-joinrosette', name:'⊹ Rosette Join', cat:'deco', compat:3, tags:'rosette flower join decorated', fn:decoFn('','','⊹') },
     { id:'d-prestar', name:'⭑⭑ Double Star', cat:'deco', compat:3, tags:'double star decorated', fn:decoFn('⭑⭑ ',' ⭑⭑') },
@@ -758,7 +828,7 @@
         search = $('#ffg-search'), showing = $('#ffg-showing'), toast = $('#ffg-toast'),
         recentWrap = $('#ffg-recent'), themeBtn = $('#ffg-themeBtn'), catsEl = $('#ffg-cats');
 
-    var state = { text: '', query: '', cat: 'all', favs: loadFavs(), recent: loadRecent() };
+    var state = { text: '', query: '', cat: 'all', view: 'popular', sessionCopied: false, sbDismissed: false, favs: loadFavs(), recent: loadRecent() };
 
     document.querySelectorAll('[data-ffg-count]').forEach(function (el) { el.textContent = String(FONTS.length); });
     var yearEl = document.getElementById('ffg-year'); if (yearEl) yearEl.textContent = String(new Date().getFullYear());
@@ -767,6 +837,7 @@
     try {
       var savedTheme = localStorage.getItem(THEME_KEY);
       if (savedTheme === 'light' || savedTheme === 'dark') { root.setAttribute('data-theme', savedTheme); syncTheme(); }
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) { root.setAttribute('data-theme', 'light'); syncTheme(); }
     } catch (e) {}
     function syncTheme() {
       var t = root.getAttribute('data-theme');
@@ -788,14 +859,78 @@
         state.text = input.value;
         countEl.textContent = input.value.length + '/500';
         render();
+        updateBar();
       }, 60);
     });
     $('#ffg-clear').addEventListener('click', function () {
       input.value = ''; state.text = ''; countEl.textContent = '0/500'; render(); input.focus();
     });
     Array.prototype.forEach.call(root.querySelectorAll('.ffg-sug'), function (b) {
-      b.addEventListener('click', function () { input.value = b.textContent; input.dispatchEvent(new Event('input')); });
+      b.addEventListener('click', function () { input.value = b.textContent; input.dispatchEvent(new Event('input')); input.focus(); });
     });
+
+    /* ORION P0-B: preview chips — fill, focus, render */
+    Array.prototype.forEach.call(root.querySelectorAll('.ffg-pv'), function (b) {
+      b.addEventListener('click', function () {
+        input.value = 'Hello';
+        state.text = 'Hello';
+        countEl.textContent = '5/500';
+        render();
+        updateBar();
+        input.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        input.focus({ preventScroll: true });
+      });
+    });
+
+    /* ORION P0-C: sticky text bar */
+    var bar = $('#ffg-stickybar'), sbText = $('#ffg-sb-text'), sbFav = $('#ffg-sb-fav');
+    var inputVisible = true, inRegion = true;
+    function updateBar() {
+      if (!bar) return;
+      var show = state.text.length > 0 && !inputVisible && inRegion && !state.sbDismissed;
+      bar.setAttribute('data-show', show ? 'true' : 'false');
+      root.classList.toggle('ffg-hasbar', show);
+      if (show) sbText.textContent = state.text;
+      var n = sbFav.querySelector('span'); if (n) n.textContent = String(state.favs.length);
+    }
+    if (bar && 'IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) {
+        es.forEach(function (en) { inputVisible = en.isIntersecting; });
+        updateBar();
+      }, { threshold: 0 }).observe(input);
+      var relatedEl = document.getElementById('related');
+      if (relatedEl) {
+        new IntersectionObserver(function (es) {
+          es.forEach(function (en) { inRegion = !en.isIntersecting; });
+          updateBar();
+        }, { threshold: 0 }).observe(relatedEl);
+      }
+      if (window.visualViewport) {
+        var vv = window.visualViewport, lastH = vv.height;
+        vv.addEventListener('resize', function () {
+          if (vv.height < lastH - 120) { bar.style.display = 'none'; }
+          else { bar.style.display = ''; updateBar(); }
+          lastH = vv.height;
+        });
+      }
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && bar.getAttribute('data-show') === 'true') { state.sbDismissed = true; updateBar(); }
+      });
+      var sbEdit = $('#ffg-sb-edit'), sbClear = $('#ffg-sb-clear');
+      if (sbEdit) sbEdit.addEventListener('click', function () {
+        input.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        input.focus({ preventScroll: true });
+      });
+      if (sbClear) sbClear.addEventListener('click', function () {
+        input.value = ''; state.text = ''; countEl.textContent = '0/500';
+        render(); updateBar(); input.focus({ preventScroll: true });
+      });
+      if (sbFav) sbFav.addEventListener('click', function () {
+        var favChip = root.querySelector('.ffg-cat[data-cat="favorites"]');
+        if (favChip) { root.querySelectorAll('.ffg-cat').forEach(function (x) { x.classList.remove('active'); }); favChip.classList.add('active'); state.cat = 'favorites'; render(); }
+        results.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      });
+    }
 
     /* share */
     $('#ffg-wa').addEventListener('click', function () {
@@ -814,9 +949,29 @@
       if (!btn) return;
       root.querySelectorAll('.ffg-cat').forEach(function (b) { b.classList.remove('active'); });
       btn.classList.add('active');
-      state.cat = btn.getAttribute('data-cat');
+      var cat = btn.getAttribute('data-cat');
+      if (cat === 'popular') { state.cat = 'all'; state.view = 'popular'; }
+      else { state.cat = cat; state.view = 'all'; }
       render();
     });
+    var showAllBtn = $('#ffg-showall');
+    if (showAllBtn) showAllBtn.addEventListener('click', function () {
+      state.view = 'all'; state.cat = 'all';
+      root.querySelectorAll('.ffg-cat').forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-cat') === 'all'); });
+      render();
+      results.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    });
+    /* category chip counts — always match displayed results */
+    (function () {
+      root.querySelectorAll('.ffg-cat').forEach(function (chip) {
+        var cat = chip.getAttribute('data-cat');
+        var n;
+        if (cat === 'all') n = FONTS.length;
+        else if (cat === 'popular' || cat === 'favorites') return;
+        else n = FONTS.filter(function (f) { return f.cat === cat; }).length;
+        if (n) chip.textContent = chip.textContent + ' (' + n + ')';
+      });
+    })();
 
     /* symbols */
     var symsEl = $('#ffg-syms');
@@ -913,14 +1068,61 @@
     }
     function doCopy(text, btn, label) {
       copyText(text).then(function () {
+        state.sessionCopied = true;
         if (btn && btn.classList.contains('copy')) {
           var old = btn.textContent;
           btn.textContent = 'Copied ✓'; btn.classList.add('done');
           setTimeout(function () { btn.textContent = old; btn.classList.remove('done'); }, 1200);
         }
-        showToast('Copied: ' + (label ? label + ' ' : '') + (text.length > 24 ? text.slice(0, 24) + '…' : text));
+        showToast('Copied — paste it in your bio ✨');
         pushRecent(text);
+        renderPostCopy();
+        maybeNudge();
       }).catch(function () { showToast('Copy failed — select and copy manually'); });
+    }
+
+    /* ORION P1-F/G: favorites row + post-copy share + nudge */
+    var favRow = $('#ffg-favrow'), postRow = $('#ffg-postcopy'), nudge = $('#ffg-nudge');
+    function renderFavRow() {
+      if (!favRow) return;
+      favRow.querySelectorAll('.ffg-favchip').forEach(function (c) { c.remove(); });
+      if (!state.favs.length || !state.text.trim()) { favRow.hidden = true; return; }
+      favRow.hidden = false;
+      var max = 6;
+      state.favs.slice(0, max).forEach(function (fid) {
+        var f = FONTS.filter(function (x) { return x.id === fid; })[0];
+        if (!f) return;
+        var sample = f.fn(state.text.trim());
+        var chip = document.createElement('button');
+        chip.type = 'button'; chip.className = 'ffg-favchip';
+        chip.textContent = sample || f.name;
+        chip.setAttribute('aria-label', 'Copy ' + f.name + ' favorite with your text');
+        chip.addEventListener('click', function () { doCopy(sample, chip, f.name); });
+        favRow.appendChild(chip);
+      });
+      if (state.favs.length > max) {
+        var more = document.createElement('span');
+        more.style.cssText = 'font-size:.8rem;color:var(--muted);font-weight:700;';
+        more.textContent = '+' + (state.favs.length - max) + ' more';
+        favRow.appendChild(more);
+      }
+    }
+    function renderPostCopy() {
+      if (!postRow) return;
+      postRow.hidden = !state.sessionCopied;
+    }
+    function maybeNudge() {
+      if (!nudge) return;
+      var seen = false;
+      try { seen = localStorage.getItem('ffg-nudge-seen') === '1'; } catch (e) {}
+      if (!seen && state.sessionCopied && !state.favs.length) {
+        nudge.hidden = false;
+        var x = $('#ffg-nudge-x');
+        if (x && !x.dataset.bound) {
+          x.dataset.bound = '1';
+          x.addEventListener('click', function () { nudge.hidden = true; try { localStorage.setItem('ffg-nudge-seen', '1'); } catch (e) {} });
+        }
+      }
     }
     function pushRecent(text) {
       state.recent = [text].concat(state.recent.filter(function (r) { return r !== text; })).slice(0, 6);
@@ -966,10 +1168,13 @@
     }
     function matches(font) {
       if (state.cat === 'favorites') return state.favs.indexOf(font.id) !== -1;
+      if (state.query) return true; /* search always spans all 54 */
+      if (state.cat === 'all') return state.view === 'popular' ? !!font.pop : true;
       if (state.cat === 'popular') return !!font.pop;
-      if (state.cat !== 'all' && font.cat !== state.cat) return false;
-      return true;
+      return font.cat === state.cat;
     }
+    var BIOS_TAGS = { 'd-sparkles': 1, 'script': 1, 'smallcaps': 1, 'fullwidth': 1, 'sansbold': 1, 'd-hearts': 1 };
+    var POP_COUNT = FONTS.filter(function (f) { return f.pop; }).length;
     function render() {
       var text = state.text.trim() ? state.text : SAMPLE;
       results.innerHTML = '';
@@ -979,18 +1184,41 @@
         if (!q) return true;
         return (f.name.toLowerCase().indexOf(q) !== -1) || (f.tags.indexOf(q) !== -1) || (f.cat.indexOf(q) !== -1);
       });
-      showing.textContent = 'Showing ' + list.length + ' of ' + FONTS.length + ' fonts';
+      var searching = !!q;
+      var showAll = $('#ffg-showall');
+      if (showAll) {
+        var inPopular = !searching && state.view === 'popular' && state.cat === 'all';
+        showAll.hidden = !inPopular;
+        if (inPopular) showAll.textContent = 'Show all ' + FONTS.length + ' styles';
+      }
+      var label = searching ? 'search results' : (state.cat === 'favorites' ? 'your favorites' : (state.cat === 'all' && state.view === 'popular' ? 'popular styles' : (state.cat !== 'all' ? state.cat + ' styles' : 'all styles')));
+      showing.textContent = 'Showing ' + list.length + ' of ' + FONTS.length + ' fonts · ' + label;
+      renderFavRow();
+      renderPostCopy();
       if (!list.length) {
         var empty = document.createElement('div');
         empty.className = 'ffg-empty';
-        empty.textContent = state.cat === 'favorites'
-          ? 'No favorites yet — tap the ☆ on any font card to save it here.'
-          : 'No fonts match your search. Try another keyword like “bold”, “cursive” or “bubble”.';
+        if (state.cat === 'favorites') {
+          empty.innerHTML = '';
+          empty.textContent = 'No favorites yet — tap the ☆ on any font card to save it here.';
+          var cta = document.createElement('button');
+          cta.type = 'button'; cta.className = 'ffg-mini'; cta.style.marginTop = '12px';
+          cta.textContent = 'Show popular styles';
+          cta.addEventListener('click', function () {
+            state.cat = 'popular'; state.view = 'popular';
+            root.querySelectorAll('.ffg-cat').forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-cat') === 'popular'); });
+            render();
+          });
+          empty.appendChild(document.createElement('br'));
+          empty.appendChild(cta);
+        } else {
+          empty.textContent = 'No fonts match your search. Try another keyword like “bold”, “cursive” or “bubble”.';
+        }
         results.appendChild(empty);
         return;
       }
       var frag = document.createDocumentFragment();
-      list.forEach(function (font) {
+      list.forEach(function (font, idx) {
         var sample = font.fn(text) || text;
         var card = document.createElement('article');
         card.className = 'fcard'; card.setAttribute('data-id', font.id);
@@ -1000,6 +1228,11 @@
         var cl = compatLabel(font.compat);
         var compat = document.createElement('span'); compat.className = 'compat ' + cl[1]; compat.textContent = cl[0];
         compat.title = cl[2]; compat.setAttribute('aria-label', cl[2]);
+        head.appendChild(nm);
+        if (BIOS_TAGS[font.id]) {
+          var tag = document.createElement('span'); tag.className = 'ffg-biostag'; tag.textContent = 'bios'; tag.title = 'Popular choice for social bios'; tag.setAttribute('aria-hidden', 'true');
+          head.appendChild(tag);
+        }
         var star = document.createElement('button');
         star.type = 'button'; star.className = 'star';
         var isFav = state.favs.indexOf(font.id) !== -1;
@@ -1012,6 +1245,7 @@
           if (idx === -1) { state.favs.unshift(font.id); star.textContent = '★'; star.classList.add('on'); star.setAttribute('aria-pressed','true'); }
           else { state.favs.splice(idx, 1); star.textContent = '☆'; star.classList.remove('on'); star.setAttribute('aria-pressed','false'); }
           saveFavs();
+          renderFavRow(); updateBar();
           if (state.cat === 'favorites') render();
         });
         head.appendChild(nm); head.appendChild(compat); head.appendChild(star);
