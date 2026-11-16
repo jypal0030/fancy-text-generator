@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jypal0030.github.io/fancy-text-generator/sitemap.xml
+Sitemap: https://fancyfontly.com/sitemap.xml
