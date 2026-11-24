@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Case Converter – Change Text to Uppercase, Title Case &amp; More | FontVerse</title>
+  <meta name="description" content="Convert text to uppercase, lowercase, sentence case, title case, camelCase, snake_case or URL slugs. Preview and copy the result, or clean up whitespace, quotes and dashes.">
+  <link rel="canonical" href="https://fancyfontly.com/case-converter/">
+  <link rel="stylesheet" href="../text-tools.css">
+  <script src="../utility-tools.js" defer></script>
+</head>
+<body class="fv-tool">
+  <header class="fv-tool-header"><nav class="fv-shell" aria-label="Main navigation">
+    <a class="fv-brand" href="../">FontVerse</a>
+    <a href="../#generator">Fancy text generator</a>
+  </nav></header>
+  <main class="fv-shell">
+    <p class="fv-kicker">04 / Text utilities</p>
+    <h1>Case Converter</h1>
+    <p class="fv-lead">Change a headline to title case, turn a phrase into <code>snake_case</code>, or tidy up pasted text. Compare the original with the live result before copying.</p>
+
+    <form class="fv-workbench" id="case-workbench">
+      <div class="fv-control-row">
+        <div>
+          <label for="case-mode">Conversion</label>
+          <select id="case-mode" name="mode">
+            <optgroup label="Letter case">
+              <option value="upper">UPPER CASE</option>
+              <option value="lower">lower case</option>
+              <option value="title">Title Case</option>
+              <option value="sentence">Sentence case</option>
+              <option value="toggle">Toggle case</option>
+              <option value="alternate">Alternating case</option>
+            </optgroup>
+            <optgroup label="Code and URLs">
+              <option value="camel">camelCase</option>
+              <option value="pascal">PascalCase</option>
+              <option value="snake">snake_case</option>
+              <option value="constant">CONSTANT_CASE</option>
+              <option value="kebab">kebab-case</option>
+              <option value="header">HTTP-Header-Case</option>
+              <option value="dot">dot.case</option>
+              <option value="slug">URL slug</option>
+            </optgroup>
+            <optgroup label="Text cleanup">
+              <option value="trim">Trim lines</option>
+              <option value="spaces">Collapse spaces</option>
+              <option value="quotes">Normalize quotes</option>
+              <option value="dashes">Normalize dashes</option>
+              <option value="ascii">ASCII only</option>
+            </optgroup>
+          </select>
+        </div>
+        <button type="reset">Clear</button>
+      </div>
+      <p><label for="case-input">Original text</label><br><textarea id="case-input" rows="6" placeholder="Type or paste text"></textarea></p>
+      <p><label for="case-output">Converted text</label><br><textarea id="case-output" rows="6" readonly></textarea></p>
+      <button type="button" id="case-copy">Copy result</button>
+      <p role="status" id="case-status"></p>
+    </form>
+    <section>
+      <h2>Which conversion should I use?</h2>
+      <p>Use title case for headings such as “A Guide to Text Styles,” snake case for identifiers like <code>order_total</code>, and a URL slug for paths like <code>summer-sale</code>. URL slugs strip accents from Latin letters and remove characters outside ASCII letters and numbers; they do not transliterate other writing systems.</p>
+      <p><a href="../kaomoji/">Browse copyable kaomoji</a></p>
+    </section>
+  </main>
+</body>
+</html>
