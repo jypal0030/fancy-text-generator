@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Case Converter – Change Text to Uppercase, Title Case &amp; More | FontVerse</title>
-  <meta name="description" content="Convert text to uppercase, lowercase, sentence case, title case, camelCase, snake_case or URL slugs. Preview and copy the result, or clean up whitespace, quotes and dashes.">
+  <title>All In One Case Converter Online | Instant Text Case Changer | FontVerse</title>
+  <meta name="description" content="Change text to uppercase, lowercase, title case, snake_case, camelCase, kebab-case, PascalCase, SCREAMING_SNAKE_CASE or HTTP header case. Preview and copy each result as you type.">
   <link rel="canonical" href="https://fancyfontly.com/case-converter/">
   <link rel="stylesheet" href="../text-tools.css">
   <script src="../utility-tools.js" defer></script>
@@ -17,28 +17,42 @@
   <main class="fv-shell">
     <p class="fv-kicker">04 / Text utilities</p>
     <h1>Case Converter</h1>
-    <p class="fv-lead">Change a headline to title case, turn a phrase into <code>snake_case</code>, or tidy up pasted text. Compare the original with the live result before copying.</p>
+    <p class="fv-lead">Type or paste text to compare nine common case styles at once. Copy the result you need, or choose an extra conversion to clean up pasted text or make a URL slug.</p>
 
     <form class="fv-workbench" id="case-workbench">
-      <div class="fv-control-row">
+      <div class="fv-case-source">
+        <label for="case-input">Original text</label>
+        <textarea id="case-input" rows="3" placeholder="Type or paste text" spellcheck="false"></textarea>
+        <button type="reset">Clear text</button>
+      </div>
+      <p class="fv-status" role="status" id="case-status"></p>
+      <section class="fv-case-section" aria-labelledby="case-previews-heading">
+        <h2 id="case-previews-heading">Live case previews</h2>
+        <div class="fv-results">
+          <article class="fv-result" data-case-style="upper"><h3>Uppercase</h3><p class="fv-preview">ORDER TOTAL</p><button type="button" disabled>Copy <span class="fv-sr">uppercase</span></button></article>
+          <article class="fv-result" data-case-style="lower"><h3>Lowercase</h3><p class="fv-preview">order total</p><button type="button" disabled>Copy <span class="fv-sr">lowercase</span></button></article>
+          <article class="fv-result" data-case-style="title"><h3>Title Case</h3><p class="fv-preview">Order Total</p><button type="button" disabled>Copy <span class="fv-sr">title case</span></button></article>
+          <article class="fv-result" data-case-style="snake"><h3>Snake Case</h3><p class="fv-preview">order_total</p><button type="button" disabled>Copy <span class="fv-sr">snake case</span></button></article>
+          <article class="fv-result" data-case-style="camel"><h3>Camel Case</h3><p class="fv-preview">orderTotal</p><button type="button" disabled>Copy <span class="fv-sr">camel case</span></button></article>
+          <article class="fv-result" data-case-style="kebab"><h3>Kebab Case</h3><p class="fv-preview">order-total</p><button type="button" disabled>Copy <span class="fv-sr">kebab case</span></button></article>
+          <article class="fv-result" data-case-style="pascal"><h3>Pascal Case</h3><p class="fv-preview">OrderTotal</p><button type="button" disabled>Copy <span class="fv-sr">Pascal case</span></button></article>
+          <article class="fv-result" data-case-style="constant"><h3>Screaming Snake Case</h3><p class="fv-preview">ORDER_TOTAL</p><button type="button" disabled>Copy <span class="fv-sr">screaming snake case</span></button></article>
+          <article class="fv-result" data-case-style="header"><h3>HTTP Header Case</h3><p class="fv-preview">Order-Total</p><button type="button" disabled>Copy <span class="fv-sr">HTTP header case</span></button></article>
+        </div>
+      </section>
+      <section class="fv-case-section" aria-labelledby="case-extra-heading">
+        <h2 id="case-extra-heading">More conversions</h2>
         <div>
           <label for="case-mode">Conversion</label>
           <select id="case-mode" name="mode">
             <optgroup label="Letter case">
-              <option value="upper">UPPER CASE</option>
-              <option value="lower">lower case</option>
-              <option value="title">Title Case</option>
+
               <option value="sentence">Sentence case</option>
               <option value="toggle">Toggle case</option>
               <option value="alternate">Alternating case</option>
             </optgroup>
             <optgroup label="Code and URLs">
-              <option value="camel">camelCase</option>
-              <option value="pascal">PascalCase</option>
-              <option value="snake">snake_case</option>
-              <option value="constant">CONSTANT_CASE</option>
-              <option value="kebab">kebab-case</option>
-              <option value="header">HTTP-Header-Case</option>
+
               <option value="dot">dot.case</option>
               <option value="slug">URL slug</option>
             </optgroup>
@@ -51,16 +65,18 @@
             </optgroup>
           </select>
         </div>
-        <button type="reset">Clear</button>
-      </div>
-      <p><label for="case-input">Original text</label><br><textarea id="case-input" rows="6" placeholder="Type or paste text"></textarea></p>
-      <p><label for="case-output">Converted text</label><br><textarea id="case-output" rows="6" readonly></textarea></p>
-      <button type="button" id="case-copy">Copy result</button>
-      <p role="status" id="case-status"></p>
+        <div class="fv-case-output">
+          <label for="case-output">Converted text</label>
+          <textarea id="case-output" rows="3" readonly></textarea>
+          <button type="button" id="case-copy" disabled>Copy result</button>
+        </div>
+      </section>
+      <noscript><p>Enable JavaScript to convert and copy your own text. You can still browse the examples above.</p></noscript>
     </form>
-    <section>
+    <section class="fv-guide">
       <h2>Which conversion should I use?</h2>
-      <p>Use title case for headings such as “A Guide to Text Styles,” snake case for identifiers like <code>order_total</code>, and a URL slug for paths like <code>summer-sale</code>. URL slugs strip accents from Latin letters and remove characters outside ASCII letters and numbers; they do not transliterate other writing systems.</p>
+      <p>Use title case for headings such as “A Guide to Text Styles.” For code, follow your project's convention: <code>order_total</code> is snake case, <code>ORDER_TOTAL</code> is screaming snake case, and <code>orderTotal</code> is camel case.</p>
+      <p>HTTP header case produces names such as <code>Content-Type</code>; it formats text without validating whether the header exists. For web paths, URL slug mode produces results like <code>summer-sale</code>. It strips accents from Latin letters and removes characters outside ASCII letters and numbers rather than transliterating other writing systems.</p>
       <p><a href="../kaomoji/">Browse copyable kaomoji</a></p>
     </section>
   </main>

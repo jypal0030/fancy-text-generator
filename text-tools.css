@@ -56,3 +56,25 @@
 .fv-tools-directory li { min-width: 0; padding: .5rem .8rem; background: var(--fv-panel); border: 1px solid var(--fv-border); border-radius: 10px; }
 .fv-tools-directory a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
 .fv-tools-directory p { margin: 0 0 .35rem; color: var(--fv-muted); }
+
+.fv-case-source button, .fv-case-output button { margin-top: .65rem; }
+.fv-case-section { margin-top: 1.2rem; }
+.fv-case-section > h2 { margin: 0 0 .65rem; font-size: clamp(1.4rem, 4vw, 1.8rem); }
+.fv-case-section .fv-result h3 { margin: 0; font: 700 .95rem/1.35 system-ui, sans-serif; }
+.fv-case-section .fv-preview { font-family: ui-monospace, Consolas, monospace; }
+.fv-case-section select {
+  width: 100%;
+  min-height: 44px;
+  padding: .45rem .65rem;
+  border: 1px solid #9f8ab1;
+  border-radius: 9px;
+  background: var(--fv-panel);
+  color: var(--fv-ink);
+  font: inherit;
+}
+.fv-case-section select:focus-visible { outline: 3px solid var(--fv-accent); outline-offset: 3px; }
+.fv-case-output { margin-top: .8rem; }
+@media (min-width: 40rem) {
+  .fv-case-section select { width: min(100%, 23rem); }
+}
+=======

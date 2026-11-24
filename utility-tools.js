@@ -1,9 +1,25 @@
-async function copyText(text, status) {
+async function copyText(text, status, source, label) {
+  status.textContent = '';
   try {
     await navigator.clipboard.writeText(text);
-    status.textContent = `Copied${text.length < 24 ? `: ${text}` : ' to clipboard'}.`;
+    status.textContent = label ? `${label} copied.` : `Copied${text.length < 24 ? `: ${text}` : ' to clipboard'}.`;
+    return true;
   } catch {
-    status.textContent = 'Clipboard unavailable. Select the text and copy it manually.';
+    if (source && source.value === text) {
+      source.focus();
+      source.select();
+      status.textContent = 'Automatic copy was unavailable. The result is selected; use your device’s copy command.';
+    } else if (source && source.textContent === text && window.getSelection()) {
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(source);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      status.textContent = 'Automatic copy was unavailable. The result is selected; use your device’s copy command.';
+    } else {
+      status.textContent = 'Clipboard unavailable. Select the text and copy it manually.';
+    }
+    return false;
   }
 }
 
@@ -61,18 +77,38 @@ function init() {
     const mode = form.querySelector('#case-mode');
     const output = form.querySelector('#case-output');
     const status = form.querySelector('#case-status');
-    const update = () => {
+    const extraCopy = form.querySelector('#case-copy');
+    const previews = Array.from(form.querySelectorAll('[data-case-style]'), (card) => {
+      const preview = card.querySelector('.fv-preview');
+      const button = card.querySelector('button');
+      const label = card.querySelector('h3').textContent;
+      const example = preview.textContent;
+      button.addEventListener('click', () => copyText(preview.textContent, status, preview, label));
+      return { preview, button, example, style: card.dataset.caseStyle };
+    });
+    const updateExtra = () => {
       output.value = convert(input.value, mode.value);
+      extraCopy.disabled = !output.value;
       status.textContent = '';
+    };
+    const update = () => {
+      for (const { preview, button, example, style } of previews) {
+        const result = convert(input.value, style);
+        preview.textContent = input.value ? result || 'No convertible characters.' : example;
+        button.disabled = !result;
+      }
+      updateExtra();
     };
     form.addEventListener('submit', (event) => event.preventDefault());
     input.addEventListener('input', update);
-    mode.addEventListener('change', update);
-    form.addEventListener('reset', () => setTimeout(update, 0));
-    form.querySelector('#case-copy').addEventListener('click', () => {
-      if (output.value) copyText(output.value, status);
-      else status.textContent = 'There is no result to copy.';
+    mode.addEventListener('change', updateExtra);
+    form.addEventListener('reset', (event) => {
+      event.preventDefault();
+      input.value = '';
+      update();
+      input.focus();
     });
+    extraCopy.addEventListener('click', () => copyText(output.value, status, output, 'Converted text'));
     update();
   }
 
