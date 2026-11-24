@@ -1280,7 +1280,7 @@ html body #ffg-root [data-ffg-results-grid]{
 })();
 //FFG-JS-END
 </script>
-<nav class="fv-tools-directory" aria-label="Specialized text tools">
+<nav id="text-tools" class="fv-tools-directory" aria-label="Specialized text tools">
   <h2>Find the right style for your text</h2>
   <ul>
     <li><a href="./bubble-text-generator/">Bubble Text Generator</a><p>Turn letters into outlined or filled circles.</p></li>
@@ -1288,7 +1288,15 @@ html body #ffg-root [data-ffg-results-grid]{
     <li><a href="./cursive-text-generator/">Cursive Text Generator</a><p>Compare regular and bold Unicode script.</p></li>
     <li><a href="./instagram-bio-fonts/">Instagram Bio Fonts</a><p>Try readable styles on editable profile bio examples.</p></li>
     <li><a href="./case-converter/">Case Converter</a><p>Compare and copy uppercase, title case, snake case and more.</p></li>
+    <li><a href="./cute-fancy-text/">Cute Fancy Text</a><p>Decorate captions and messages with hearts, stars, bows or soft script.</p></li>
   </ul>
 </nav>
+<script>
+  (function () {
+    var directory = document.getElementById('text-tools');
+    var footer = document.querySelector('footer, [role="contentinfo"]');
+    if (footer) footer.before(directory);
+  })();
+</script>
 </body>
 </html>

@@ -22,6 +22,7 @@ Style definitions are bundled in the browser script. Favorites are stored on the
 - `/instagram-bio-fonts/` — bold, italic and fullwidth previews with editable bio examples.
 - `/brackets-boxed-text-generator/` — live previews and copy controls for decorative brackets and outlined or filled square letters.
 - `/case-converter/` — nine live case previews with individual copy buttons, plus a dropdown for extra conversions and text cleanup; uses `utility-tools.js`.
+- `/cute-fancy-text/` — live previews and copy controls for hearts, stars, bows and floral cursive.
 - `robots.txt`, `sitemap.xml`, and `og-image.svg` are static crawl and sharing assets.
 
 ## Environment
@@ -41,3 +42,4 @@ Canonical URLs use `https://fancyfontly.com/`, matching the sitemap. The homepag
 - Added Bubble Text, Cursive Text and Instagram Bio Fonts tools and aligned homepage metadata with the sitemap domain.
 - Added the Brackets and Boxed Text Generator and linked it from the homepage and sitemap.
 - Expanded the Case Converter with side-by-side copyable previews, updated its SEO title, and linked it from the homepage and sitemap.
+- Added Cute Fancy Text, linked it from the homepage and sitemap, and positioned the homepage tool directory before the footer.

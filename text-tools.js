@@ -23,6 +23,10 @@
   function convert(text, style) {
     if (style === 'cornerBrackets') return `「${text}」`;
     if (style === 'boldBrackets') return `【${text}】`;
+    if (style === 'cuteHearts') return `♡ ${text} ♡`;
+    if (style === 'cuteStars') return `✧･ﾟ ${text} ﾟ･✧`;
+    if (style === 'cuteBows') return `୨୧ ${text} ୨୧`;
+    if (style === 'cuteScript') return `❀ ${convert(text, 'script')} ❀`;
     const [upper, lower, digits] = ranges[style];
     return text.replace(/[A-Za-z0-9]/g, letter => {
       if (style === 'script' && Object.hasOwn(scriptExceptions, letter)) return scriptExceptions[letter];
