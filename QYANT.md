@@ -20,6 +20,7 @@ Style definitions are bundled in the browser script. Favorites are stored on the
 - `/bubble-text-generator/` — outlined and filled Unicode bubble letters.
 - `/cursive-text-generator/` — regular and bold Unicode script previews.
 - `/instagram-bio-fonts/` — bold, italic and fullwidth previews with editable bio examples.
+- `/brackets-boxed-text-generator/` — live previews and copy controls for decorative brackets and outlined or filled square letters.
 - `robots.txt`, `sitemap.xml`, and `og-image.svg` are static crawl and sharing assets.
 
 ## Environment
@@ -37,3 +38,4 @@ Canonical URLs use `https://fancyfontly.com/`, matching the sitemap. The homepag
 - Memory file added to an existing project; pending reconstruction.
 - Reconstructed project memory and made the results grid minimum responsive.
 - Added Bubble Text, Cursive Text and Instagram Bio Fonts tools and aligned homepage metadata with the sitemap domain.
+- Added the Brackets and Boxed Text Generator and linked it from the homepage and sitemap.

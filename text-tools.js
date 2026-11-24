@@ -7,6 +7,8 @@
   const ranges = {
     bubble: [0x24B6, 0x24D0, '⓪①②③④⑤⑥⑦⑧⑨'],
     filled: [0x1F157, 0x1F157, '⓿❶❷❸❹❺❻❼❽❾'],
+    square: [0x1F130, 0x1F130],
+    filledSquare: [0x1F170, 0x1F170],
     script: [0x1D49C, 0x1D4B6],
     boldScript: [0x1D4D0, 0x1D4EA],
     bold: [0x1D5D4, 0x1D5EE],
@@ -19,6 +21,8 @@
   };
 
   function convert(text, style) {
+    if (style === 'cornerBrackets') return `「${text}」`;
+    if (style === 'boldBrackets') return `【${text}】`;
     const [upper, lower, digits] = ranges[style];
     return text.replace(/[A-Za-z0-9]/g, letter => {
       if (style === 'script' && Object.hasOwn(scriptExceptions, letter)) return scriptExceptions[letter];
