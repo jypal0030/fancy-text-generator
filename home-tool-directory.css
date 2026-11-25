@@ -1,0 +1,83 @@
+/* Homepage tool directory: fern-green accents, readable labels and compact cards. */
+#text-tools.fv-tools-directory {
+  --catalog-paper: #edf2e9;
+  --catalog-panel: #fffefa;
+  --catalog-accent: #234435;
+  --catalog-muted: #455c4d;
+  --catalog-line: #a8bcac;
+  --catalog-badge: #e0eadf;
+  background: var(--catalog-paper);
+  border-color: var(--catalog-line);
+}
+
+[data-theme="dark"] #text-tools.fv-tools-directory {
+  --catalog-paper: #192b23;
+  --catalog-panel: #1a2921;
+  --catalog-accent: #afe0bc;
+  --catalog-muted: #bfcec2;
+  --catalog-line: #65816e;
+  --catalog-badge: #263c30;
+}
+
+#text-tools.fv-tools-directory :is(h2, .fv-directory-kicker) {
+  color: var(--catalog-accent);
+}
+
+#text-tools.fv-tools-directory :is(.fv-directory-intro p:not(.fv-directory-kicker), .fv-home-tool-grid p) {
+  color: var(--catalog-muted);
+}
+
+#text-tools .fv-home-tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: .75rem;
+}
+
+#text-tools .fv-home-tool-grid > [role="listitem"] {
+  min-width: 0;
+  padding: .35rem .85rem .85rem;
+  border: 1px solid var(--catalog-line);
+  border-radius: .65rem;
+  background: var(--catalog-panel);
+}
+
+#text-tools .fv-home-tool-grid > [role="listitem"]:is(:hover, :focus-within) {
+  border-color: var(--catalog-accent);
+}
+
+#text-tools .fv-home-tool-grid p {
+  margin: 0;
+  line-height: 1.45;
+}
+
+#text-tools :is(.fv-home-tool-grid a, .fv-home-tool-current) {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--catalog-accent);
+  font-weight: 700;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+#text-tools .fv-home-tool-current {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: .35rem .6rem;
+  margin-block-end: .75rem;
+}
+
+#text-tools .fv-home-tool-current span {
+  padding: .15rem .45rem;
+  border: 1px solid var(--catalog-line);
+  border-radius: .35rem;
+  background: var(--catalog-badge);
+  font-size: .75rem;
+}
+
+#text-tools :is(.fv-home-tool-grid a, .fv-home-tool-current):focus-visible {
+  outline: 2px solid var(--catalog-accent);
+  outline-offset: 3px;
+}

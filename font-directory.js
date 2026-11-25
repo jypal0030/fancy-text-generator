@@ -31,7 +31,7 @@
   }
 
   const directory = document.querySelector('#text-tools ul');
-  if (!directory) return;
+  if (!directory || directory.classList.contains('fv-home-tool-grid')) return;
 
   const destinations = new Set(Array.from(directory.querySelectorAll('a[href]'), link => link.href));
   for (const [path, title, description] of [

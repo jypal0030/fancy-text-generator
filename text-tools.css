@@ -512,4 +512,99 @@
 @media (min-width: 40rem) {
   .fv-case-section select { width: min(100%, 23rem); }
 }
+
+/* Homepage catalog: fern-green specimen cards, following Type Studio. */
+#ffg-root #text-tools:has(.fv-home-tool-catalog) {
+  --catalog-paper: #edf2e9;
+  --catalog-panel: #fffefa;
+  --catalog-accent: #234435;
+  --catalog-muted: #455c4d;
+  --catalog-line: #a8bcac;
+  --catalog-highlight: #e0eadf;
+  background: var(--catalog-paper);
+  border-color: var(--catalog-line);
+}
+
+#ffg-root[data-theme="dark"] #text-tools:has(.fv-home-tool-catalog) {
+  --catalog-paper: #192b23;
+  --catalog-panel: #1a2921;
+  --catalog-accent: #afe0bc;
+  --catalog-muted: #bfcec2;
+  --catalog-line: #65816e;
+  --catalog-highlight: #263c30;
+}
+
+#ffg-root #text-tools:has(.fv-home-tool-catalog) :is(h2, .fv-directory-kicker) {
+  color: var(--catalog-accent);
+}
+
+#ffg-root #text-tools:has(.fv-home-tool-catalog) p {
+  color: var(--catalog-muted);
+}
+
+#ffg-root #text-tools .fv-home-tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: .75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#ffg-root #text-tools .fv-home-tool-grid li {
+  display: block;
+  min-width: 0;
+  padding: .55rem .9rem .85rem;
+  border: 1px solid var(--catalog-line);
+  border-radius: .65rem;
+  background: var(--catalog-panel);
+}
+
+#ffg-root #text-tools .fv-home-tool-grid li::before,
+#ffg-root #text-tools .fv-home-tool-grid li::after,
+#ffg-root #text-tools .fv-home-tool-grid li a::after,
+#ffg-root #text-tools .fv-home-tool-current::after {
+  content: none;
+}
+
+#ffg-root #text-tools :is(.fv-home-tool-grid a, .fv-home-tool-current) {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 44px;
+  gap: .35rem .5rem;
+  color: var(--catalog-accent);
+  font-weight: 700;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+#ffg-root #text-tools .fv-home-tool-current {
+  margin-bottom: .7rem;
+}
+
+#ffg-root #text-tools .fv-home-tool-current span {
+  padding: .12rem .4rem;
+  border: 1px solid var(--catalog-line);
+  border-radius: .3rem;
+  background: var(--catalog-highlight);
+  font-size: .7rem;
+  text-decoration: none;
+}
+
+#ffg-root #text-tools .fv-home-tool-grid li p {
+  margin: 0;
+  line-height: 1.45;
+}
+
+#ffg-root #text-tools .fv-home-tool-grid li:is(:hover, :focus-within) {
+  border-color: var(--catalog-accent);
+}
+
+#ffg-root #text-tools :is(.fv-home-tool-grid a, .fv-home-tool-current):focus-visible {
+  outline: 2px solid var(--catalog-accent);
+  outline-offset: 3px;
+}
 =======

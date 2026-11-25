@@ -6,6 +6,100 @@
 <title>Fancy Text Generator – Copy and Paste Stylish Fonts | FontVerse</title>
 <meta name="description" content="Use FontVerse’s free fancy text generator to preview and copy stylish Unicode text, from cursive and bubble letters to bold fonts for bios, captions and messages.">
 <link rel="stylesheet" href="./text-tools.css?v=studio-compact-2">
+<style>
+  /* Homepage directory: fern-green cards with compact, readable descriptions. */
+  #text-tools.fv-tools-directory {
+    --directory-paper: #edf2e9;
+    --directory-card: #fffefa;
+    --directory-ink: #234435;
+    --directory-copy: #455c4d;
+    --directory-line: #a8bcac;
+    background: var(--directory-paper);
+    border-color: var(--directory-line);
+  }
+
+  [data-theme="dark"] #text-tools.fv-tools-directory {
+    --directory-paper: #192b23;
+    --directory-card: #23372b;
+    --directory-ink: #b8e7c5;
+    --directory-copy: #c6d5c9;
+    --directory-line: #65816e;
+  }
+
+  #text-tools.fv-tools-directory :is(h2, .fv-directory-kicker) {
+    color: var(--directory-ink);
+  }
+
+  #text-tools.fv-tools-directory :is(.fv-directory-intro p:not(.fv-directory-kicker), .fv-home-tool-grid p) {
+    color: var(--directory-copy);
+  }
+
+  #ffg-root #text-tools .fv-home-tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: .75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  #ffg-root #text-tools .fv-home-tool-grid > li {
+    display: block;
+    min-width: 0;
+    padding: .25rem .85rem .85rem;
+    border: 1px solid var(--directory-line);
+    border-radius: .65rem;
+    background: var(--directory-card);
+  }
+
+  #ffg-root #text-tools .fv-home-tool-grid > li:is(:hover, :focus-within) {
+    border-color: var(--directory-ink);
+  }
+
+  #ffg-root #text-tools .fv-home-tool-grid > li::before,
+  #ffg-root #text-tools .fv-home-tool-grid > li::after,
+  #ffg-root #text-tools .fv-home-tool-grid a::after {
+    content: none;
+  }
+
+  #ffg-root #text-tools .fv-home-tool-grid p {
+    margin: 0;
+    line-height: 1.45;
+  }
+
+  #text-tools.fv-tools-directory :is(.fv-home-tool-grid a, .fv-home-tool-current) {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--directory-ink);
+    font-weight: 700;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+    text-decoration: underline;
+    text-underline-offset: .2em;
+  }
+
+  #text-tools.fv-tools-directory .fv-home-tool-current {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: .35rem .6rem;
+    margin-block-end: .75rem;
+  }
+
+  #text-tools .fv-home-tool-current span {
+    padding: .15rem .45rem;
+    border: 1px solid var(--directory-line);
+    border-radius: .35rem;
+    background: var(--directory-card);
+    font-size: .75rem;
+  }
+
+  #text-tools.fv-tools-directory :is(.fv-home-tool-grid a, .fv-home-tool-current):focus-visible {
+    outline: 2px solid var(--directory-ink);
+    outline-offset: 3px;
+  }
+</style>
+<link rel="stylesheet" href="./home-tool-directory.css">
 <link rel="stylesheet" href="./site-nav.css">
 <script src="./font-directory.js" defer></script>
 <script src="./site-nav.js" defer></script>
@@ -508,16 +602,23 @@ html body #ffg-root [data-ffg-results-grid]{
         <h2 id="text-tools-heading">Find the right style for your text</h2>
         <p>Pick a tool, try your own words, and copy a style you like.</p>
       </div>
-      <ul>
-        <li><a href="./bubble-text-generator/">Bubble Text Generator</a><p>Turn letters into outlined or filled circles.</p></li>
-        <li><a href="./brackets-boxed-text-generator/">Brackets and Boxed Text Generator</a><p>Frame a phrase in brackets or turn letters into squares.</p></li>
-        <li><a href="./cursive-text-generator/">Cursive Text Generator</a><p>Compare regular and bold Unicode script.</p></li>
-        <li><a href="./instagram-bio-fonts/">Instagram Bio Fonts</a><p>Try readable styles on editable profile bio examples.</p></li>
-        <li><a href="./case-converter/">Case Converter</a><p>Compare and copy uppercase, title case, snake case and more.</p></li>
-        <li><a href="./cute-fancy-text/">Cute Fancy Text</a><p>Decorate captions and messages with hearts, stars, bows or soft script.</p></li>
-        <li><a href="./kaomoji/">Kaomoji &amp; Japanese Emoticons</a><p>Search and copy Japanese smileys, Lenny faces and other text reactions.</p></li>
-        <li><a href="./type-studio/">Type Studio — Font Tester</a><p>Compare fonts side by side, export transparent text PNGs, or explore fancy letters A–Z.</p></li>
-      </ul>
+      <div class="fv-home-tool-catalog">
+        <a class="fv-home-tool-current" href="https://fancyfonty.com/" aria-current="page">Fancy Text Generator <span>Current tool</span></a>
+        <ul class="fv-home-tool-grid" role="list">
+          <li><a href="https://fancyfonty.com/bubble-text-generator/">Bubble Text Generator</a><p>Turn letters into outlined or filled circles.</p></li>
+          <li><a href="https://fancyfonty.com/brackets-boxed-text-generator/">Brackets and Boxed Text Generator</a><p>Frame a phrase in brackets or turn letters into squares.</p></li>
+          <li><a href="https://fancyfonty.com/cursive-text-generator/">Cursive Text Generator</a><p>Compare regular and bold Unicode script.</p></li>
+          <li><a href="https://fancyfonty.com/instagram-bio-fonts/">Instagram Bio Fonts</a><p>Try readable styles on editable profile bio examples.</p></li>
+          <li><a href="https://fancyfonty.com/case-converter/">Case Converter</a><p>Compare and copy uppercase, title case, snake case and more.</p></li>
+          <li><a href="https://fancyfonty.com/cute-fancy-text/">Cute Fancy Text</a><p>Decorate captions and messages with hearts, stars, bows or soft script.</p></li>
+          <li><a href="https://fancyfonty.com/kaomoji/">Kaomoji &amp; Japanese Emoticons</a><p>Search and copy Japanese smileys, Lenny faces and other text reactions.</p></li>
+          <li><a href="https://fancyfonty.com/gothic-font-generator/">Gothic Font Generator</a><p>Compare regular and bold Fraktur blackletter.</p></li>
+          <li><a href="https://fancyfonty.com/bold-font-generator/">Bold Font Generator</a><p>Copy bold serif, sans serif or italic text.</p></li>
+          <li><a href="https://fancyfonty.com/type-studio/">Type Studio — Font Tester</a><p>Preview your own text in different font stacks side by side.</p></li>
+          <li><a href="https://fancyfonty.com/type-studio/transparent-text-generator/">Transparent Text Generator</a><p>Preview lettering and download it as a transparent PNG.</p></li>
+          <li><a href="https://fancyfonty.com/type-studio/fancy-letters/">Fancy Letters A–Z</a><p>Choose an uppercase letter and copy it in a Unicode style.</p></li>
+        </ul>
+      </div>
     </nav>
 
     <section class="ffg-section" id="symbols" aria-label="Fancy symbols and dividers">
