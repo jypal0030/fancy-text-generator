@@ -456,6 +456,23 @@ html body #ffg-root [data-ffg-results-grid]{
       <button class="ffg-showall" id="ffg-showall" type="button" hidden>Show all 54 styles</button>
     </section>
 
+    <nav id="text-tools" class="fv-tools-directory" aria-labelledby="text-tools-heading">
+      <div class="fv-directory-intro">
+        <p class="fv-directory-kicker">Explore text tools</p>
+        <h2 id="text-tools-heading">Find the right style for your text</h2>
+        <p>Pick a tool, try your own words, and copy a style you like.</p>
+      </div>
+      <ul>
+        <li><a href="./bubble-text-generator/">Bubble Text Generator</a><p>Turn letters into outlined or filled circles.</p></li>
+        <li><a href="./brackets-boxed-text-generator/">Brackets and Boxed Text Generator</a><p>Frame a phrase in brackets or turn letters into squares.</p></li>
+        <li><a href="./cursive-text-generator/">Cursive Text Generator</a><p>Compare regular and bold Unicode script.</p></li>
+        <li><a href="./instagram-bio-fonts/">Instagram Bio Fonts</a><p>Try readable styles on editable profile bio examples.</p></li>
+        <li><a href="./case-converter/">Case Converter</a><p>Compare and copy uppercase, title case, snake case and more.</p></li>
+        <li><a href="./cute-fancy-text/">Cute Fancy Text</a><p>Decorate captions and messages with hearts, stars, bows or soft script.</p></li>
+        <li><a href="./kaomoji/">Kaomoji &amp; Japanese Emoticons</a><p>Search and copy Japanese smileys, Lenny faces and other text reactions.</p></li>
+      </ul>
+    </nav>
+
     <section class="ffg-section" id="symbols" aria-label="Fancy symbols and dividers">
       <div class="ffg-status"><h2>Fancy Symbols &amp; Decorations</h2></div>
       <p style="color:var(--muted);max-width:760px;">Single symbols you can drop into bios, usernames and captions. Tap any symbol to copy it.</p>
@@ -1281,28 +1298,6 @@ html body #ffg-root [data-ffg-results-grid]{
 })();
 //FFG-JS-END
 </script>
-<nav id="text-tools" class="fv-tools-directory" aria-labelledby="text-tools-heading">
-  <div class="fv-directory-intro">
-    <p class="fv-directory-kicker">Explore text tools</p>
-    <h2 id="text-tools-heading">Find the right style for your text</h2>
-    <p>Pick a tool, try your own words, and copy a style you like.</p>
-  </div>
-  <ul>
-    <li><a href="./bubble-text-generator/">Bubble Text Generator</a><p>Turn letters into outlined or filled circles.</p></li>
-    <li><a href="./brackets-boxed-text-generator/">Brackets and Boxed Text Generator</a><p>Frame a phrase in brackets or turn letters into squares.</p></li>
-    <li><a href="./cursive-text-generator/">Cursive Text Generator</a><p>Compare regular and bold Unicode script.</p></li>
-    <li><a href="./instagram-bio-fonts/">Instagram Bio Fonts</a><p>Try readable styles on editable profile bio examples.</p></li>
-    <li><a href="./case-converter/">Case Converter</a><p>Compare and copy uppercase, title case, snake case and more.</p></li>
-    <li><a href="./cute-fancy-text/">Cute Fancy Text</a><p>Decorate captions and messages with hearts, stars, bows or soft script.</p></li>
-    <li><a href="./kaomoji/">Kaomoji &amp; Japanese Emoticons</a><p>Search and copy Japanese smileys, Lenny faces and other text reactions.</p></li>
-  </ul>
-</nav>
-<script>
-  (function () {
-    var directory = document.getElementById('text-tools');
-    var footer = document.querySelector('footer, [role="contentinfo"]');
-    if (footer) footer.before(directory);
-  })();
-</script>
+
 </body>
 </html>

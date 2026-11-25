@@ -16,7 +16,7 @@ Style definitions are bundled in the browser script. Favorites are stored on the
 
 ## Pages and routes
 
-- `/` — generator and reference content, including the `#generator` section and links to specialized tools.
+- `/` — generator and reference content, including the `#generator` section and the `#text-tools` directory immediately after it.
 - `/bubble-text-generator/` — outlined and filled Unicode bubble letters.
 - `/cursive-text-generator/` — regular and bold Unicode script previews.
 - `/instagram-bio-fonts/` — bold, italic and fullwidth previews with editable bio examples.
@@ -46,3 +46,4 @@ Canonical URLs use `https://fancyfonty.com/`, matching the sitemap. The homepage
 - Added Cute Fancy Text, linked it from the homepage and sitemap, and positioned the homepage tool directory before the footer.
 - Linked Kaomoji from the homepage and sitemap, updated its title, and added practical examples and contextual links to tool pages.
 - Switched canonical URLs, homepage sharing metadata and structured data, robots.txt, and sitemap URLs to `fancyfonty.com`.
+- Moved the homepage tool directory directly below the generator in HTML and removed its JavaScript relocation.
