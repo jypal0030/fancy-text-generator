@@ -258,7 +258,7 @@
   #ffg-root .fv-nav-studio:hover .fv-nav-arrow { transform: translateX(3px); }
 }
 
-@media (max-width: 53rem) {
+@media (max-width: 64rem) {
   #ffg-root .fv-nav-shell {
     min-height: 64px;
     grid-template-columns: minmax(0, 1fr) auto auto;
@@ -283,7 +283,14 @@
   }
 
   #ffg-root .fv-top[data-enhanced]:not([data-menu-open]) .fv-nav-links { display: none; }
-  #ffg-root .fv-top[data-menu-open] .fv-nav-links { animation: fv-nav-in var(--nav-ease) both; }
+  #ffg-root .fv-top[data-menu-open] .fv-nav-links {
+    max-height: 65vh;
+    max-height: 65dvh;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    padding-inline: 4px;
+    animation: fv-nav-in var(--nav-ease) both;
+  }
   #ffg-root .fv-top[data-menu-open] .fv-nav-toggle {
     border-color: var(--nav-violet);
     background: var(--nav-violet-bg);
@@ -309,7 +316,7 @@
   #ffg-root .fv-nav-arrow { margin-inline-start: auto; }
 }
 
-@media (max-width: 23rem) {
+@media (max-width: 25rem) {
   #ffg-root .fv-nav-wordmark small { display: none; }
   #ffg-root .fv-top .fv-nav-toggle { padding-inline: .45rem; }
   #ffg-root .fv-nav-toggle span {
