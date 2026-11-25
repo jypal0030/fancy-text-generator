@@ -128,7 +128,7 @@ function init() {
     });
     faces.addEventListener('click', (event) => {
       const button = event.target.closest('button');
-      if (button) copyText(button.textContent.trim(), status);
+      if (button) copyText(button.textContent, status, button);
     });
   }
 }

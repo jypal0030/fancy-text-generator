@@ -162,6 +162,7 @@
   outline-offset: 3px;
 }
 #text-tools li:active { background: var(--directory-tile); }
+#text-tools li:has(a[href$="/kaomoji/"]) { --directory-tile: #e9eee5; --directory-accent: #3c5e49; --directory-hover: #f2f6ef; }
 @media (hover: hover) {
   #text-tools li:hover {
     background: var(--directory-hover);
