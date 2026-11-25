@@ -136,3 +136,27 @@ canvas{max-width:100%;height:auto}
 .guide{margin-top:clamp(1.5rem,4vw,2.5rem);padding:clamp(.85rem,3vw,1.35rem);border:1px solid var(--fern-rule);border-inline-start:4px solid var(--accent);border-radius:var(--radius);background:var(--fern-wash)}
 .guide h2{margin:0 0 .4rem;font:700 clamp(1.2rem,3vw,1.55rem)/1.2 Georgia,serif;color:var(--ink)}
 .guide p{max-width:70ch;margin:.5rem 0 0;color:var(--muted)}
+
+/* Crawlable FontVerse directory shared by every Type Studio page. */
+.studio-tool-directory{margin-top:clamp(2rem,5vw,3.5rem);padding-top:clamp(1.5rem,4vw,2.5rem);border-top:1px solid var(--fern-rule)}
+.studio-tool-directory h2{margin:0 0 .6rem;font:700 clamp(1.65rem,4vw,2.5rem)/1.15 Georgia,serif;letter-spacing:-.035em;text-wrap:balance}
+.studio-tool-directory>p{max-width:62ch;margin:0 0 1.25rem;color:var(--muted)}
+.studio-tool-directory ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:.75rem;margin:0;padding:0;list-style:none}
+.studio-tool-directory li{min-width:0;padding:.85rem 1rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);box-shadow:var(--card-shadow)}
+.studio-tool-directory li:has(a[aria-current="page"]){border-color:var(--accent);border-inline-start-width:3px}
+.studio-tool-directory a{display:inline-flex;align-items:center;min-height:44px;font-weight:700;overflow-wrap:anywhere;text-underline-offset:.2em}
+.studio-tool-directory a[aria-current="page"]::after{content:"Current tool";margin-inline-start:.5rem;padding:.1rem .35rem;border-radius:4px;background:var(--fern-tile);font-size:.65rem;font-weight:750;letter-spacing:.04em;text-transform:uppercase}
+.studio-tool-directory li p{margin:.15rem 0 0;color:var(--muted);font-size:.9rem;line-height:1.5;overflow-wrap:anywhere}
+.studio-tool-directory a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(hover:hover) and (pointer:fine){
+  .studio-tool-directory li:hover{border-color:var(--accent)}
+}
+@media (width < 40rem){
+  .studio-tool-directory{margin-top:1.75rem;padding-top:1.25rem}
+  .studio-tool-directory h2{font-size:1.4rem}
+  .studio-tool-directory>p{margin-bottom:.85rem;font-size:.875rem}
+  .studio-tool-directory ul{gap:.5rem}
+  .studio-tool-directory li{padding:.55rem .7rem}
+  .studio-tool-directory a{font-size:.875rem;line-height:1.3}
+  .studio-tool-directory li p{font-size:.8125rem;line-height:1.4}
+}
