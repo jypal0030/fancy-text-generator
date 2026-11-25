@@ -57,6 +57,132 @@
 .fv-tools-directory a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
 .fv-tools-directory p { margin: 0 0 .35rem; color: var(--fv-muted); }
 
+/* Tool directory: soft lavender paper, plum ink and glyphs as type specimens. */
+#text-tools {
+  --directory-paper: #f8f4fa;
+  --directory-tile: #eee5f4;
+  --directory-line: #ded2e7;
+  --directory-hover: #f5ebfa;
+  --directory-accent: #6d357d;
+  background: var(--directory-paper);
+  border-block: 1px solid var(--directory-line);
+  padding-block: clamp(2rem, 5vw, 4rem);
+}
+#text-tools .fv-directory-intro { margin-block-end: clamp(1.15rem, 3vw, 1.75rem); }
+#text-tools .fv-directory-kicker {
+  margin: 0 0 .45rem;
+  color: var(--directory-accent);
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+#text-tools h2 {
+  margin: 0 0 .6rem;
+  font-size: clamp(1.85rem, 4.2vw, 3.1rem);
+  letter-spacing: -.04em;
+}
+#text-tools ul {
+  grid-template-columns: minmax(0, 1fr);
+  gap: .85rem;
+}
+#text-tools li {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-content: start;
+  gap: .4rem .65rem;
+  padding: 1.05rem;
+  border-color: var(--directory-line);
+  border-radius: var(--fv-radius);
+  transition: background-color .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+#text-tools li::before {
+  content: "Aa" / "";
+  display: grid;
+  place-items: center;
+  grid-column: 1;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: .25rem;
+  border: 1px solid var(--directory-line);
+  border-radius: 10px;
+  background: var(--directory-tile);
+  color: var(--directory-accent);
+  font: 700 1.2rem/1 Georgia, serif;
+}
+#text-tools li:has(a[href$="/bubble-text-generator/"])::before { content: "Ⓐ" / ""; }
+#text-tools li:has(a[href$="/brackets-boxed-text-generator/"])::before { content: "【A】" / ""; font-size: .9rem; }
+#text-tools li:has(a[href$="/cursive-text-generator/"])::before { content: "ℒ" / ""; }
+#text-tools li:has(a[href$="/instagram-bio-fonts/"])::before { content: "𝘉𝘪𝘰" / ""; }
+#text-tools li:has(a[href$="/case-converter/"])::before { content: "Aa" / ""; font-family: ui-monospace, monospace; }
+#text-tools li:has(a[href$="/cute-fancy-text/"])::before { content: "♡" / ""; font-size: 1.5rem; }
+#text-tools li:has(a[href$="/kaomoji/"])::before { content: "^‿^" / ""; }
+#text-tools li::after {
+  content: "↗" / "";
+  grid-area: 1 / 2;
+  align-self: start;
+  color: var(--directory-accent);
+  font-size: 1.2rem;
+  pointer-events: none;
+}
+#text-tools li a {
+  grid-column: 1 / -1;
+  min-height: 0;
+  color: var(--fv-ink);
+  font-size: 1rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+#text-tools li a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--fv-radius);
+}
+#text-tools li p {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: .9rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+#text-tools li:focus-within {
+  background: var(--directory-hover);
+  border-color: var(--directory-accent);
+}
+#text-tools li a:focus-visible {
+  outline: none;
+  color: var(--directory-accent);
+  text-decoration: underline;
+}
+#text-tools li a:focus-visible::after {
+  outline: 3px solid var(--directory-accent);
+  outline-offset: 3px;
+}
+#text-tools li:active { background: var(--directory-tile); }
+@media (hover: hover) {
+  #text-tools li:hover {
+    background: var(--directory-hover);
+    border-color: var(--directory-accent);
+    box-shadow: 0 4px 10px #381d4614;
+  }
+  #text-tools li:hover a {
+    color: var(--directory-accent);
+    text-decoration: underline;
+  }
+}
+@media (min-width: 40rem) {
+  #text-tools ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 62rem) {
+  #text-tools ul { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #text-tools li { transition: none; }
+}
+
 .fv-case-source button, .fv-case-output button { margin-top: .65rem; }
 .fv-case-section { margin-top: 1.2rem; }
 .fv-case-section > h2 { margin: 0 0 .65rem; font-size: clamp(1.4rem, 4vw, 1.8rem); }
