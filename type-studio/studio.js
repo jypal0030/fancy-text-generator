@@ -121,7 +121,7 @@
       if (!ready || exporting) return;
       exporting = true;
       syncDownload();
-      announce(exportStatus, 'Preparing your PNG.');
+      announce(exportStatus, 'Preparing your PNG…');
       const finish = message => {
         exporting = false;
         syncDownload();
@@ -143,7 +143,7 @@
             link.download = 'transparent-text.png';
             document.body.append(link);
             link.click();
-            finish('PNG download requested. If it doesn’t appear, check your browser’s download controls.');
+            finish('PNG ready. Download requested. Check your browser’s download controls if it doesn’t appear.');
           } catch {
             finish('Could not start the download. Try again or use another browser.');
           } finally {

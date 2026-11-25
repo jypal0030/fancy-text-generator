@@ -57,6 +57,18 @@ input,select{width:100%;min-width:0}
 .studio-workbench [aria-invalid="true"]{border-color:var(--invalid, #a33831)}
 :root[data-studio-theme="dark"]{--invalid:#f2a09a}
 [data-studio="png"] #status{margin:0 0 .75rem}
+[data-studio="png"] #export-status:not(:empty){
+  width:fit-content;
+  max-width:100%;
+  padding:.5rem .75rem;
+  border:1px solid var(--fern-rule);
+  border-inline-start:3px solid var(--accent);
+  border-radius:var(--radius);
+  background:var(--panel);
+  color:var(--ink);
+  font-weight:600;
+  overflow-wrap:anywhere;
+}
 [data-studio="png"] #export-status:empty{min-height:0;margin:0}
 [data-studio="png"] #download[aria-busy="true"]{cursor:progress}
 @media(hover:hover) and (pointer:fine){
