@@ -76,3 +76,4 @@ Canonical URLs use `https://fancyfonty.com/`, matching the sitemap. The homepage
 - Kept the standalone homepage Type Studio card compact on phones and tablets without changing the navbar; all three Studio pages inherit the homepage's `ffg_theme` preference or use the device preference.
 - Kept the homepage Type Studio card compact and tappable on small screens and shared the homepage theme across all three Studio pages.
 - Made Studio navigation and specimen cards more compact on phones and removed duplicate dark-theme rules.
+- Added page-specific WebApplication JSON-LD to all 11 tool pages using their sitemap canonical URLs.
