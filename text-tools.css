@@ -399,6 +399,67 @@
   #text-tools li { transition: none; }
 }
 
+/* Shared tool directory: the same crawlable destinations on every standalone tool page. */
+.fv-tool-directory {
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+  padding-top: clamp(1.5rem, 4vw, 2.5rem);
+  border-top: 1px solid var(--fv-border);
+}
+.fv-tool-directory h2 {
+  margin: 0 0 .6rem;
+  font-size: clamp(1.65rem, 4vw, 2.5rem);
+  letter-spacing: -.035em;
+}
+.fv-tool-directory > p {
+  max-width: 62ch;
+  margin: 0 0 1.25rem;
+  color: var(--fv-muted);
+}
+.fv-tool-directory ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: .75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.fv-tool-directory li {
+  min-width: 0;
+  padding: .85rem 1rem;
+  border: 1px solid var(--fv-border);
+  border-radius: 10px;
+  background: var(--fv-panel);
+}
+.fv-tool-directory li:has(a[aria-current="page"]) {
+  border-color: var(--fv-accent);
+  border-inline-start-width: 3px;
+}
+.fv-tool-directory a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+.fv-tool-directory a[aria-current="page"]::after {
+  content: "Current tool";
+  margin-inline-start: .5rem;
+  padding: .1rem .35rem;
+  border-radius: 4px;
+  background: #f0e9f6;
+  font-size: .65rem;
+  font-weight: 750;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.fv-tool-directory li p {
+  margin: .15rem 0 0;
+  color: var(--fv-muted);
+  font-size: .9rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
 .fv-case-source button, .fv-case-output button { margin-top: .65rem; }
 .fv-case-section { margin-top: 1.2rem; }
 .fv-case-section > h2 { margin: 0 0 .65rem; font-size: clamp(1.4rem, 4vw, 1.8rem); }
