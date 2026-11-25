@@ -24,6 +24,20 @@
 .fv-tool-header nav, .fv-tool-footer nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .25rem 1rem; }
 .fv-tool-header a, .fv-tool-footer a { display: inline-flex; align-items: center; min-height: 44px; }
 .fv-tool-header nav { padding-block: .45rem; }
+.fv-tool a.fv-back {
+  gap: .45rem;
+  padding: .35rem .75rem;
+  border: 1px solid var(--fv-border);
+  border-radius: 8px;
+  background: var(--fv-panel);
+  font-size: .875rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.fv-tool a.fv-back:hover {
+  border-color: var(--fv-accent);
+  text-decoration: underline;
+}
 .fv-tool a.fv-brand { font: bold 1.45rem Georgia, serif; color: var(--fv-ink); text-decoration: none; }
 .fv-tool main { padding-block: clamp(2rem, 6vw, 5rem) 2rem; }
 .fv-tool h1, .fv-tool h2, .fv-tools-directory h2 { color: var(--fv-ink); font-family: Georgia, serif; line-height: 1.1; }

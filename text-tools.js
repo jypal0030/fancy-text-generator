@@ -15,6 +15,7 @@
     boldSans: [0x1D5D4, 0x1D5EE, '𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵'],
     boldSerif: [0x1D400, 0x1D41A, '𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗'],
     boldItalic: [0x1D468, 0x1D482],
+    boldItalicSans: [0x1D63C, 0x1D656],
     fraktur: [0x1D504, 0x1D51E],
     boldFraktur: [0x1D56C, 0x1D586],
     italic: [0x1D608, 0x1D622],
@@ -34,6 +35,12 @@
     if (style === 'cuteStars') return `✧･ﾟ ${text} ﾟ･✧`;
     if (style === 'cuteBows') return `୨୧ ${text} ୨୧`;
     if (style === 'cuteScript') return `❀ ${convert(text, 'script')} ❀`;
+    if (style === 'frakturCorners') return `「${convert(text, 'fraktur')}」`;
+    if (style === 'frakturDiamonds') return `◇ ${convert(text, 'fraktur')} ◇`;
+    if (style === 'boldFrakturFrame') return `【${convert(text, 'boldFraktur')}】`;
+    if (style === 'boldUnderline') {
+      return convert(text, 'boldSans').replace(/[\u{1D5D4}-\u{1D607}\u{1D7EC}-\u{1D7F5}]\p{M}*/gu, '$&\u0332');
+    }
     const [upper, lower, digits] = ranges[style];
     return text.replace(/[A-Za-z0-9]/g, letter => {
       if (style === 'script' && Object.hasOwn(scriptExceptions, letter)) return scriptExceptions[letter];
