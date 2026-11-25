@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Online Font Tester – Compare 6 System Fonts | Type Studio</title>
-  <meta name="description" content="Preview your text in six serif, sans-serif and monospace fonts. Compare size, weight and letter spacing in one free browser-based font tester.">
+  <title>Online Font Tester – Compare 6 Fonts Side by Side | Type Studio</title>
+  <meta name="description" content="Type your own sample and compare six system fonts side by side. Adjust size, weight and letter spacing to see which font suits your heading or body text.">
   <meta name="theme-color" content="#edf2e9">
   <link rel="canonical" href="https://fancyfonty.com/type-studio/">
   <link rel="stylesheet" href="./studio.css">
@@ -22,9 +22,14 @@
     </nav>
   </header>
   <main data-studio="tester">
-    <p class="kicker">Type Studio <span aria-hidden="true">/</span> 01 · Type specimen</p>
-    <h1>Font Tester</h1>
-    <p class="intro">Compare the same text in six system font stacks. Adjust size, weight and spacing together so you can see what changes between faces.</p>
+    <header class="studio-intro">
+      <div>
+        <p class="kicker">Type Studio <span aria-hidden="true">/</span> 01 · Type specimen</p>
+        <h1>Font Tester</h1>
+        <p class="intro">Compare the same text in six system font stacks. Adjust size, weight and spacing together so you can see what changes between faces.</p>
+      </div>
+      <div class="studio-specimen" aria-hidden="true"><span>Aa</span><small>Font specimen</small></div>
+    </header>
     <section class="studio-workbench" aria-label="Font preview controls">
     <label for="sample">Your sample text</label>
     <textarea id="sample" rows="3" maxlength="500">The quick brown fox jumps over the lazy dog.</textarea>
@@ -43,7 +48,11 @@
       <article style="--face:'Courier New',monospace"><h2>Courier New</h2><p class="sample">The quick brown fox jumps over the lazy dog.</p><p class="body-sample">The quick brown fox jumps over the lazy dog.</p></article>
       <article style="--face:system-ui,sans-serif"><h2>System UI</h2><p class="sample">The quick brown fox jumps over the lazy dog.</p><p class="body-sample">The quick brown fox jumps over the lazy dog.</p></article>
     </section>
-    <section class="guide"><h2>How to compare fonts</h2><p>Try a real heading or a few lines from your project. Compare letter shapes in the large preview, then check readability in the smaller preview. If a named font is missing on your device, your browser uses a fallback from the same family. No font files are downloaded.</p></section>
+    <section class="guide">
+      <h2>How to compare fonts</h2>
+      <p>Try a real heading or a few lines from your project. Compare letter shapes in the large preview, then check readability in the smaller preview. If a named font is missing on your device, your browser uses a fallback from the same family. No font files are downloaded.</p>
+      <p>Need lettering for a slide or banner? Use the <a href="./transparent-text-generator/">transparent PNG text generator</a> to create a separate image.</p>
+    </section>
     <noscript><p>Enable JavaScript to edit and compare your own text.</p></noscript>
   </main>
   <footer class="studio-footer">

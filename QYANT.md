@@ -67,3 +67,4 @@ Canonical URLs use `https://fancyfonty.com/`, matching the sitemap. The homepage
 - Removed the pinned mobile header shortcut; Type Studio remains in the toggle menu and in the homepage intro as a compact card with a visible Font Tester action.
 - Removed the pinned mobile header shortcut; Type Studio remains in the toggle menu and in the homepage intro as a compact card with a visible Font Tester action.
 - Restored Type Studio to the mobile menu and kept the compact, labeled Type Studio card in the homepage intro.
+- Refined the shared Type Studio navigation and responsive specimen layouts, and updated all three pages with distinct metadata and contextual links to related tools.

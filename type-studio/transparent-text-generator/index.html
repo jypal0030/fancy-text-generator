@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Transparent Text Generator – Download Text as PNG | Type Studio</title>
-  <meta name="description" content="Create and download a transparent PNG from your text. Choose a font, size, colour and padding, then preview your lettering before you save it.">
+  <title>Transparent Text Generator – Download a Text PNG | Type Studio</title>
+  <meta name="description" content="Turn text into a PNG with a transparent background. Choose a font, size, colour and padding, preview the result, and download it in your browser.">
   <meta name="theme-color" content="#edf2e9">
   <link rel="canonical" href="https://fancyfonty.com/type-studio/transparent-text-generator/">
   <link rel="stylesheet" href="../studio.css">
@@ -22,9 +22,14 @@
     </nav>
   </header>
   <main data-studio="png">
-    <p class="kicker">Type Studio <span aria-hidden="true">/</span> 02 · Image export</p>
-    <h1>Transparent Text Generator</h1>
-    <p class="intro">Make a PNG from a word or phrase and place it over an image, slide or banner without a solid background.</p>
+    <header class="studio-intro">
+      <div>
+        <p class="kicker">Type Studio <span aria-hidden="true">/</span> 02 · Image export</p>
+        <h1>Transparent Text Generator</h1>
+        <p class="intro">Make a PNG from a word or phrase and place it over an image, slide or banner without a solid background.</p>
+      </div>
+      <div class="studio-specimen" aria-hidden="true"><span>Ag</span><small>PNG export</small></div>
+    </header>
     <section class="studio-workbench" aria-label="PNG preview and download">
     <label for="sample">Text for the image</label>
     <textarea id="sample" rows="3" maxlength="240">Field Notes</textarea>
@@ -38,7 +43,11 @@
     <button id="download" type="button" disabled>Download PNG</button>
     <p id="status" role="status"></p>
     </section>
-    <section class="guide"><h2>Will the background appear in my download?</h2><p>No. The tiled backdrop is only a preview aid. The PNG contains the lettering and transparent space. Padding adds clear space around the letters, and line breaks create separate lines in the image.</p></section>
+    <section class="guide">
+      <h2>Will the background appear in my download?</h2>
+      <p>No. The tiled backdrop is only a preview aid. The PNG contains the lettering and transparent space. Padding adds clear space around the letters, and line breaks create separate lines in the image.</p>
+      <p>Still choosing a typeface? Compare serif, sans-serif and monospace samples in the <a href="../">online font tester</a>.</p>
+    </section>
     <noscript><p>Enable JavaScript to preview and download a PNG.</p></noscript>
   </main>
   <footer class="studio-footer">
