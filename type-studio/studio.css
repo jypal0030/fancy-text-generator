@@ -16,9 +16,8 @@ a{color:var(--accent);text-underline-offset:.2em}
 .studio-nav a{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-width:0;min-height:48px;padding:.55rem .9rem;border:1px solid var(--fern-rule);border-radius:var(--radius);background:var(--panel);box-shadow:0 2px 0 #23443512;font-size:.875rem;font-weight:700;line-height:1.25;text-align:center;text-decoration:none;overflow-wrap:anywhere;transition:background-color var(--ease),border-color var(--ease),box-shadow var(--ease),transform var(--ease)}
 .studio-nav .studio-back{justify-content:flex-start;background:var(--fern-tile)}
 .studio-nav a[aria-current="page"]{background:var(--action);border-color:var(--action);color:var(--action-ink);box-shadow:0 3px 0 var(--action-shadow)}
-.studio-nav svg,.studio-type-icon{width:1.15rem;height:1.15rem;flex:none}
-.studio-nav svg{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-.studio-type-icon{font:700 1rem/1.15rem Georgia,serif}
+.studio-nav svg{width:1.15rem;height:1.15rem;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.studio-nav a > .studio-type-icon{display:inline-grid;place-items:center;flex:none;width:1.25rem;min-width:1.25rem;height:1rem;font:700 .8rem/1 Georgia,serif;white-space:nowrap;overflow-wrap:normal}
 main{padding-block:clamp(1.35rem,3.5vw,3rem) clamp(2rem,5vw,4rem)}
 .studio-intro{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:1.5rem;margin-bottom:1.4rem;padding-block:0 1.35rem;border-bottom:1px solid var(--fern-rule)}
 .kicker{display:flex;align-items:center;flex-wrap:wrap;gap:.4rem;margin:0 0 .7rem;color:var(--accent);font-size:.78rem;font-weight:750;letter-spacing:.12em;text-transform:uppercase}
@@ -85,7 +84,8 @@ input,select{width:100%;min-width:0}
   .studio-nav a{min-height:44px;padding:.4rem .55rem;font-size:.8125rem}
   .studio-nav a > span{min-width:0;overflow-wrap:anywhere}
   .studio-nav .studio-back{flex-shrink:0}
-  .studio-nav svg,.studio-type-icon{width:1rem;height:1rem;line-height:1rem}
+  .studio-nav svg{width:1rem;height:1rem}
+  .studio-nav a > .studio-type-icon{width:1.125rem;min-width:1.125rem;font-size:.75rem}
   .specimens{gap:.75rem;margin-top:1.3rem}
   .specimens article{padding:.65rem .75rem}
   .specimens .sample{font-size:max(1rem,calc(var(--size,32px) * .875));margin:.4rem 0}
