@@ -4,7 +4,7 @@
 body{margin:0;background:var(--paper);color:var(--ink)}
 /* Studio navigation and surfaces use the homepage feature's fern-green and cream palette. */
 :root{--fern-wash:#edf2e9;--fern-tile:#e0eadf;--fern-rule:#a8bcac;--lift:0 8px 20px #233b2814;--ease:180ms ease;--gutter:clamp(.75rem,3vw,2rem);--action:#234435;--action-hover:#315b47;--action-ink:#fff;--action-shadow:#183026;--kicker-mark:#59745e;--card-shadow:0 3px 8px #233b2812;--preview-paper:#fff;--preview-tiles:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='%23e5e9e4' d='M0 0h12v12H0zM12 12h12v12H12z'/%3E%3C/svg%3E")}
-:root[data-studio-theme="dark"]{color-scheme:dark;--paper:#111b16;--panel:#1a2921;--ink:#edf5ec;--muted:#bfcec2;--accent:#afe0bc;--line:#5d7566;--fern-wash:#192b23;--fern-tile:#263c30;--fern-rule:#65816e;--lift:0 8px 20px #0005;--card-shadow:0 3px 8px #0004;--action:#b7e4c2;--action-hover:#d0f0d7;--action-ink:#14251a;--action-shadow:#0c1510;--kicker-mark:#9bbb9f;--preview-paper:#54655b;--preview-tiles:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='%23718277' d='M0 0h12v12H0zM12 12h12v12H12z'/%3E%3C/svg%3E")}
+:root[data-studio-theme="dark"]{color-scheme:dark;--paper:#111b16;--panel:#1a2921;--ink:#edf5ec;--muted:#bfcec2;--accent:#afe0bc;--line:#5d7566;--fern-wash:#192b23;--fern-tile:#263c30;--fern-rule:#65816e;--lift:0 8px 20px #0005;--card-shadow:0 3px 8px #0004;--action:#b7e4c2;--action-hover:#d0f0d7;--action-ink:#14251a;--action-shadow:#0c1510;--kicker-mark:#9bbb9f;--preview-paper:#a6b5a9;--preview-tiles:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='%23849589' d='M0 0h12v12H0zM12 12h12v12H12z'/%3E%3C/svg%3E")}
 body{min-height:100vh;display:flex;flex-direction:column}
 a{color:var(--accent);text-underline-offset:.2em}
 .studio-header,.studio-footer{background:var(--fern-wash);border-color:var(--fern-rule);border-style:solid;border-width:0}
@@ -12,7 +12,7 @@ a{color:var(--accent);text-underline-offset:.2em}
 .studio-footer{border-top-width:1px;margin-top:auto}
 .studio-nav,main,.studio-footer-inner{width:min(68rem,calc(100% - var(--gutter) * 2));margin-inline:auto}
 .studio-nav{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding-block:.85rem}
-.studio-tabs{display:flex;align-items:stretch;gap:.5rem;min-width:0}
+.studio-tabs{display:flex;align-items:stretch;gap:.5rem;min-width:0;margin-inline-start:auto}
 .studio-nav a{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-width:0;min-height:48px;padding:.55rem .9rem;border:1px solid var(--fern-rule);border-radius:var(--radius);background:var(--panel);box-shadow:0 2px 0 #23443512;font-size:.875rem;font-weight:700;line-height:1.25;text-align:center;text-decoration:none;overflow-wrap:anywhere;transition:background-color var(--ease),border-color var(--ease),box-shadow var(--ease),transform var(--ease)}
 .studio-nav .studio-back{justify-content:flex-start;background:var(--fern-tile)}
 .studio-nav a[aria-current="page"]{background:var(--action);border-color:var(--action);color:var(--action-ink);box-shadow:0 3px 0 var(--action-shadow)}
@@ -61,23 +61,33 @@ input,select{width:100%;min-width:0}
 @media (min-width:56rem){
   [data-studio="tester"] .specimens{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
-@media(max-width:640px){
-  .studio-nav{flex-direction:column;align-items:stretch;gap:.5rem;padding-block:.5rem .7rem}
-  .studio-nav .studio-back{align-self:flex-start;padding-inline:.65rem}
-  .studio-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.35rem}
-  .studio-nav a{min-height:44px;padding:.35rem .3rem;gap:.3rem;font-size:.75rem}
-  .studio-nav svg,.studio-type-icon{width:1rem;height:1rem;line-height:1rem}
-  .studio-intro{display:block;margin-bottom:1rem;padding-bottom:1rem}
-  .studio-specimen{display:none}
-  .kicker{font-size:.69rem;margin-bottom:.5rem}
-  .intro{margin-top:.55rem;font-size:.9375rem}
-  .specimens{gap:.65rem}
-  [data-studio="letters"] .specimens{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .studio-footer-inner{padding-block:1rem}
-  .studio-footer a{font-size:.8125rem}
+@media(min-width:40rem) and (max-width:56rem){
+  .studio-nav a{min-height:46px;padding-inline:.65rem;font-size:.8125rem}
 }
-@media(max-width:360px){
-  .studio-tabs a{flex-direction:column;gap:.15rem}
+@media(max-width:39.999rem){
+  .studio-nav{display:grid;grid-template-columns:minmax(0,1fr);gap:.45rem;padding-block:.5rem .65rem}
+  .studio-nav .studio-back{justify-self:start;padding-inline:.65rem}
+  .studio-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.35rem;margin:0}
+  .studio-nav a{min-height:44px;padding:.3rem .25rem;gap:.25rem;font-size:.75rem}
+  .studio-tabs a{flex-direction:column;text-wrap:balance}
+  .studio-nav svg,.studio-type-icon{width:1rem;height:1rem;line-height:1rem}
+  main{padding-top:1.15rem}
+  .studio-intro{display:block;margin-bottom:.8rem;padding-bottom:.8rem}
+  .studio-specimen{display:none}
+  .kicker{font-size:.69rem;margin-bottom:.4rem}
+  .intro{margin-top:.45rem;font-size:.875rem}
+  .studio-workbench{padding:.7rem;font-size:.875rem}
+  .studio-workbench textarea:focus,.studio-workbench input:focus,.studio-workbench select:focus{font-size:max(1rem,1em)}
+  .studio-workbench .controls{grid-template-columns:repeat(auto-fit,minmax(min(100%,8.5rem),1fr));gap:.5rem;margin-top:.65rem}
+  .specimens{margin-top:1.15rem;gap:.55rem}
+  .specimens article{padding:.65rem}
+  .specimens article h2{font-size:.8rem}
+  .specimens .sample{font-size:calc(var(--size,32px) * .875);margin:.45rem 0}
+  .specimens .body-sample,.specimens button{font-size:.875rem}
+  [data-studio="letters"] .specimens{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .specimens .glyph{font-size:2rem;line-height:1.2;margin:.35rem 0 .5rem}
+  .studio-footer-inner{padding-block:.85rem}
+  .studio-footer a{font-size:.8125rem}
 }
 @media(prefers-reduced-motion:reduce){
   .studio-nav a,.specimens article{transition:none}
@@ -96,84 +106,3 @@ canvas{max-width:100%;height:auto}
 .guide{margin-top:clamp(1.5rem,4vw,2.5rem);padding:clamp(.85rem,3vw,1.35rem);border:1px solid var(--fern-rule);border-inline-start:4px solid var(--accent);border-radius:var(--radius);background:var(--fern-wash)}
 .guide h2{margin:0 0 .4rem;font:700 clamp(1.2rem,3vw,1.55rem)/1.2 Georgia,serif;color:var(--ink)}
 .guide p{max-width:70ch;margin:.5rem 0 0;color:var(--muted)}
-
-/* Shared forest night palette for the three Studio tools. */
-:root[data-studio-theme="dark"] {
-  color-scheme: dark;
-  --paper: #111b16;
-  --panel: #1a2921;
-  --ink: #edf5ec;
-  --muted: #bfcec2;
-  --accent: #afe0bc;
-  --line: #5d7566;
-  --fern-wash: #192b23;
-  --fern-tile: #263c30;
-  --fern-rule: #65816e;
-  --lift: 0 8px 20px #0005;
-  --night-action-ink: #14251a;
-}
-
-:root[data-studio-theme="dark"] body { background: var(--paper); color: var(--ink); }
-:root[data-studio-theme="dark"] .kicker span { color: var(--accent); }
-:root[data-studio-theme="dark"] .specimens article { box-shadow: 0 3px 8px #0004; }
-:root[data-studio-theme="dark"] .specimens article:focus-within { box-shadow: var(--lift); }
-
-:root[data-studio-theme="dark"] button,
-:root[data-studio-theme="dark"] .studio-nav a[aria-current="page"] {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--night-action-ink);
-}
-
-@media (hover: hover) and (pointer: fine) {
-  :root[data-studio-theme="dark"] .specimens article:hover { box-shadow: var(--lift); }
-  :root[data-studio-theme="dark"] main button:not(:disabled):hover {
-    background: #d0f0d7;
-    border-color: #d0f0d7;
-  }
-}
-
-/* The checkerboard is preview-only; exported PNGs stay transparent. */
-:root[data-studio-theme="dark"] .preview {
-  background: #a6b5a9 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='%23849589' d='M0 0h12v12H0zM12 12h12v12H12z'/%3E%3C/svg%3E");
-}
-
-/* All three Studio tools inherit the homepage's forest night palette. */
-:root[data-studio-theme="dark"] {
-  color-scheme: dark;
-  --paper: #111b16;
-  --panel: #1a2921;
-  --ink: #edf5ec;
-  --muted: #bfcec2;
-  --accent: #afe0bc;
-  --line: #5d7566;
-  --fern-wash: #192b23;
-  --fern-tile: #263c30;
-  --fern-rule: #65816e;
-  --lift: 0 8px 20px #0005;
-  --night-action-ink: #14251a;
-}
-
-:root[data-studio-theme="dark"] body { background: var(--paper); color: var(--ink); }
-:root[data-studio-theme="dark"] .kicker span { color: var(--accent); }
-:root[data-studio-theme="dark"] .specimens article { box-shadow: 0 3px 8px #0004; }
-:root[data-studio-theme="dark"] .specimens article:is(:hover,:focus-within) { box-shadow: var(--lift); }
-
-:root[data-studio-theme="dark"] button,
-:root[data-studio-theme="dark"] .studio-nav a[aria-current="page"] {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--night-action-ink);
-}
-
-@media (hover: hover) and (pointer: fine) {
-  :root[data-studio-theme="dark"] main button:not(:disabled):hover {
-    background: #d0f0d7;
-    border-color: #d0f0d7;
-  }
-}
-
-/* The checkerboard is preview-only; exported PNGs stay transparent. */
-:root[data-studio-theme="dark"] .preview {
-  background: #a6b5a9 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='%23849589' d='M0 0h12v12H0zM12 12h12v12H12z'/%3E%3C/svg%3E");
-}
