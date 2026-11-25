@@ -24,6 +24,8 @@ Style definitions are bundled in the browser script. Favorites are stored on the
 - `/case-converter/` — nine live case previews with individual copy buttons, plus a dropdown for extra conversions and text cleanup; uses `utility-tools.js`.
 - `/cute-fancy-text/` — live previews and copy controls for hearts, stars, bows and floral cursive.
 - `/kaomoji/` — searchable Japanese emoticons and Lenny faces with copy buttons; uses `utility-tools.js` and is linked from the homepage and sitemap.
+- `/gothic-font-generator/` — live regular and bold Fraktur previews with copy controls.
+- `/bold-font-generator/` — live bold serif, bold sans serif and bold italic serif previews with copy controls.
 - `robots.txt`, `sitemap.xml`, and `og-image.svg` are static crawl and sharing assets.
 
 ## Environment
@@ -47,3 +49,4 @@ Canonical URLs use `https://fancyfonty.com/`, matching the sitemap. The homepage
 - Linked Kaomoji from the homepage and sitemap, updated its title, and added practical examples and contextual links to tool pages.
 - Switched canonical URLs, homepage sharing metadata and structured data, robots.txt, and sitemap URLs to `fancyfonty.com`.
 - Moved the homepage tool directory directly below the generator in HTML and removed its JavaScript relocation.
+- Added Gothic and Bold Font Generators, linked them from the homepage directory and related tools, and added both to the sitemap.

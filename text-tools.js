@@ -12,6 +12,11 @@
     script: [0x1D49C, 0x1D4B6],
     boldScript: [0x1D4D0, 0x1D4EA],
     bold: [0x1D5D4, 0x1D5EE],
+    boldSans: [0x1D5D4, 0x1D5EE, '𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵'],
+    boldSerif: [0x1D400, 0x1D41A, '𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗'],
+    boldItalic: [0x1D468, 0x1D482],
+    fraktur: [0x1D504, 0x1D51E],
+    boldFraktur: [0x1D56C, 0x1D586],
     italic: [0x1D608, 0x1D622],
     wide: [0xFF21, 0xFF41, '０１２３４５６７８９']
   };
@@ -19,6 +24,8 @@
     B: 'ℬ', E: 'ℰ', F: 'ℱ', H: 'ℋ', I: 'ℐ', L: 'ℒ', M: 'ℳ', R: 'ℛ',
     e: 'ℯ', g: 'ℊ', o: 'ℴ'
   };
+
+  const frakturExceptions = { C: 'ℭ', H: 'ℌ', I: 'ℑ', R: 'ℜ', Z: 'ℨ' };
 
   function convert(text, style) {
     if (style === 'cornerBrackets') return `「${text}」`;
@@ -30,6 +37,7 @@
     const [upper, lower, digits] = ranges[style];
     return text.replace(/[A-Za-z0-9]/g, letter => {
       if (style === 'script' && Object.hasOwn(scriptExceptions, letter)) return scriptExceptions[letter];
+      if (style === 'fraktur' && Object.hasOwn(frakturExceptions, letter)) return frakturExceptions[letter];
       const code = letter.charCodeAt(0);
       if (code >= 97) return String.fromCodePoint(lower + code - 97);
       if (code >= 65) return String.fromCodePoint(upper + code - 65);
