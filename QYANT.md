@@ -64,3 +64,6 @@ Canonical URLs use `https://fancyfonty.com/`, matching the sitemap. The homepage
 - Replaced the homepage navbar with a type-specimen wordmark, a prominent Type Studio link, an Explore disclosure, and a mobile menu while preserving the theme control.
 - Kept a compact Type Studio shortcut visible outside the collapsed menu on phones and tablets.
 - Kept the Type Studio shortcut visible outside the collapsed homepage menu on phones and tablets.
+- Removed the pinned mobile header shortcut; Type Studio remains in the toggle menu and in the homepage intro as a compact card with a visible Font Tester action.
+- Removed the pinned mobile header shortcut; Type Studio remains in the toggle menu and in the homepage intro as a compact card with a visible Font Tester action.
+- Restored Type Studio to the mobile menu and kept the compact, labeled Type Studio card in the homepage intro.

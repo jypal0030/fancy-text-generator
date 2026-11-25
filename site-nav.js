@@ -8,9 +8,6 @@
 
   const explore = nav.querySelector('.fv-nav-more');
   const summary = explore?.querySelector('summary');
-  const studio = nav.querySelector('.fv-nav-studio');
-  const studioPosition = document.createComment('Desktop Type Studio link position');
-  if (studio) studio.before(studioPosition);
   const mobile = window.matchMedia('(max-width: 64rem)');
   header.setAttribute('data-nav-ready', '');
   header.setAttribute('data-enhanced', '');
@@ -58,15 +55,9 @@
 
   function resetAtBreakpoint() {
     const focused = document.activeElement;
-    const focusedStudio = studio?.contains(focused);
-    if (studio) {
-      if (mobile.matches) toggle.before(studio);
-      else studioPosition.after(studio);
-      header.toggleAttribute('data-studio-pinned', mobile.matches);
-    }
-    setMenu(false, mobile.matches && nav.contains(focused) && !focusedStudio);
-    if (focusedStudio) focused.focus({ preventScroll: true });
-    else if (!mobile.matches && focused === toggle) nav.querySelector('a')?.focus();
+    const collapsed = mobile.matches;
+    setMenu(false, collapsed && nav.contains(focused));
+    if (!collapsed && focused === toggle) nav.querySelector('a')?.focus();
   }
 
   if (mobile.addEventListener) mobile.addEventListener('change', resetAtBreakpoint);
