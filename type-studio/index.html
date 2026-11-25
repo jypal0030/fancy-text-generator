@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Font Tester – Preview and Compare Fonts Online | Type Studio</title>
+  <meta name="description" content="Compare your own text in serif, sans-serif and monospace fonts. Adjust size, weight and spacing, then try transparent PNG export or copyable fancy letters.">
+  <link rel="canonical" href="https://fancyfonty.com/type-studio/">
+  <link rel="stylesheet" href="./studio.css">
+  <script src="./studio.js" defer></script>
+</head>
+<body>
+  <header><nav aria-label="Main navigation"><a class="brand" href="./">Type Studio</a><a href="./" aria-current="page">Font Tester</a><a href="./transparent-text-generator/">PNG Text</a><a href="./fancy-letters/">Fancy Letters</a></nav></header>
+  <main data-studio="tester">
+    <p class="kicker">01 / Type specimen</p>
+    <h1>Font Tester</h1>
+    <p class="intro">Compare the same text in six system font stacks. Adjust size, weight and spacing together so you can see what changes between faces.</p>
+    <label for="sample">Your sample text</label>
+    <textarea id="sample" rows="3" maxlength="500">The quick brown fox jumps over the lazy dog.</textarea>
+    <div class="controls">
+      <label>Size (px)<input id="size" type="number" min="12" max="120" value="32"></label>
+      <label>Weight<select id="weight"><option value="400">Regular</option><option value="700">Bold</option></select></label>
+      <label>Letter spacing (px)<input id="spacing" type="number" min="-3" max="20" step=".5" value="0"></label>
+    </div>
+    <section class="specimens" aria-label="Font comparison">
+      <article style="--face:Georgia,serif"><h2>Georgia</h2><p class="sample">The quick brown fox jumps over the lazy dog.</p><p class="body-sample">The quick brown fox jumps over the lazy dog.</p></article>
+      <article style="--face:'Times New Roman',serif"><h2>Times New Roman</h2><p class="sample">The quick brown fox jumps over the lazy dog.</p><p class="body-sample">The quick brown fox jumps over the lazy dog.</p></article>
+      <article style="--face:Arial,sans-serif"><h2>Arial</h2><p class="sample">The quick brown fox jumps over the lazy dog.</p><p class="body-sample">The quick brown fox jumps over the lazy dog.</p></article>
+      <article style="--face:Verdana,sans-serif"><h2>Verdana</h2><p class="sample">The quick brown fox jumps over the lazy dog.</p><p class="body-sample">The quick brown fox jumps over the lazy dog.</p></article>
+      <article style="--face:'Courier New',monospace"><h2>Courier New</h2><p class="sample">The quick brown fox jumps over the lazy dog.</p><p class="body-sample">The quick brown fox jumps over the lazy dog.</p></article>
+      <article style="--face:system-ui,sans-serif"><h2>System UI</h2><p class="sample">The quick brown fox jumps over the lazy dog.</p><p class="body-sample">The quick brown fox jumps over the lazy dog.</p></article>
+    </section>
+    <section class="guide"><h2>How to compare fonts</h2><p>Try a real heading or a few lines from your project. Compare letter shapes in the large preview, then check readability in the smaller preview. If a named font is missing on your device, your browser uses a fallback from the same family. No font files are downloaded.</p></section>
+    <noscript><p>Enable JavaScript to edit and compare your own text.</p></noscript>
+  </main>
+  <footer><a href="../#text-tools">Back to FontVerse text tools</a></footer>
+</body>
+</html>

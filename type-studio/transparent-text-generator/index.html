@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transparent Text Generator – Download Text as PNG | Type Studio</title>
+  <meta name="description" content="Turn words into a transparent PNG. Choose a font, size, colour and padding, preview the text and download it without a background.">
+  <link rel="canonical" href="https://fancyfonty.com/type-studio/transparent-text-generator/">
+  <link rel="stylesheet" href="../studio.css">
+  <script src="../studio.js" defer></script>
+</head>
+<body>
+  <header><nav aria-label="Main navigation"><a class="brand" href="../">Type Studio</a><a href="../">Font Tester</a><a href="./" aria-current="page">PNG Text</a><a href="../fancy-letters/">Fancy Letters</a></nav></header>
+  <main data-studio="png">
+    <p class="kicker">02 / Image export</p>
+    <h1>Transparent Text Generator</h1>
+    <p class="intro">Make a PNG from a word or phrase and place it over an image, slide or banner without a solid background.</p>
+    <label for="sample">Text for the image</label>
+    <textarea id="sample" rows="3" maxlength="240">Field Notes</textarea>
+    <div class="controls">
+      <label>Font<select id="face"><option>Georgia</option><option>Arial</option><option>Verdana</option><option>Courier New</option></select></label>
+      <label>Size (px)<input id="size" type="number" min="12" max="160" value="72"></label>
+      <label>Text colour<input id="colour" type="color" value="#234435"></label>
+      <label>Padding (px)<input id="padding" type="number" min="0" max="200" value="24"></label>
+    </div>
+    <div class="preview"><canvas id="art" role="img" aria-label="Transparent text image preview" hidden></canvas></div>
+    <button id="download" type="button" disabled>Download PNG</button>
+    <p id="status" role="status"></p>
+    <section class="guide"><h2>Will the background appear in my download?</h2><p>No. The tiled backdrop is only a preview aid. The PNG contains the lettering and transparent space. Padding adds clear space around the letters, and line breaks create separate lines in the image.</p></section>
+    <noscript><p>Enable JavaScript to preview and download a PNG.</p></noscript>
+  </main>
+  <footer><a href="../">Back to Font Tester</a></footer>
+</body>
+</html>
