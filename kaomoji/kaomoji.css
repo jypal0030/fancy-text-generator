@@ -1,0 +1,40 @@
+/* Plum accents for copyable faces. */
+#face-workbench {
+  --face-accent: #71385f;
+  --face-tint: #f8edf5;
+  --face-border: #ddc8d7;
+}
+
+#face-workbench section {
+  margin-block: 1.5rem;
+}
+
+#face-workbench section button {
+  min-height: 44px;
+  max-width: 100%;
+  margin: .25rem .25rem .25rem 0;
+  padding: .6rem .85rem;
+  border: 1px solid var(--face-border);
+  border-radius: .75rem;
+  background: #fff;
+  color: #32222d;
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+#face-workbench section button:hover,
+#face-workbench section button:focus-visible {
+  background: var(--face-tint);
+  border-color: var(--face-accent);
+  color: var(--face-accent);
+}
+
+#face-workbench :is(button, input):focus-visible {
+  outline: 2px solid var(--face-accent);
+  outline-offset: 3px;
+}
+
+#face-workbench [hidden] {
+  display: none !important;
+}

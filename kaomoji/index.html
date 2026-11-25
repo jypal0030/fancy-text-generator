@@ -7,7 +7,9 @@
   <meta name="description" content="Find and copy Japanese smiley faces, happy emoticons, mischievous Lenny faces, drool kaomoji and more. Search by mood or browse the collection.">
   <link rel="canonical" href="https://fancyfontly.com/kaomoji/">
   <link rel="stylesheet" href="../text-tools.css">
+  <link rel="stylesheet" href="./kaomoji.css">
   <script src="../utility-tools.js" defer></script>
+  <script type="module" src="./search.js"></script>
 </head>
 <body class="fv-tool">
   <header class="fv-tool-header"><nav class="fv-shell" aria-label="Main navigation">
@@ -20,14 +22,18 @@
     <p class="fv-lead">Find a text face for your next message. Pick a mood, then select a face to copy it as plain text.</p>
     <div class="fv-workbench" id="face-workbench">
       <label for="face-search">Find a face</label>
-      <input id="face-search" type="search" placeholder="Try happy, drool, or cat">
-      <p id="face-status" role="status"></p>
+      <input id="face-search" type="search" placeholder="Try happy, Lenny, or cat" autocomplete="off" aria-describedby="face-hint">
+      <p id="face-hint">Search by mood or paste a face. Select any result to copy it.</p>
+      <p class="fv-status" id="face-status" role="status"></p>
+      <noscript><p>Enable JavaScript for live search and one-click copy.</p></noscript>
       <section data-tags="happy smile japanese smiley faces emoticons funny laugh">
         <h2>Happy emoticons &amp; Japanese smileys</h2>
         <button type="button">(^_^)</button>
         <button type="button">(＾▽＾)</button>
         <button type="button">(⌒‿⌒)</button>
         <button type="button">(≧▽≦)</button>
+        <button type="button">ヽ(・∀・)ﾉ</button>
+        <button type="button">٩(ˊᗜˋ*)و</button>
       </section>
       <section data-tags="evil mischievous devil smirk jemoticons lenny faces">
         <h2>Mischievous kaomoji &amp; Lenny faces</h2>
@@ -35,6 +41,14 @@
         <button type="button">(¬‿¬)</button>
         <button type="button">( ͡° ͜ʖ ͡°)</button>
         <button type="button">(◣‿◢)</button>
+        <button type="button">( ͡~ ͜ʖ ͡°)</button>
+        <button type="button">( ͡ᵔ ͜ʖ ͡ᵔ )</button>
+      </section>
+      <section data-tags="love heart cute hug kiss affection">
+        <h2>Love &amp; hugs</h2>
+        <button type="button">(♡‿♡)</button>
+        <button type="button">(づ｡◕‿‿◕｡)づ</button>
+        <button type="button">( ˘ ³˘)♥</button>
       </section>
       <section data-tags="drool drooling hungry food yum jemoticons">
         <h2>Drool kaomoji</h2>
