@@ -4,23 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fancy Letters A–Z – Copy and Paste Styled Letters | Type Studio</title>
-  <meta name="description" content="Find fancy versions of the letter A or any letter through Z. Compare bold, script, blackletter, circled and boxed Unicode letters and copy your favourite.">
+  <meta name="description" content="Explore fancy uppercase letters A–Z. Choose a letter, compare five Unicode styles including script and blackletter, and copy your favourite.">
+  <meta name="theme-color" content="#edf2e9">
   <link rel="canonical" href="https://fancyfonty.com/type-studio/fancy-letters/">
   <link rel="stylesheet" href="../studio.css">
   <script src="../studio.js" defer></script>
 </head>
 <body>
-  <header><nav aria-label="Main navigation"><a class="brand" href="../">Type Studio</a><a href="../">Font Tester</a><a href="../transparent-text-generator/">PNG Text</a><a href="./" aria-current="page">Fancy Letters</a></nav></header>
+  <header class="studio-header">
+    <nav class="studio-nav" aria-label="Type Studio navigation">
+      <a class="studio-back" href="../../#text-tools"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M19 12H5m7-7-7 7 7 7"/></svg><span>Back to Text Tools</span></a>
+      <div class="studio-tabs">
+        <a href="../"><span class="studio-type-icon" aria-hidden="true">Aa</span><span>Font Tester</span></a>
+        <a href="../transparent-text-generator/"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1"/><path d="m4 17 5-4 3 2 5-5 4 4"/></svg><span>PNG Text</span></a>
+        <a href="./" aria-current="page"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3c0 5-4 9-9 9 5 0 9 4 9 9 0-5 4-9 9-9-5 0-9-4-9-9Z"/></svg><span>Fancy Letters</span></a>
+      </div>
+    </nav>
+  </header>
   <main data-studio="letters">
-    <p class="kicker">03 / Letter explorer</p>
+    <p class="kicker">Type Studio <span aria-hidden="true">/</span> 03 · Letter explorer</p>
     <h1>Fancy Letters A–Z</h1>
     <p class="intro">Start with the letter A or choose any uppercase letter. Compare five styles and copy a character for a short heading or display name.</p>
-    <div class="controls">
+    <div class="controls studio-workbench studio-letter-picker">
       <label>Choose a letter<select id="letter" disabled>
         <option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option><option>M</option><option>N</option><option>O</option><option>P</option><option>Q</option><option>R</option><option>S</option><option>T</option><option>U</option><option>V</option><option>W</option><option>X</option><option>Y</option><option>Z</option>
       </select></label>
     </div>
-    <section class="specimens" aria-label="Copyable letter styles">
+    <section class="specimens" aria-labelledby="letter-styles-heading">
+      <h2 class="studio-section-title" id="letter-styles-heading">Copyable letter styles</h2>
       <article data-base="119808"><h2>Bold serif</h2><p class="glyph">𝐀</p><button disabled type="button" aria-label="Copy bold serif letter">Copy</button></article>
       <article data-base="120016"><h2>Bold script</h2><p class="glyph">𝓐</p><button disabled type="button" aria-label="Copy bold script letter">Copy</button></article>
       <article data-base="120172"><h2>Bold blackletter</h2><p class="glyph">𝕬</p><button disabled type="button" aria-label="Copy bold blackletter letter">Copy</button></article>
@@ -31,6 +42,15 @@
     <section class="guide"><h2>Are these installable fonts?</h2><p>No. These are Unicode characters that look like styled letters. Some apps and screen readers handle them differently from ordinary letters. Check the result after pasting, and keep important information in plain text.</p></section>
     <noscript><p>You can select and copy the letter A examples manually. Enable JavaScript to browse other letters.</p></noscript>
   </main>
-  <footer><a href="../">Back to Font Tester</a></footer>
+  <footer class="studio-footer">
+    <div class="studio-footer-inner">
+      <div><strong>Type Studio</strong><p>Compare type, create a transparent image, or find a letter to copy.</p></div>
+      <nav aria-label="More text tools">
+        <a href="../">Online Font Tester</a>
+        <a href="../transparent-text-generator/">Transparent PNG Text</a>
+        <a href="../../#text-tools">All FontVerse tools</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>

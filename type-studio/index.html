@@ -3,18 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Font Tester – Preview and Compare Fonts Online | Type Studio</title>
-  <meta name="description" content="Compare your own text in serif, sans-serif and monospace fonts. Adjust size, weight and spacing, then try transparent PNG export or copyable fancy letters.">
+  <title>Online Font Tester – Compare 6 System Fonts | Type Studio</title>
+  <meta name="description" content="Preview your text in six serif, sans-serif and monospace fonts. Compare size, weight and letter spacing in one free browser-based font tester.">
+  <meta name="theme-color" content="#edf2e9">
   <link rel="canonical" href="https://fancyfonty.com/type-studio/">
   <link rel="stylesheet" href="./studio.css">
   <script src="./studio.js" defer></script>
 </head>
 <body>
-  <header><nav aria-label="Main navigation"><a class="brand" href="./">Type Studio</a><a href="./" aria-current="page">Font Tester</a><a href="./transparent-text-generator/">PNG Text</a><a href="./fancy-letters/">Fancy Letters</a></nav></header>
+  <header class="studio-header">
+    <nav class="studio-nav" aria-label="Type Studio navigation">
+      <a class="studio-back" href="../#text-tools"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M19 12H5m7-7-7 7 7 7"/></svg><span>Back to Text Tools</span></a>
+      <div class="studio-tabs">
+        <a href="./" aria-current="page"><span class="studio-type-icon" aria-hidden="true">Aa</span><span>Font Tester</span></a>
+        <a href="./transparent-text-generator/"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1"/><path d="m4 17 5-4 3 2 5-5 4 4"/></svg><span>PNG Text</span></a>
+        <a href="./fancy-letters/"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3c0 5-4 9-9 9 5 0 9 4 9 9 0-5 4-9 9-9-5 0-9-4-9-9Z"/></svg><span>Fancy Letters</span></a>
+      </div>
+    </nav>
+  </header>
   <main data-studio="tester">
-    <p class="kicker">01 / Type specimen</p>
+    <p class="kicker">Type Studio <span aria-hidden="true">/</span> 01 · Type specimen</p>
     <h1>Font Tester</h1>
     <p class="intro">Compare the same text in six system font stacks. Adjust size, weight and spacing together so you can see what changes between faces.</p>
+    <section class="studio-workbench" aria-label="Font preview controls">
     <label for="sample">Your sample text</label>
     <textarea id="sample" rows="3" maxlength="500">The quick brown fox jumps over the lazy dog.</textarea>
     <div class="controls">
@@ -22,7 +33,9 @@
       <label>Weight<select id="weight"><option value="400">Regular</option><option value="700">Bold</option></select></label>
       <label>Letter spacing (px)<input id="spacing" type="number" min="-3" max="20" step=".5" value="0"></label>
     </div>
-    <section class="specimens" aria-label="Font comparison">
+    </section>
+    <section class="specimens" aria-labelledby="comparison-heading">
+      <h2 class="studio-section-title" id="comparison-heading">Compare font previews</h2>
       <article style="--face:Georgia,serif"><h2>Georgia</h2><p class="sample">The quick brown fox jumps over the lazy dog.</p><p class="body-sample">The quick brown fox jumps over the lazy dog.</p></article>
       <article style="--face:'Times New Roman',serif"><h2>Times New Roman</h2><p class="sample">The quick brown fox jumps over the lazy dog.</p><p class="body-sample">The quick brown fox jumps over the lazy dog.</p></article>
       <article style="--face:Arial,sans-serif"><h2>Arial</h2><p class="sample">The quick brown fox jumps over the lazy dog.</p><p class="body-sample">The quick brown fox jumps over the lazy dog.</p></article>
@@ -33,6 +46,15 @@
     <section class="guide"><h2>How to compare fonts</h2><p>Try a real heading or a few lines from your project. Compare letter shapes in the large preview, then check readability in the smaller preview. If a named font is missing on your device, your browser uses a fallback from the same family. No font files are downloaded.</p></section>
     <noscript><p>Enable JavaScript to edit and compare your own text.</p></noscript>
   </main>
-  <footer><a href="../#text-tools">Back to FontVerse text tools</a></footer>
+  <footer class="studio-footer">
+    <div class="studio-footer-inner">
+      <div><strong>Type Studio</strong><p>Compare type, create a transparent image, or find a letter to copy.</p></div>
+      <nav aria-label="More text tools">
+        <a href="./transparent-text-generator/">Transparent PNG Text</a>
+        <a href="./fancy-letters/">Fancy Letters A–Z</a>
+        <a href="../#text-tools">All FontVerse tools</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
