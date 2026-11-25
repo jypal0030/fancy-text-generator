@@ -81,19 +81,21 @@ input,select{width:100%;min-width:0}
 }
 @media (max-width:56rem){
   .studio-nav{gap:.5rem;padding-block:.6rem}
-  .studio-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.375rem}
+  .studio-tabs{display:grid;flex:0 1 26rem;grid-template-columns:repeat(3,minmax(0,1fr));gap:.375rem}
   .studio-nav a{min-height:44px;padding:.4rem .55rem;font-size:.8125rem}
   .studio-nav a > span{min-width:0;overflow-wrap:anywhere}
   .studio-nav .studio-back{flex-shrink:0}
   .studio-nav svg,.studio-type-icon{width:1rem;height:1rem;line-height:1rem}
   .specimens{gap:.75rem;margin-top:1.3rem}
-  .specimens article{padding:.85rem}
+  .specimens article{padding:.65rem .75rem}
+  .specimens .sample{font-size:max(1rem,calc(var(--size,32px) * .875));margin:.4rem 0}
+  .specimens .body-sample{font-size:.875rem;line-height:1.4}
 }
-@media (max-width:39.999rem){
+@media (width < 40rem){
   .studio-nav{display:grid;grid-template-columns:minmax(0,1fr);gap:.4rem;padding-block:.45rem .6rem}
   .studio-nav .studio-back{justify-self:start;max-width:100%;padding-inline:.6rem}
   .studio-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.35rem;margin:0}
-  .studio-tabs a{flex-direction:column;gap:.15rem;padding:.2rem .15rem;font-size:.75rem;line-height:1.15;text-wrap:balance}
+  .studio-tabs a{flex-direction:column;gap:.15rem;min-height:44px;min-width:0;padding:.2rem .15rem;font-size:.75rem;line-height:1.15;text-align:center;overflow-wrap:anywhere;text-wrap:balance}
   .studio-nav a > span{min-width:0;max-width:100%}
   main{padding-top:1.15rem}
   .studio-intro{display:block;margin-bottom:.8rem;padding-bottom:.8rem}
