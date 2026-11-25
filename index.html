@@ -6,7 +6,9 @@
 <title>Fancy Text Generator – Copy and Paste Stylish Fonts | FontVerse</title>
 <meta name="description" content="Use FontVerse’s free fancy text generator to preview and copy stylish Unicode text, from cursive and bubble letters to bold fonts for bios, captions and messages.">
 <link rel="stylesheet" href="./text-tools.css">
+<link rel="stylesheet" href="./site-nav.css">
 <script src="./font-directory.js" defer></script>
+<script src="./site-nav.js" defer></script>
 <style>
   /* Fern-green specimen strip distinguishes Type Studio from the main generator. */
   .ffg-hero a.ffg-studio-feature {
@@ -166,6 +168,8 @@
 <meta name="theme-color" content="#0a0a12">
 <link rel="canonical" href="https://fancyfonty.com/">
 <meta name="google-site-verification" content="NDgkiNGOTayRnaO7B86JTNPvmaDRwmr_QchbP6IeOOo" />
+
+<link rel="stylesheet" href="./site-nav.css">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -512,23 +516,56 @@ html body #ffg-root [data-ffg-results-grid]{
   <div class="ffg-glow g2" aria-hidden="true"></div>
   <div class="ffg-glow g3" aria-hidden="true"></div>
 
-  <header class="ffg-header">
-    <nav class="ffg-nav" aria-label="Main navigation">
-      <a class="ffg-logo" href="#top">
-        <span class="ffg-mark" aria-hidden="true">F</span>
-        <span>Font<span class="ffg-grad-text">Verse</span></span>
+  <header class="fv-top">
+    <div class="fv-nav-shell">
+      <a class="fv-nav-brand" href="#top" aria-label="FontVerse home">
+        <span class="fv-nav-mark" aria-hidden="true">
+          <svg width="29" height="29" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+            <path d="M3 24 10 7l7 17M6 18h8M2 24h5m7 0h4m2.5 3h9"/>
+            <path d="M27.5 24v-7.2c0-3.6-5.5-3.6-6.4-.8m6.4 3.3c-3.8-1.2-6.7.6-6.7 2.6 0 2.7 4.6 3.3 6.7.4"/>
+          </svg>
+        </span>
+        <span class="fv-nav-wordmark">
+          FontVerse
+          <small>Unicode type tools</small>
+        </span>
       </a>
-      <div class="ffg-links">
-        <a href="#generator">Generator</a>
-        <a href="#fonts">All Fonts</a>
-        <a href="#symbols">Symbols</a>
-        <a href="#fancy-letters">Fancy Letters</a>
-        <a href="#lenny-face">Lenny Face</a>
-        <a href="#how">How to Use</a>
-        <a href="#faq">FAQ</a>
-      </div>
-      <button class="ffg-theme" id="ffg-themeBtn" type="button" aria-label="Toggle dark / light mode" title="Toggle theme">🌙</button>
-    </nav>
+
+      <button class="fv-nav-toggle" type="button" aria-expanded="false" aria-controls="fv-nav-links">
+        <svg class="fv-nav-menu-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+        <svg class="fv-nav-close-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false">
+          <path d="m6 6 12 12M18 6 6 18"/>
+        </svg>
+        <span>Menu</span>
+      </button>
+
+      <nav class="fv-nav-links" id="fv-nav-links" aria-label="Main navigation">
+        <a class="fv-nav-item" href="#generator">Generator</a>
+        <a class="fv-nav-item" href="#text-tools">Text Tools</a>
+        <details class="fv-nav-more">
+          <summary class="fv-nav-item">Explore</summary>
+          <div class="fv-nav-more-panel">
+            <a class="fv-nav-item" href="#fonts">All Fonts</a>
+            <a class="fv-nav-item" href="#symbols">Symbols</a>
+            <a class="fv-nav-item" href="#fancy-letters">Fancy Letters</a>
+            <a class="fv-nav-item" href="#lenny-face">Lenny Face</a>
+            <a class="fv-nav-item" href="#how">How to Use</a>
+            <a class="fv-nav-item" href="#faq">FAQ</a>
+          </div>
+        </details>
+        <a class="fv-nav-item fv-nav-studio" href="./type-studio/">
+          <span>Type Studio</span>
+          <span class="fv-nav-badge">New</span>
+          <svg class="fv-nav-arrow" width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M4 10h11m-4-4 4 4-4 4"/>
+          </svg>
+        </a>
+      </nav>
+
+      <button class="fv-nav-theme" id="ffg-themeBtn" type="button" aria-label="Toggle dark / light mode" title="Toggle theme">🌙</button>
+    </div>
   </header>
 
   <main id="top">
@@ -1462,6 +1499,7 @@ html body #ffg-root [data-ffg-results-grid]{
 })();
 //FFG-JS-END
 </script>
+<script src="./site-nav.js" defer></script>
 
 </body>
 </html>

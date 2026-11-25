@@ -8,7 +8,7 @@ FontVerse is a public Unicode text generator with live previews, style filters, 
 
 ## Stack
 
-Static HTML, CSS, and vanilla JavaScript. The generator and its base styles live in the root `index.html`. Specialized tools share `text-tools.css` and `text-tools.js`.
+Static HTML, CSS, and vanilla JavaScript. The generator and its base styles live in the root `index.html`. Specialized tools share `text-tools.css` and `text-tools.js`. The homepage navigation is written in `index.html` and uses `site-nav.css` and `site-nav.js` for its responsive menu.
 
 ## Data model
 
@@ -61,3 +61,4 @@ Canonical URLs use `https://fancyfonty.com/`, matching the sitemap. The homepage
 - Featured Type Studio directly below the homepage intro with a static link to the Font Tester.
 - Featured Type Studio directly below the homepage intro with a static link to the Font Tester.
 - Featured Type Studio in the homepage intro so it can be found without scrolling to the directory.
+- Replaced the homepage navbar with a type-specimen wordmark, a prominent Type Studio link, an Explore disclosure, and a mobile menu while preserving the theme control.
