@@ -45,6 +45,8 @@ Type Studio keeps Back and the three tool tabs on one row from 40rem upward. Bel
 
 Canonical URLs use `https://fancyfonty.com/`, matching the sitemap. The homepage covers broad fancy-text queries; separate pages target distinct tools, not keyword variants. Seasonal pages and additional utility pages are future candidates.
 
+All 12 tool pages list the same 12 tools in static HTML, with descriptions and an `aria-current="page"` link for the current tool. The homepage lists the same 12 tool destinations separately from its own current-page label.
+
 ## Change log
 
 - Memory file added to an existing project; pending reconstruction.
@@ -80,3 +82,4 @@ Canonical URLs use `https://fancyfonty.com/`, matching the sitemap. The homepage
 - Added the static FontVerse tool directory to all three Type Studio pages with responsive fern-green cards and a current-page label on Font Tester.
 - Added the static homepage directory with 12 standalone tool links, descriptions, fern-green styling and a separate current-page label for the homepage.
 - Completed the static 12-tool directories on all three Type Studio pages and marked each page’s own entry as current.
+- Replaced the JavaScript-rendered directories on the nine standalone pages with static 12-tool lists and current-page markers, leaving SEO metadata unchanged.
