@@ -26,7 +26,7 @@ Style definitions are bundled in the browser script. Favorites are stored on the
 - `/kaomoji/` — searchable Japanese emoticons and Lenny faces with copy buttons; uses `utility-tools.js` and is linked from the homepage and sitemap.
 - `/gothic-font-generator/` — five live previews with copy controls: regular and bold Fraktur plus three decorative frames.
 - `/bold-font-generator/` — five live previews with copy controls: bold serif and sans serif, italic variants of both, and underlined bold sans serif.
-- `/type-studio/` — separate typography workspace with a live system Font Tester.
+- `/type-studio/` — separate typography workspace with a live system Font Tester, linked from the homepage Text Tools directory.
 - `/type-studio/transparent-text-generator/` — browser-rendered transparent PNG export with font, size, colour and padding controls.
 - `/type-studio/fancy-letters/` — five copyable Unicode styles for each uppercase letter A–Z.
 - `robots.txt`, `sitemap.xml`, and `og-image.svg` are static crawl and sharing assets.
@@ -55,3 +55,6 @@ Canonical URLs use `https://fancyfonty.com/`, matching the sitemap. The homepage
 - Added Gothic and Bold Font Generators, linked them from the homepage directory and related tools, and added both to the sitemap.
 - Expanded Gothic and Bold to five previews each and added a Back to Text Tools link to the homepage directory on both pages.
 - Added the three-page Type Studio workspace and listed its canonical URLs in the sitemap.
+- Linked Type Studio from the homepage Text Tools directory in static HTML.
+- Linked Type Studio from the homepage Text Tools directory in static HTML.
+- Linked Type Studio from the homepage Text Tools directory.
