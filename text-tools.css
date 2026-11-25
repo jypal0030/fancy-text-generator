@@ -107,6 +107,41 @@
   #ffg-root .ffg-studio-cta { font-size: 1rem; }
 }
 
+@media (max-width: 36rem) {
+  #ffg-root a.ffg-studio-feature {
+    width: min(100%, 19rem);
+    min-height: 44px;
+    margin: .5rem auto;
+    padding: .2rem .5rem;
+    gap: .375rem;
+  }
+
+  #ffg-root .ffg-studio-specimen {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 6px;
+    font-size: .875rem;
+  }
+
+  #ffg-root .ffg-studio-heading {
+    gap: .125rem .3rem;
+    font-size: .875rem;
+    line-height: 1.2;
+  }
+
+  #ffg-root .ffg-studio-title { font-size: inherit; }
+  #ffg-root .ffg-studio-badge {
+    padding: .1rem .25rem;
+    font-size: .625rem;
+  }
+
+  #ffg-root .ffg-studio-cta {
+    grid-area: 1 / 3;
+    font-size: .875rem;
+    line-height: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   #ffg-root a.ffg-studio-feature { transition: none; }
   #ffg-root a.ffg-studio-feature:hover { transform: none; }
