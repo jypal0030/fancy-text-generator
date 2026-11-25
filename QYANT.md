@@ -39,6 +39,8 @@ The static page does not require runtime environment variables. The optional Git
 
 The results grid retains a 290px minimum per column when space permits and allows a narrower single column on small screens.
 
+On phones and tablets, the homepage keeps a compact standalone Type Studio card, with the navbar link only inside the toggle menu. Type Studio pages inherit the homepage theme using browser storage, or the device preference if no homepage theme has been saved.
+
 Canonical URLs use `https://fancyfonty.com/`, matching the sitemap. The homepage covers broad fancy-text queries; separate pages target distinct tools, not keyword variants. Seasonal pages and additional utility pages are future candidates.
 
 ## Change log
@@ -68,3 +70,6 @@ Canonical URLs use `https://fancyfonty.com/`, matching the sitemap. The homepage
 - Removed the pinned mobile header shortcut; Type Studio remains in the toggle menu and in the homepage intro as a compact card with a visible Font Tester action.
 - Restored Type Studio to the mobile menu and kept the compact, labeled Type Studio card in the homepage intro.
 - Refined the shared Type Studio navigation and responsive specimen layouts, and updated all three pages with distinct metadata and contextual links to related tools.
+- Kept the homepage Type Studio card compact on phones and tablets without changing the navbar; all three Studio pages use the homepage's `ffg_theme` preference or fall back to the device theme.
+- Kept the standalone homepage Type Studio card compact on phones and tablets without changing the navbar; all three Studio pages inherit the homepage's `ffg_theme` preference or use the device preference.
+- Kept the homepage Type Studio card compact and tappable on small screens and shared the homepage theme across all three Studio pages.
