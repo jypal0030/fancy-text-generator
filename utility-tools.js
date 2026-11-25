@@ -114,18 +114,7 @@ function init() {
 
   const faces = document.querySelector('#face-workbench');
   if (faces) {
-    const search = faces.querySelector('#face-search');
     const status = faces.querySelector('#face-status');
-    const sections = [...faces.querySelectorAll('[data-tags]')];
-    search.addEventListener('input', () => {
-      const terms = search.value.toLowerCase().trim().split(/\s+/);
-      sections.forEach((section) => {
-        const haystack = `${section.dataset.tags} ${section.textContent}`.toLowerCase();
-        section.hidden = !terms.every((term) => haystack.includes(term));
-      });
-      faces.querySelector('#face-empty').hidden = sections.some((section) => !section.hidden);
-      status.textContent = '';
-    });
     faces.addEventListener('click', (event) => {
       const button = event.target.closest('button');
       if (button) copyText(button.textContent, status, button);

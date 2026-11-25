@@ -42,7 +42,10 @@ function initSearch() {
     empty.hidden = total !== 0;
   }
 
-  input.addEventListener('input', () => queueMicrotask(filter));
+  input.addEventListener('input', () => {
+    workbench.querySelector('#face-status').textContent = '';
+    filter();
+  });
   filter();
 }
 
