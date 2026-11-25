@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fancyfontly.com/sitemap.xml
+Sitemap: https://fancyfonty.com/sitemap.xml
