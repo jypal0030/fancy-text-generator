@@ -22,8 +22,9 @@
     <form class="fv-workbench" id="case-workbench">
       <div class="fv-case-source">
         <label for="case-input">Original text</label>
-        <textarea id="case-input" rows="3" placeholder="Type or paste text" spellcheck="false"></textarea>
-        <button type="reset">Clear text</button>
+        <textarea id="case-input" rows="3" placeholder="Type or paste text" spellcheck="false" aria-describedby="case-help"></textarea>
+        <p id="case-help">The cards show examples until you enter text.</p>
+        <button type="reset" disabled>Clear text</button>
       </div>
       <p class="fv-status" role="status" id="case-status"></p>
       <section class="fv-case-section" aria-labelledby="case-previews-heading">
@@ -67,7 +68,8 @@
         </div>
         <div class="fv-case-output">
           <label for="case-output">Converted text</label>
-          <textarea id="case-output" rows="3" readonly></textarea>
+          <textarea id="case-output" rows="3" readonly aria-describedby="case-extra-status"></textarea>
+          <p id="case-extra-status" role="status"></p>
           <button type="button" id="case-copy" disabled>Copy result</button>
         </div>
       </section>

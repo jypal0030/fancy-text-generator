@@ -36,13 +36,14 @@
     <textarea id="sample" rows="3" maxlength="240">Field Notes</textarea>
     <div class="controls">
       <label>Font<select id="face"><option>Georgia</option><option>Arial</option><option>Verdana</option><option>Courier New</option></select></label>
-      <label>Size (px)<input id="size" type="number" min="12" max="160" value="72"></label>
+      <label>Size (px)<input id="size" type="number" min="12" max="160" value="72" required aria-describedby="status"></label>
       <label>Text colour<input id="colour" type="color" value="#234435"></label>
-      <label>Padding (px)<input id="padding" type="number" min="0" max="200" value="24"></label>
+      <label>Padding (px)<input id="padding" type="number" min="0" max="200" value="24" required aria-describedby="status"></label>
     </div>
-    <div class="preview"><canvas id="art" role="img" aria-label="Transparent text image preview" hidden></canvas></div>
-    <button id="download" type="button" disabled>Download PNG</button>
+    <div class="preview" id="image-preview" hidden><canvas id="art" role="img" aria-label="Transparent text image preview"></canvas></div>
     <p id="status" role="status"></p>
+    <button id="download" type="button" disabled aria-describedby="status export-status">Download PNG</button>
+    <p id="export-status" role="status"></p>
     </section>
     <section class="guide">
       <h2>Will the background appear in my download?</h2>

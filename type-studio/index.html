@@ -35,10 +35,11 @@
     <label for="sample">Your sample text</label>
     <textarea id="sample" rows="3" maxlength="500">The quick brown fox jumps over the lazy dog.</textarea>
     <div class="controls">
-      <label>Size (px)<input id="size" type="number" min="12" max="120" value="32"></label>
+      <label>Size (px)<input id="size" type="number" min="12" max="120" value="32" required aria-describedby="tester-status"></label>
       <label>Weight<select id="weight"><option value="400">Regular</option><option value="700">Bold</option></select></label>
-      <label>Letter spacing (px)<input id="spacing" type="number" min="-3" max="20" step=".5" value="0"></label>
+      <label>Letter spacing (px)<input id="spacing" type="number" min="-3" max="20" step=".5" value="0" required aria-describedby="tester-status"></label>
     </div>
+    <p id="tester-status" role="status">Edit the sample to compare your own text.</p>
     </section>
     <section class="specimens" aria-labelledby="comparison-heading">
       <h2 class="studio-section-title" id="comparison-heading">Compare font previews</h2>

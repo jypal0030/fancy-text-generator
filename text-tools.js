@@ -59,6 +59,7 @@
     const style = card.dataset.style;
 
     button.addEventListener('click', async () => {
+      if (button.disabled) return;
       const text = preview.textContent;
       status.textContent = '';
       try {
@@ -71,10 +72,12 @@
           range.selectNodeContents(preview);
           selection.removeAllRanges();
           selection.addRange(range);
-          status.textContent = 'Automatic copy was unavailable. The text is selected; use your device’s copy command.';
-        } else {
-          status.textContent = 'Automatic copy was unavailable. Select and copy the preview manually.';
+          if (selection.toString() === text) {
+            status.textContent = 'Automatic copy failed. The text is selected; use your device’s copy command.';
+            return;
+          }
         }
+        status.textContent = 'Automatic copy failed. Select and copy the preview manually.';
       }
     });
 
@@ -87,7 +90,8 @@
       preview.textContent = hasText ? convert(input.value, style) : 'Your preview will appear here.';
       button.disabled = !hasText;
     }
-    status.textContent = '';
+    const message = hasText ? '' : 'Enter text above to generate copyable previews.';
+    if (status.textContent !== message) status.textContent = message;
   }
 
   form.addEventListener('submit', event => event.preventDefault());

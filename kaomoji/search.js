@@ -2,7 +2,8 @@ function initSearch() {
   const workbench = document.getElementById('face-workbench');
   const input = document.getElementById('face-search');
   const empty = document.getElementById('face-empty');
-  if (!workbench || !input || !empty) return;
+  const results = document.getElementById('face-results-status');
+  if (!workbench || !input || !empty || !results) return;
 
   const normalize = value => value.normalize('NFC').toLowerCase().trim();
   const individualTags = new Map([
@@ -40,11 +41,20 @@ function initSearch() {
       total += count;
     }
     empty.hidden = total !== 0;
+    return total;
   }
 
+  let announcement;
   input.addEventListener('input', () => {
     workbench.querySelector('#face-status').textContent = '';
-    filter();
+    const total = filter();
+    clearTimeout(announcement);
+    announcement = setTimeout(() => {
+      const message = total === 0
+        ? empty.textContent
+        : `${total} ${total === 1 ? 'face' : 'faces'} ${input.value.trim() ? 'found' : 'available'}.`;
+      if (results.textContent !== message) results.textContent = message;
+    }, 250);
   });
   filter();
 }

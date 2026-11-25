@@ -5,20 +5,22 @@ async function copyText(text, status, source, label) {
     status.textContent = label ? `${label} copied.` : `Copied${text.length < 24 ? `: ${text}` : ' to clipboard'}.`;
     return true;
   } catch {
-    if (source && source.value === text) {
+    let selected = false;
+    if (source && source.value === text && typeof source.select === 'function') {
       source.focus();
       source.select();
-      status.textContent = 'Automatic copy was unavailable. The result is selected; use your device’s copy command.';
+      selected = source.selectionStart === 0 && source.selectionEnd === text.length;
     } else if (source && source.textContent === text && window.getSelection()) {
       const selection = window.getSelection();
       const range = document.createRange();
       range.selectNodeContents(source);
       selection.removeAllRanges();
       selection.addRange(range);
-      status.textContent = 'Automatic copy was unavailable. The result is selected; use your device’s copy command.';
-    } else {
-      status.textContent = 'Clipboard unavailable. Select the text and copy it manually.';
+      selected = selection.toString() === text;
     }
+    status.textContent = selected
+      ? 'Automatic copy failed. The result is selected; use your device’s copy command.'
+      : 'Automatic copy failed. Select the text and copy it manually.';
     return false;
   }
 }
@@ -78,6 +80,8 @@ function init() {
     const output = form.querySelector('#case-output');
     const status = form.querySelector('#case-status');
     const extraCopy = form.querySelector('#case-copy');
+    const extraStatus = form.querySelector('#case-extra-status');
+    const clear = form.querySelector('[type="reset"]');
     const previews = Array.from(form.querySelectorAll('[data-case-style]'), (card) => {
       const preview = card.querySelector('.fv-preview');
       const button = card.querySelector('button');
@@ -89,9 +93,14 @@ function init() {
     const updateExtra = () => {
       output.value = convert(input.value, mode.value);
       extraCopy.disabled = !output.value;
+      const message = !input.value
+        ? 'Enter text above to see a result.'
+        : !output.value ? 'No characters remain after this conversion. Try a different conversion.' : '';
+      if (extraStatus.textContent !== message) extraStatus.textContent = message;
       status.textContent = '';
     };
     const update = () => {
+      clear.disabled = !input.value;
       for (const { preview, button, example, style } of previews) {
         const result = convert(input.value, style);
         preview.textContent = input.value ? result || 'No convertible characters.' : example;
