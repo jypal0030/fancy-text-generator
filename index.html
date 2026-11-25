@@ -7,6 +7,160 @@
 <meta name="description" content="Use FontVerse’s free fancy text generator to preview and copy stylish Unicode text, from cursive and bubble letters to bold fonts for bios, captions and messages.">
 <link rel="stylesheet" href="./text-tools.css">
 <script src="./font-directory.js" defer></script>
+<style>
+  /* Fern-green specimen strip distinguishes Type Studio from the main generator. */
+  .ffg-hero a.ffg-studio-feature {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: .625rem .75rem;
+    width: min(100%, 42rem);
+    min-height: 56px;
+    margin: .875rem auto 0;
+    padding: .625rem .75rem;
+    border: 1px solid #789681;
+    border-radius: .75rem;
+    background: #edf4ea;
+    color: #234435;
+    text-align: left;
+    text-decoration: none;
+  }
+
+  .ffg-hero a.ffg-studio-feature:hover { background: #dfeedd; color: #234435; }
+  .ffg-hero a.ffg-studio-feature:focus-visible { outline: 3px solid #548860; outline-offset: 3px; }
+
+  .ffg-studio-specimen {
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: .5rem;
+    background: #d6e7d7;
+    font: 700 1.375rem/1 Georgia, serif;
+  }
+
+  .ffg-studio-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .25rem .5rem;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  .ffg-studio-badge {
+    padding: .2rem .375rem;
+    border-radius: .25rem;
+    background: #29543d;
+    color: #fff;
+    font-size: .625rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+  }
+
+  .ffg-studio-description,
+  .ffg-studio-cta { display: block; font-size: .8125rem; line-height: 1.35; }
+  .ffg-studio-description { margin-top: .25rem; color: #415d4e; }
+  .ffg-studio-cta { font-weight: 750; }
+  .ffg-studio-feature:is(:hover, :focus-visible) .ffg-studio-cta {
+    text-decoration: underline;
+    text-underline-offset: .2em;
+  }
+
+  @media (max-width: 36rem) {
+    .ffg-hero a.ffg-studio-feature {
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: .35rem .625rem;
+    }
+    .ffg-studio-cta { grid-column: 2; }
+  }
+</style>
+<style>
+  /* A fern-green type specimen distinguishes Studio from the Unicode generator. */
+  .ffg-hero a.ffg-studio-feature {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: .75rem;
+    width: min(100%, 42rem);
+    min-height: 56px;
+    margin: .875rem auto 0;
+    padding: .625rem .75rem;
+    border: 1px solid #89a791;
+    border-radius: .75rem;
+    background: #edf4ea;
+    color: #234435;
+    text-align: left;
+    text-decoration: none;
+  }
+
+  .ffg-hero a.ffg-studio-feature:is(:hover, :focus-visible) {
+    background: #e1eedf;
+    color: #234435;
+  }
+
+  .ffg-hero a.ffg-studio-feature:focus-visible {
+    outline: 3px solid #4e865c;
+    outline-offset: 3px;
+  }
+
+  .ffg-studio-specimen {
+    display: grid;
+    place-items: center;
+    width: 2.625rem;
+    height: 2.625rem;
+    border-radius: .5rem;
+    background: #d6e7d7;
+    font: 700 1.375rem/1 Georgia, serif;
+  }
+
+  .ffg-studio-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .25rem .5rem;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  .ffg-studio-badge {
+    padding: .125rem .375rem;
+    border-radius: .25rem;
+    background: #29543d;
+    color: #fff;
+    font-size: .625rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+  }
+
+  .ffg-studio-description,
+  .ffg-studio-cta {
+    display: block;
+    font-size: .8125rem;
+    line-height: 1.35;
+  }
+
+  .ffg-studio-description { margin-top: .25rem; color: #415d4e; }
+  .ffg-studio-cta { font-weight: 750; }
+  .ffg-studio-feature:is(:hover, :focus-visible) .ffg-studio-cta {
+    text-decoration: underline;
+    text-underline-offset: .2em;
+  }
+
+  @media (max-width: 36rem) {
+    .ffg-hero a.ffg-studio-feature {
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: .25rem .625rem;
+    }
+    .ffg-studio-cta { grid-column: 2; }
+  }
+
+  @media (max-width: 22rem) {
+    .ffg-studio-specimen { width: 2.125rem; height: 2.125rem; }
+  }
+</style>
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="FontVerse">
 <meta name="theme-color" content="#0a0a12">
@@ -381,6 +535,14 @@ html body #ffg-root [data-ffg-results-grid]{
     <section class="ffg-hero">
       <h1>Fancy Text <span class="ffg-grad-text">Generator</span><span class="ffg-h1sub">Create Stylish Fonts Online — Free</span></h1>
       <p class="ffg-sub"><span class="ffg-sub-short">54+ stylish Unicode styles — type, tap, paste. Free.</span><span class="ffg-sub-full">Type your text and instantly convert it into <span data-ffg-count>50</span>+ stylish Unicode fonts — bold, cursive, aesthetic, tiny, upside-down and more. Copy and paste anywhere: Instagram, Facebook, WhatsApp, TikTok, YouTube, Discord and Free Fire.</span></p>
+      <a class="ffg-studio-feature" href="./type-studio/">
+        <span class="ffg-studio-specimen" aria-hidden="true">Aa</span>
+        <span>
+          <span class="ffg-studio-heading"><span class="ffg-studio-badge">NEW</span><strong>Type Studio</strong></span>
+          <span class="ffg-studio-description">Compare fonts side by side, export transparent PNGs, or explore fancy letters.</span>
+        </span>
+        <span class="ffg-studio-cta">Open Font Tester <span aria-hidden="true">→</span></span>
+      </a>
       <div class="ffg-chips">
         <span class="ffg-chipstat"><b><span data-ffg-count>50</span>+</b> Fonts</span>
         <span class="ffg-chipstat"><b>100% Free</b> • No Sign-up</span>

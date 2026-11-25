@@ -16,7 +16,7 @@ Style definitions are bundled in the browser script. Favorites are stored on the
 
 ## Pages and routes
 
-- `/` — generator and reference content, including the `#generator` section and the `#text-tools` directory immediately after it.
+- `/` — generator and reference content, including a featured Type Studio link in the intro, the `#generator` section and the `#text-tools` directory immediately after it.
 - `/bubble-text-generator/` — outlined and filled Unicode bubble letters.
 - `/cursive-text-generator/` — regular and bold Unicode script previews.
 - `/instagram-bio-fonts/` — bold, italic and fullwidth previews with editable bio examples.
@@ -26,7 +26,7 @@ Style definitions are bundled in the browser script. Favorites are stored on the
 - `/kaomoji/` — searchable Japanese emoticons and Lenny faces with copy buttons; uses `utility-tools.js` and is linked from the homepage and sitemap.
 - `/gothic-font-generator/` — five live previews with copy controls: regular and bold Fraktur plus three decorative frames.
 - `/bold-font-generator/` — five live previews with copy controls: bold serif and sans serif, italic variants of both, and underlined bold sans serif.
-- `/type-studio/` — separate typography workspace with a live system Font Tester, linked from the homepage Text Tools directory.
+- `/type-studio/` — separate typography workspace with a live system Font Tester, linked from the homepage intro and Text Tools directory.
 - `/type-studio/transparent-text-generator/` — browser-rendered transparent PNG export with font, size, colour and padding controls.
 - `/type-studio/fancy-letters/` — five copyable Unicode styles for each uppercase letter A–Z.
 - `robots.txt`, `sitemap.xml`, and `og-image.svg` are static crawl and sharing assets.
@@ -58,3 +58,6 @@ Canonical URLs use `https://fancyfonty.com/`, matching the sitemap. The homepage
 - Linked Type Studio from the homepage Text Tools directory in static HTML.
 - Linked Type Studio from the homepage Text Tools directory in static HTML.
 - Linked Type Studio from the homepage Text Tools directory.
+- Featured Type Studio directly below the homepage intro with a static link to the Font Tester.
+- Featured Type Studio directly below the homepage intro with a static link to the Font Tester.
+- Featured Type Studio in the homepage intro so it can be found without scrolling to the directory.

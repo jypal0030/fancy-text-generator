@@ -1,3 +1,82 @@
+/* Type Studio feature: a forest-green specimen strip that distinguishes the studio from the main generator. */
+#ffg-root a.ffg-studio-feature {
+  --studio-paper: #1d3028;
+  --studio-ink: #ecf6e9;
+  --studio-muted: #c4d7ca;
+  --studio-line: #527660;
+  --studio-tile: #2e4b3c;
+  --studio-badge: #d7ecc8;
+  --studio-badge-ink: #21412d;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: .75rem;
+  width: min(100%, 46rem);
+  min-height: 56px;
+  margin: 1rem auto 0;
+  padding: .6rem .8rem;
+  border: 1px solid var(--studio-line);
+  border-radius: 12px;
+  background: var(--studio-paper);
+  color: var(--studio-ink);
+  text-align: left;
+  text-decoration: none;
+}
+
+#ffg-root[data-theme="light"] a.ffg-studio-feature {
+  --studio-paper: #edf4ea;
+  --studio-ink: #234435;
+  --studio-muted: #415d4e;
+  --studio-line: #89a791;
+  --studio-tile: #d9e9da;
+  --studio-badge: #29543d;
+  --studio-badge-ink: #fff;
+}
+
+#ffg-root a.ffg-studio-feature:focus-visible {
+  outline: 3px solid var(--studio-ink);
+  outline-offset: 3px;
+}
+
+#ffg-root .ffg-studio-specimen {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 8px;
+  background: var(--studio-tile);
+  font: 700 1.4rem/1 Georgia, serif;
+}
+
+#ffg-root .ffg-studio-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .3rem .5rem;
+  line-height: 1.25;
+}
+
+#ffg-root .ffg-studio-badge {
+  padding: .15rem .4rem;
+  border-radius: 4px;
+  background: var(--studio-badge);
+  color: var(--studio-badge-ink);
+  font-size: .65rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+#ffg-root .ffg-studio-title { font-size: 1rem; font-weight: 800; }
+#ffg-root .ffg-studio-detail { display: block; margin-top: .25rem; color: var(--studio-muted); font-size: .85rem; line-height: 1.35; }
+#ffg-root .ffg-studio-cta { font-size: .85rem; font-weight: 750; }
+#ffg-root .ffg-studio-feature:is(:hover, :focus-visible) .ffg-studio-cta { text-decoration: underline; text-underline-offset: .2em; }
+
+@media (max-width: 36rem) {
+  #ffg-root a.ffg-studio-feature { grid-template-columns: auto minmax(0, 1fr); gap: .35rem .65rem; }
+  #ffg-root .ffg-studio-cta { grid-column: 2; }
+}
+
 /* FontVerse specimen sheets: warm paper, plum ink, violet accents and editorial serif titles. */
 .fv-tool,
 .fv-tools-directory {
