@@ -78,3 +78,4 @@ Canonical URLs use `https://fancyfonty.com/`, matching the sitemap. The homepage
 - Made Studio navigation and specimen cards more compact on phones and removed duplicate dark-theme rules.
 - Added page-specific WebApplication JSON-LD to all 11 tool pages using their sitemap canonical URLs.
 - Added the static FontVerse tool directory to all three Type Studio pages with responsive fern-green cards and a current-page label on Font Tester.
+- Added the static 11-tool directory to the homepage with canonical fancyfonty.com links, descriptions, fern-green styling and a current-page label.

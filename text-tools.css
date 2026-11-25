@@ -460,6 +460,38 @@
   overflow-wrap: anywhere;
 }
 
+/* Homepage directory: fern-green accents on the existing light/dark surfaces. */
+#text-tools.fv-tool-directory {
+  --fv-accent: #2f6b4f;
+  --fv-border: #c9d8ce;
+  --fv-panel: #f4f8f5;
+  --fv-muted: #52665a;
+}
+#text-tools.fv-tool-directory h2 { color: #183c2b; }
+#text-tools.fv-tool-directory a { color: #245c42; }
+#text-tools.fv-tool-directory a:hover { color: #183c2b; }
+#text-tools.fv-tool-directory a:focus-visible {
+  outline: 3px solid #2f6b4f;
+  outline-offset: 3px;
+}
+#text-tools.fv-tool-directory a[aria-current="page"]::after {
+  background: #dcebe1;
+  color: #245c42;
+}
+[data-theme="dark"] #text-tools.fv-tool-directory {
+  --fv-accent: #8bc9a5;
+  --fv-border: #3d5b49;
+  --fv-panel: #1d2b23;
+  --fv-muted: #b5c8bb;
+}
+[data-theme="dark"] #text-tools.fv-tool-directory h2,
+[data-theme="dark"] #text-tools.fv-tool-directory a:hover { color: #e0f0e6; }
+[data-theme="dark"] #text-tools.fv-tool-directory a { color: #a5d8b9; }
+[data-theme="dark"] #text-tools.fv-tool-directory a[aria-current="page"]::after {
+  background: #2b4937;
+  color: #c4e5d1;
+}
+
 .fv-case-source button, .fv-case-output button { margin-top: .65rem; }
 .fv-case-section { margin-top: 1.2rem; }
 .fv-case-section > h2 { margin: 0 0 .65rem; font-size: clamp(1.4rem, 4vw, 1.8rem); }
