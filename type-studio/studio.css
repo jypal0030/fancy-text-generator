@@ -67,16 +67,20 @@ input,select{width:100%;min-width:0}
 @media (min-width:56rem){
   [data-studio="tester"] .specimens{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
-@media(min-width:40rem) and (max-width:56rem){
-  .studio-nav a{min-height:46px;padding-inline:.65rem;font-size:.8125rem}
-}
-@media(max-width:39.999rem){
-  .studio-nav{display:grid;grid-template-columns:minmax(0,1fr);gap:.45rem;padding-block:.5rem .65rem}
-  .studio-nav .studio-back{justify-self:start;padding-inline:.65rem}
-  .studio-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.35rem;margin:0}
-  .studio-nav a{min-height:44px;padding:.3rem .25rem;gap:.25rem;font-size:.75rem}
-  .studio-tabs a{flex-direction:column;text-wrap:balance}
+@media (max-width:56rem){
+  .studio-nav{gap:.5rem;padding-block:.6rem}
+  .studio-tabs{gap:.375rem}
+  .studio-nav a{min-height:44px;padding:.45rem .6rem;font-size:.8125rem}
   .studio-nav svg,.studio-type-icon{width:1rem;height:1rem;line-height:1rem}
+  .specimens{gap:.75rem;margin-top:1.3rem}
+  .specimens article{padding:.85rem}
+}
+@media (max-width:39.999rem){
+  .studio-nav{display:grid;grid-template-columns:minmax(0,1fr);gap:.4rem;padding-block:.45rem .6rem}
+  .studio-nav .studio-back{justify-self:start;max-width:100%;padding-inline:.6rem}
+  .studio-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.35rem;margin:0}
+  .studio-tabs a{flex-direction:column;gap:.2rem;padding:.25rem .2rem;font-size:.75rem;line-height:1.15;text-wrap:balance}
+  .studio-nav a > span{min-width:0;max-width:100%}
   main{padding-top:1.15rem}
   .studio-intro{display:block;margin-bottom:.8rem;padding-bottom:.8rem}
   .studio-specimen{display:none}
@@ -85,13 +89,14 @@ input,select{width:100%;min-width:0}
   .studio-workbench{padding:.7rem;font-size:.875rem}
   .studio-workbench textarea:focus,.studio-workbench input:focus,.studio-workbench select:focus{font-size:max(1rem,1em)}
   .studio-workbench .controls{grid-template-columns:repeat(auto-fit,minmax(min(100%,8.5rem),1fr));gap:.5rem;margin-top:.65rem}
-  .specimens{margin-top:1.15rem;gap:.55rem}
-  .specimens article{padding:.65rem}
-  .specimens article h2{font-size:.8rem}
-  .specimens .sample{font-size:calc(var(--size,32px) * .875);margin:.45rem 0}
-  .specimens .body-sample,.specimens button{font-size:.875rem}
+  .specimens{margin-top:1rem;gap:.5rem}
+  .specimens article{padding:.55rem .65rem}
+  .specimens article h2{font-size:.8rem;line-height:1.25}
+  .specimens .sample{font-size:max(1rem,calc(var(--size,32px) * .8));margin:.35rem 0}
+  .specimens .body-sample,.specimens button{font-size:.875rem;line-height:1.35}
+  .specimens button{min-width:44px}
   [data-studio="letters"] .specimens{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .specimens .glyph{font-size:2rem;line-height:1.2;margin:.35rem 0 .5rem}
+  .specimens .glyph{font-size:1.85rem;line-height:1.15;margin:.25rem 0 .35rem}
   .studio-footer-inner{padding-block:.85rem}
   .studio-footer a{font-size:.8125rem}
 }
