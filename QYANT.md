@@ -88,3 +88,4 @@ All 12 tool pages list the same 12 tools in static HTML, with descriptions and a
 - Added Flower, Maths, and Discord Symbols collections and linked the Cool Symbols hub from the homepage.
 - Refined the Cool Symbols hub and six collections on their existing canonical URLs; the three cross copy-and-paste query variants share `/cross-symbols/`.
 - Added matching breadcrumb JSON-LD across the symbol library, grouped flower and maths characters, and added copyable Discord and flower examples without changing URLs.
+- Added copyable Instagram, Discord, and WhatsApp examples and a visible FAQ to the existing Cross Symbols page.

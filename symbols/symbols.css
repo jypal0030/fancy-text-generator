@@ -145,8 +145,7 @@
   line-height: 1.45;
   overflow-wrap: anywhere;
 }
-.symbol-grid-examples { grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); }
-.symbol-grid-examples .symbol-glyph { font-size: 1.2rem; line-height: 1.45; }
+=======
 =======
 @media (max-width: 29rem) {
   .symbol-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
