@@ -29,6 +29,8 @@ Style definitions are bundled in the browser script. Favorites are stored on the
 - `/type-studio/` — separate typography workspace with a live system Font Tester, linked from the homepage header, intro and Text Tools directory.
 - `/type-studio/transparent-text-generator/` — browser-rendered transparent PNG export with font, size, colour and padding controls.
 - `/type-studio/fancy-letters/` — five copyable Unicode styles for each uppercase letter A–Z.
+- `/symbols/` — copyable Unicode symbol hub, linked from the homepage Text Tools directory.
+- `/flower-symbols/`, `/maths-symbols/`, and `/discord-symbols/` — static copyable symbol collections linked from the hub and listed in the sitemap.
 - `robots.txt`, `sitemap.xml`, and `og-image.svg` are static crawl and sharing assets.
 
 ## Environment
@@ -83,3 +85,4 @@ All 12 tool pages list the same 12 tools in static HTML, with descriptions and a
 - Added the static homepage directory with 12 standalone tool links, descriptions, fern-green styling and a separate current-page label for the homepage.
 - Completed the static 12-tool directories on all three Type Studio pages and marked each page’s own entry as current.
 - Replaced the JavaScript-rendered directories on the nine standalone pages with static 12-tool lists and current-page markers, leaving SEO metadata unchanged.
+- Added Flower, Maths, and Discord Symbols collections and linked the Cool Symbols hub from the homepage.

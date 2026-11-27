@@ -1,0 +1,71 @@
+/* Symbols: cream specimen sheets, fern-green controls and oversize glyphs. */
+.symbol-page {
+  --fv-paper: #f8f6ef;
+  --fv-panel: #fffefa;
+  --fv-ink: #202a23;
+  --fv-accent: #234435;
+  --fv-muted: #455c4d;
+  --fv-border: #a8bcac;
+  --symbol-wash: #edf2e9;
+}
+
+.symbol-page main { padding-top: clamp(1.5rem, 4vw, 3rem); }
+.symbol-page .fv-tool-header { background: var(--symbol-wash); }
+.symbol-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .25rem .6rem;
+  margin: 0 0 .85rem;
+  padding: 0;
+  list-style: none;
+  color: var(--fv-muted);
+  font-size: .875rem;
+}
+.symbol-breadcrumb a { display: inline-flex; align-items: center; min-height: 44px; }
+.symbol-breadcrumb li + li::before { content: "/"; margin-inline-end: .6rem; }
+.symbol-workbench { background: var(--symbol-wash); }
+.symbol-workbench h2 { margin: 0 0 .65rem; font-size: clamp(1.35rem, 4vw, 1.8rem); }
+.symbol-workbench > p { margin: 0 0 .65rem; color: var(--fv-muted); }
+.symbol-workbench .symbol-status { min-height: 1.6em; margin: 0 0 .65rem; }
+.symbol-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
+  gap: .65rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.symbol-grid li {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  min-width: 0;
+  padding: .65rem .45rem .45rem;
+  border: 1px solid var(--fv-border);
+  border-radius: 10px;
+  background: var(--fv-panel);
+  text-align: center;
+}
+.symbol-glyph {
+  font: 2rem/1.2 system-ui, sans-serif;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+.symbol-name { margin: .25rem 0; font-size: .85rem; color: var(--fv-muted); overflow-wrap: anywhere; }
+.symbol-workbench [data-symbol-copy] {
+  width: 100%;
+  margin-top: .2rem;
+  background: var(--fv-panel);
+  color: var(--fv-accent);
+}
+.symbol-workbench [data-symbol-copy]:not(:disabled):is(:hover, :focus-visible, [data-copied]) {
+  background: var(--fv-accent);
+  color: #fff;
+}
+.symbol-category { display: block; margin-block: 0 .45rem; font: 1.6rem/1.2 system-ui, sans-serif; }
+.symbol-page .fv-tool-directory { margin-top: 1.75rem; border-top: 0; padding-top: 0; }
+.symbol-page .fv-tool-directory a[aria-current="page"]::after { background: var(--symbol-wash); }
+@media (max-width: 29rem) {
+  .symbol-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

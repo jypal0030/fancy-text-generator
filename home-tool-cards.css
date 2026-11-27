@@ -1,0 +1,160 @@
+/* Fern-green type specimen cards for the homepage tool directory. */
+nav#text-tools.fv-tools-directory {
+  --card-fern: #28533f;
+  --card-fern-hover: #183c2d;
+  --card-button-ink: #fff;
+  --card-focus: #27694d;
+  --card-shadow: 0 2px 4px #18352812, 0 8px 20px #18352815;
+  --card-shadow-active: 0 4px 8px #1835281a, 0 12px 24px #18352826;
+  min-width: 0;
+  padding: clamp(1rem, 3vw, 2rem);
+  border: 1px solid var(--catalog-line);
+  border-radius: 1.25rem;
+}
+
+[data-theme="dark"] nav#text-tools.fv-tools-directory {
+  --card-fern: #b9e4c4;
+  --card-fern-hover: #d9f3df;
+  --card-button-ink: #172f23;
+  --card-focus: #c1edcd;
+  --card-shadow: 0 2px 4px #08161050, 0 8px 20px #08161048;
+  --card-shadow-active: 0 4px 8px #08161065, 0 12px 24px #08161055;
+}
+
+nav#text-tools.fv-tools-directory .fv-directory-kicker {
+  display: inline-block;
+  padding: .25rem .65rem;
+  border: 1px solid var(--catalog-line);
+  border-radius: 999px;
+  background: var(--catalog-badge);
+  color: var(--catalog-accent);
+}
+
+nav#text-tools.fv-tools-directory .fv-directory-intro h2 {
+  text-wrap: balance;
+}
+
+nav#text-tools.fv-tools-directory .fv-home-tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  align-items: stretch;
+  gap: clamp(.8rem, 2vw, 1.15rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav#text-tools.fv-tools-directory .fv-home-tool-grid > li {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  align-items: start;
+  gap: .7rem;
+  min-width: 0;
+  padding: clamp(.85rem, 2vw, 1.15rem);
+  border: 1px solid var(--catalog-line);
+  border-radius: 1rem;
+  background: var(--catalog-panel);
+  box-shadow: var(--card-shadow);
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+
+nav#text-tools.fv-tools-directory .fv-home-tool-grid > li::before {
+  content: var(--tool-glyph, "Aa");
+  content: var(--tool-glyph, "Aa") / "";
+  position: static;
+  display: grid;
+  place-items: center;
+  inline-size: 3rem;
+  block-size: 2.75rem;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--catalog-line);
+  border-radius: .7rem;
+  background: var(--catalog-badge);
+  color: var(--catalog-accent);
+  font: 700 1.2rem/1 Georgia, serif;
+}
+
+nav#text-tools.fv-tools-directory .fv-home-tool-grid > li::after {
+  content: none;
+}
+
+#text-tools .fv-home-tool-grid > li:has(> a[href$="/bubble-text-generator/"]) { --tool-glyph: "Ⓐ"; }
+#text-tools .fv-home-tool-grid > li:has(> a[href$="/brackets-boxed-text-generator/"]) { --tool-glyph: "[A]"; }
+#text-tools .fv-home-tool-grid > li:has(> a[href$="/cursive-text-generator/"]) { --tool-glyph: "ℒ"; }
+#text-tools .fv-home-tool-grid > li:has(> a[href$="/instagram-bio-fonts/"]) { --tool-glyph: "𝘉𝘪𝘰"; }
+#text-tools .fv-home-tool-grid > li:has(> a[href$="/case-converter/"]) { --tool-glyph: "a⇄A"; }
+#text-tools .fv-home-tool-grid > li:has(> a[href$="/cute-fancy-text/"]) { --tool-glyph: "♡"; }
+#text-tools .fv-home-tool-grid > li:has(> a[href$="/kaomoji/"]) { --tool-glyph: "^‿^"; }
+#text-tools .fv-home-tool-grid > li:has(> a[href$="/gothic-font-generator/"]) { --tool-glyph: "𝔊"; }
+#text-tools .fv-home-tool-grid > li:has(> a[href$="/bold-font-generator/"]) { --tool-glyph: "𝐁"; }
+#text-tools .fv-home-tool-grid > li:has(> a[href$="/type-studio/"]) { --tool-glyph: "Ag"; }
+#text-tools .fv-home-tool-grid > li:has(> a[href$="/transparent-text-generator/"]) { --tool-glyph: "▧"; }
+#text-tools .fv-home-tool-grid > li:has(> a[href$="/fancy-letters/"]) { --tool-glyph: "A–Z"; }
+#text-tools .fv-home-tool-grid > li:has(> a[href$="/symbols/"]) { --tool-glyph: "✦"; }
+
+nav#text-tools.fv-tools-directory .fv-home-tool-grid > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  min-width: 0;
+  min-height: 44px;
+  padding: .55rem .75rem;
+  border: 1px solid transparent;
+  border-radius: .625rem;
+  background: var(--card-fern);
+  color: var(--card-button-ink);
+  font-size: .9rem;
+  font-weight: 700;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+  transition: background-color .18s ease;
+}
+
+nav#text-tools.fv-tools-directory .fv-home-tool-grid > li > a::after {
+  content: "→";
+  content: "→" / "";
+  position: static;
+  flex: none;
+  font: 600 1rem/1 system-ui, sans-serif;
+}
+
+nav#text-tools.fv-tools-directory .fv-home-tool-grid > li > a:is(:hover, :focus-visible) {
+  background: var(--card-fern-hover);
+  color: var(--card-button-ink);
+  text-decoration: none;
+}
+
+nav#text-tools.fv-tools-directory .fv-home-tool-grid > li > p {
+  margin: 0;
+  color: var(--catalog-muted);
+  font-size: .9rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+nav#text-tools.fv-tools-directory a:focus-visible {
+  outline: 2px solid var(--card-focus);
+  outline-offset: 3px;
+}
+
+nav#text-tools.fv-tools-directory .fv-home-tool-grid > li:focus-within {
+  border-color: var(--card-focus);
+  box-shadow: var(--card-shadow-active);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  nav#text-tools.fv-tools-directory .fv-home-tool-grid > li:hover {
+    border-color: var(--card-focus);
+    box-shadow: var(--card-shadow-active);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  nav#text-tools.fv-tools-directory .fv-home-tool-grid > li,
+  nav#text-tools.fv-tools-directory .fv-home-tool-grid > li > a {
+    transition: none;
+  }
+}

@@ -121,6 +121,38 @@ function init() {
     update();
   }
 
+  const symbols = document.querySelector('[data-symbol-picker]');
+  if (symbols) {
+    const status = symbols.querySelector('[role="status"]');
+    let activeButton;
+    let timer;
+    let latestCopy = 0;
+    const reset = () => {
+      if (!activeButton) return;
+      activeButton.removeAttribute('data-copied');
+      activeButton.textContent = 'Copy';
+      activeButton = null;
+    };
+
+    for (const button of symbols.querySelectorAll('[data-symbol-copy]')) {
+      const tile = button.closest('li');
+      const glyph = tile.querySelector('.symbol-glyph');
+      const name = tile.querySelector('.symbol-name').textContent;
+      button.disabled = false;
+      button.addEventListener('click', async () => {
+        const request = ++latestCopy;
+        clearTimeout(timer);
+        reset();
+        const copied = await copyText(glyph.textContent, status, glyph, name);
+        if (!copied || request !== latestCopy) return;
+        activeButton = button;
+        button.setAttribute('data-copied', '');
+        button.textContent = 'Copied';
+        timer = setTimeout(reset, 1800);
+      });
+    }
+  }
+
   const faces = document.querySelector('#face-workbench');
   if (faces) {
     const status = faces.querySelector('#face-status');
