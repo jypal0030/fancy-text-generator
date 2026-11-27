@@ -93,3 +93,4 @@ The homepage Explore text tools section uses a minimal sage palette, thin border
 - Added copyable Instagram, Discord, and WhatsApp examples and a visible FAQ to the existing Cross Symbols page.
 - Updated the Flower Symbols search metadata and added copyable Instagram, Discord, and WhatsApp examples and a visible FAQ at the existing URL.
 - Added a scoped minimal homepage directory stylesheet with compact icon-and-title rows.
+- Added contextual links from Cute Fancy Text, Kaomoji, and Instagram Bio Fonts to the symbol library; removed duplicate Discord examples and stray CSS markers without changing canonical URLs.
