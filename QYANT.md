@@ -86,3 +86,4 @@ All 12 tool pages list the same 12 tools in static HTML, with descriptions and a
 - Completed the static 12-tool directories on all three Type Studio pages and marked each page’s own entry as current.
 - Replaced the JavaScript-rendered directories on the nine standalone pages with static 12-tool lists and current-page markers, leaving SEO metadata unchanged.
 - Added Flower, Maths, and Discord Symbols collections and linked the Cool Symbols hub from the homepage.
+- Refined the Cool Symbols hub and six collections on their existing canonical URLs; the three cross copy-and-paste query variants share `/cross-symbols/`.

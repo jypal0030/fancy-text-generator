@@ -66,6 +66,54 @@
 .symbol-category { display: block; margin-block: 0 .45rem; font: 1.6rem/1.2 system-ui, sans-serif; }
 .symbol-page .fv-tool-directory { margin-top: 1.75rem; border-top: 0; padding-top: 0; }
 .symbol-page .fv-tool-directory a[aria-current="page"]::after { background: var(--symbol-wash); }
+
+/* Collection cards: a glyph specimen, a description and a clear navigation action. */
+.symbol-collections ul {
+  gap: 1rem;
+}
+.symbol-collections li {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: .65rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 3px 0 #23443514, 0 8px 20px #23443512;
+}
+.symbol-collections .symbol-category {
+  display: inline-grid;
+  place-items: center;
+  justify-self: start;
+  min-width: 3rem;
+  min-height: 2.75rem;
+  margin: 0;
+  padding-inline: .5rem;
+  border: 1px solid var(--fv-border);
+  border-radius: .65rem;
+  background: var(--symbol-wash);
+  color: var(--fv-accent);
+}
+.symbol-collections li p { margin: 0; }
+.symbol-page .symbol-collections li a {
+  grid-row: 3;
+  display: flex;
+  justify-content: space-between;
+  gap: .5rem;
+  padding: .5rem .75rem;
+  border-radius: .65rem;
+  background: var(--fv-accent);
+  color: #fff;
+  text-decoration: none;
+}
+.symbol-collections li a::after { content: "→" / ""; }
+.symbol-page .symbol-collections li a:is(:hover, :focus-visible) {
+  background: #315b47;
+  text-decoration: underline;
+}
+.symbol-collections li:focus-within { border-color: var(--fv-accent); }
+
+.symbol-group + .symbol-group { margin-top: 1.25rem; }
+.symbol-group h3 { margin: 0 0 .5rem; font-size: 1rem; }
+=======
 @media (max-width: 29rem) {
   .symbol-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
