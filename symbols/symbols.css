@@ -67,6 +67,27 @@
 .symbol-page .fv-tool-directory { margin-top: 1.75rem; border-top: 0; padding-top: 0; }
 .symbol-page .fv-tool-directory a[aria-current="page"]::after { background: var(--symbol-wash); }
 
+.symbol-jumps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: -0.45rem 0 1.25rem;
+}
+.symbol-jumps a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: .35rem .8rem;
+  border: 1px solid var(--fv-border);
+  border-radius: .65rem;
+  background: var(--fv-panel);
+  font-size: .9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.symbol-jumps a:first-child { background: var(--fv-accent); color: #fff; }
+.symbol-jumps a:is(:hover, :focus-visible) { text-decoration: underline; }
+
 /* Collection cards: a glyph specimen, a description and a clear navigation action. */
 .symbol-collections ul {
   gap: 1rem;
@@ -92,7 +113,7 @@
   background: var(--symbol-wash);
   color: var(--fv-accent);
 }
-.symbol-collections li p { margin: 0; }
+.symbol-collections li p { grid-row: 2; margin: 0; }
 .symbol-page .symbol-collections li a {
   grid-row: 3;
   display: flex;
@@ -109,11 +130,25 @@
   background: #315b47;
   text-decoration: underline;
 }
+@media (hover: hover) {
+  .symbol-collections li:hover { box-shadow: 0 4px 0 #23443520, 0 12px 24px #2344351f; }
+}
 .symbol-collections li:focus-within { border-color: var(--fv-accent); }
 
 .symbol-group + .symbol-group { margin-top: 1.25rem; }
 .symbol-group h3 { margin: 0 0 .5rem; font-size: 1rem; }
+.symbol-grid.symbol-grid-examples {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+}
+.symbol-grid-examples .symbol-glyph {
+  font-size: 1.2rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+.symbol-grid-examples { grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); }
+.symbol-grid-examples .symbol-glyph { font-size: 1.2rem; line-height: 1.45; }
 =======
 @media (max-width: 29rem) {
   .symbol-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .symbol-grid-examples { grid-template-columns: minmax(0, 1fr); }
 }

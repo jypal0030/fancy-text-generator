@@ -9,6 +9,10 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebApplication","name":"Maths Symbols","url":"https://fancyfonty.com/maths-symbols/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","description":"Browse and copy Unicode maths symbols for equations and notes."}
   </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fancyfonty.com/"},{"@type":"ListItem","position":2,"name":"Cool Symbols","item":"https://fancyfonty.com/symbols/"},{"@type":"ListItem","position":3,"name":"Maths Symbols","item":"https://fancyfonty.com/maths-symbols/"}]}
+  </script>
+
   <link rel="stylesheet" href="../text-tools.css">
   <link rel="stylesheet" href="../symbols/symbols.css">
   <script src="../utility-tools.js?v=symbol-picker-1" defer></script>
@@ -27,15 +31,29 @@
     <section class="fv-workbench symbol-workbench" aria-labelledby="maths-picker" data-symbol-picker>
       <h2 id="maths-picker">Common maths symbols</h2>
       <p class="symbol-status" role="status" aria-atomic="true"></p>
-      <ul class="symbol-grid">
+      <section class="symbol-group" aria-labelledby="maths-operators">
+        <h3 id="maths-operators">Arithmetic operators</h3>
+        <ul class="symbol-grid">
+        <li><span class="symbol-glyph">+</span><p class="symbol-name">Plus sign</p><button type="button" data-symbol-copy disabled aria-label="Copy plus sign">Copy</button></li>
         <li><span class="symbol-glyph">−</span><p class="symbol-name">Minus sign</p><button type="button" data-symbol-copy disabled aria-label="Copy minus sign">Copy</button></li>
         <li><span class="symbol-glyph">×</span><p class="symbol-name">Multiplication sign</p><button type="button" data-symbol-copy disabled aria-label="Copy multiplication sign">Copy</button></li>
         <li><span class="symbol-glyph">÷</span><p class="symbol-name">Division sign</p><button type="button" data-symbol-copy disabled aria-label="Copy division sign">Copy</button></li>
         <li><span class="symbol-glyph">±</span><p class="symbol-name">Plus or minus</p><button type="button" data-symbol-copy disabled aria-label="Copy plus or minus">Copy</button></li>
+        </ul>
+      </section>
+      <section class="symbol-group" aria-labelledby="maths-comparisons">
+        <h3 id="maths-comparisons">Equality and inequality signs</h3>
+        <ul class="symbol-grid">
+        <li><span class="symbol-glyph">=</span><p class="symbol-name">Equals sign</p><button type="button" data-symbol-copy disabled aria-label="Copy equals sign">Copy</button></li>
         <li><span class="symbol-glyph">≠</span><p class="symbol-name">Not equal to</p><button type="button" data-symbol-copy disabled aria-label="Copy not equal to">Copy</button></li>
         <li><span class="symbol-glyph">≈</span><p class="symbol-name">Approximately equal</p><button type="button" data-symbol-copy disabled aria-label="Copy approximately equal">Copy</button></li>
         <li><span class="symbol-glyph">≤</span><p class="symbol-name">Less than or equal to</p><button type="button" data-symbol-copy disabled aria-label="Copy less than or equal to">Copy</button></li>
         <li><span class="symbol-glyph">≥</span><p class="symbol-name">Greater than or equal to</p><button type="button" data-symbol-copy disabled aria-label="Copy greater than or equal to">Copy</button></li>
+        </ul>
+      </section>
+      <section class="symbol-group" aria-labelledby="maths-notation">
+        <h3 id="maths-notation">Roots, constants and other notation</h3>
+        <ul class="symbol-grid">
         <li><span class="symbol-glyph">√</span><p class="symbol-name">Square root</p><button type="button" data-symbol-copy disabled aria-label="Copy square root">Copy</button></li>
         <li><span class="symbol-glyph">π</span><p class="symbol-name">Pi</p><button type="button" data-symbol-copy disabled aria-label="Copy pi">Copy</button></li>
         <li><span class="symbol-glyph">∑</span><p class="symbol-name">Summation</p><button type="button" data-symbol-copy disabled aria-label="Copy summation">Copy</button></li>
@@ -43,7 +61,8 @@
         <li><span class="symbol-glyph">∈</span><p class="symbol-name">Element of</p><button type="button" data-symbol-copy disabled aria-label="Copy element of">Copy</button></li>
         <li><span class="symbol-glyph">∅</span><p class="symbol-name">Empty set</p><button type="button" data-symbol-copy disabled aria-label="Copy empty set">Copy</button></li>
         <li><span class="symbol-glyph">∞</span><p class="symbol-name">Infinity</p><button type="button" data-symbol-copy disabled aria-label="Copy infinity">Copy</button></li>
-      </ul>
+        </ul>
+      </section>
       <noscript><p>Select and copy any symbol manually. The copy buttons require JavaScript.</p></noscript>
     </section>
     <section class="fv-guide">
