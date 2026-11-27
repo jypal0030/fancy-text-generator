@@ -6,6 +6,7 @@
 <title>Fancy Text Generator – Copy and Paste Stylish Fonts | FontVerse</title>
 <meta name="description" content="Use FontVerse’s free fancy text generator to preview and copy stylish Unicode text, from cursive and bubble letters to bold fonts for bios, captions and messages.">
 <link rel="stylesheet" href="./text-tools.css?v=studio-compact-2">
+<link rel="stylesheet" href="./home-tool-directory.css">
 <style>
   /* Homepage directory: fern-green cards with compact, readable descriptions. */
   #text-tools.fv-tools-directory {
@@ -46,20 +47,100 @@
   #ffg-root #text-tools .fv-home-tool-grid > li {
     display: block;
     min-width: 0;
-    padding: .25rem .85rem .85rem;
+    padding: .9rem;
     border: 1px solid var(--directory-line);
-    border-radius: .65rem;
+    border-radius: .9rem;
     background: var(--directory-card);
+    box-shadow: 0 2px 4px #17291e14, 0 8px 16px -10px #17291e55;
   }
 
   #ffg-root #text-tools .fv-home-tool-grid > li:is(:hover, :focus-within) {
     border-color: var(--directory-ink);
   }
 
-  #ffg-root #text-tools .fv-home-tool-grid > li::before,
+  #ffg-root #text-tools .fv-home-tool-grid > li::before {
+    content: var(--directory-glyph, "Aa");
+    content: var(--directory-glyph, "Aa") / "";
+    position: static;
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 0 .65rem;
+    border: 1px solid #abc3b0;
+    border-radius: .65rem;
+    background: #e4f0e6;
+    color: #244635;
+    font: 600 1.2rem/1 Georgia, serif;
+    transform: none;
+  }
+
+  #ffg-root #text-tools .fv-home-tool-grid > li:has(a[href*="bold-font"]) { --directory-glyph: "B"; }
+  #ffg-root #text-tools .fv-home-tool-grid > li:has(a[href*="cursive-text"]) { --directory-glyph: "𝒜"; }
+  #ffg-root #text-tools .fv-home-tool-grid > li:has(a[href*="bubble-text"]) { --directory-glyph: "ⓐ"; }
+  #ffg-root #text-tools .fv-home-tool-grid > li:has(a[href*="gothic-font"]) { --directory-glyph: "𝔊"; }
+  #ffg-root #text-tools .fv-home-tool-grid > li:has(a[href*="case-converter"]) { --directory-glyph: "A↔a"; }
+  #ffg-root #text-tools .fv-home-tool-grid > li:has(a[href*="brackets-boxed"]) { --directory-glyph: "[A]"; }
+  #ffg-root #text-tools .fv-home-tool-grid > li:has(a[href*="cute-fancy"]) { --directory-glyph: "♡"; }
+  #ffg-root #text-tools .fv-home-tool-grid > li:has(a[href*="instagram-bio"]) { --directory-glyph: "@"; }
+  #ffg-root #text-tools .fv-home-tool-grid > li:has(a[href*="symbols"]) { --directory-glyph: "✦"; }
+  #ffg-root #text-tools .fv-home-tool-grid > li:has(a[href*="kaomoji"]) { --directory-glyph: "^‿^"; }
+  #ffg-root #text-tools .fv-home-tool-grid > li:has(a[href*="transparent-text"]) { --directory-glyph: "▧"; }
+  #ffg-root #text-tools .fv-home-tool-grid > li:has(a[href*="fancy-letters"]) { --directory-glyph: "ℒ"; }
+  #ffg-root #text-tools .fv-home-tool-grid > li:has(a[href*="type-studio/"]:not([href*="type-studio/fancy-letters"]):not([href*="type-studio/transparent-text"])) { --directory-glyph: "Tt"; }
+
   #ffg-root #text-tools .fv-home-tool-grid > li::after,
-  #ffg-root #text-tools .fv-home-tool-grid a::after {
+  #ffg-root #text-tools .fv-home-tool-grid a::before {
     content: none;
+  }
+
+  #ffg-root #text-tools.fv-tools-directory .fv-home-tool-grid a[href]::after {
+    content: "↗";
+    content: "↗" / "";
+    position: static;
+    inset: auto;
+    flex: none;
+    margin-inline-start: .5rem;
+    padding: 0;
+    width: auto;
+    height: auto;
+    background: none;
+    border: 0;
+    color: inherit;
+    transform: none;
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  #ffg-root #text-tools.fv-tools-directory .fv-home-tool-grid a[href] {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    max-width: 100%;
+    min-height: 44px;
+    box-sizing: border-box;
+    margin: 0 0 .55rem;
+    padding: .45rem .75rem;
+    border: 1px solid #28513d;
+    border-radius: .5rem;
+    background: #28513d;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.35;
+    text-decoration: none;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  #ffg-root #text-tools.fv-tools-directory .fv-home-tool-grid a[href]:hover {
+    background: #1d3c2c;
+    text-decoration: underline;
+  }
+
+  #ffg-root #text-tools.fv-tools-directory .fv-home-tool-grid a[href]:focus-visible {
+    outline: 2px solid var(--directory-ink);
+    outline-offset: 3px;
   }
 
   #ffg-root #text-tools .fv-home-tool-grid p {
@@ -67,23 +148,19 @@
     line-height: 1.45;
   }
 
-  #text-tools.fv-tools-directory :is(.fv-home-tool-grid a, .fv-home-tool-current) {
-    display: flex;
+  #text-tools.fv-tools-directory .fv-home-tool-current {
+    display: inline-flex;
     align-items: center;
+    flex-wrap: wrap;
+    gap: .35rem .6rem;
     min-height: 44px;
+    margin-block-end: .75rem;
     color: var(--directory-ink);
     font-weight: 700;
     line-height: 1.35;
     overflow-wrap: anywhere;
     text-decoration: underline;
     text-underline-offset: .2em;
-  }
-
-  #text-tools.fv-tools-directory .fv-home-tool-current {
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: .35rem .6rem;
-    margin-block-end: .75rem;
   }
 
   #text-tools .fv-home-tool-current span {
@@ -94,13 +171,11 @@
     font-size: .75rem;
   }
 
-  #text-tools.fv-tools-directory :is(.fv-home-tool-grid a, .fv-home-tool-current):focus-visible {
+  #text-tools.fv-tools-directory .fv-home-tool-current:focus-visible {
     outline: 2px solid var(--directory-ink);
     outline-offset: 3px;
   }
 </style>
-<link rel="stylesheet" href="./home-tool-directory.css">
-<link rel="stylesheet" href="./home-tool-cards.css">
 <link rel="stylesheet" href="./site-nav.css">
 <script src="./font-directory.js" defer></script>
 <script src="./site-nav.js" defer></script>
