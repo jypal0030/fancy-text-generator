@@ -49,6 +49,8 @@ Canonical URLs use `https://fancyfonty.com/`, matching the sitemap. The homepage
 
 All 12 tool pages list the same 12 tools in static HTML, with descriptions and an `aria-current="page"` link for the current tool. The homepage lists the same 12 tool destinations separately from its own current-page label.
 
+The homepage Explore text tools section uses a minimal sage palette, thin borders, and compact cards with inline glyphs and titles in both themes.
+
 ## Change log
 
 - Memory file added to an existing project; pending reconstruction.
@@ -90,3 +92,4 @@ All 12 tool pages list the same 12 tools in static HTML, with descriptions and a
 - Added matching breadcrumb JSON-LD across the symbol library, grouped flower and maths characters, and added copyable Discord and flower examples without changing URLs.
 - Added copyable Instagram, Discord, and WhatsApp examples and a visible FAQ to the existing Cross Symbols page.
 - Updated the Flower Symbols search metadata and added copyable Instagram, Discord, and WhatsApp examples and a visible FAQ at the existing URL.
+- Added a scoped minimal homepage directory stylesheet with compact icon-and-title rows.
